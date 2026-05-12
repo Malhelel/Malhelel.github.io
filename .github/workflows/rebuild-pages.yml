@@ -1,0 +1,19 @@
+name: Rebuild GitHub Pages after data change
+
+on:
+  push:
+    paths:
+      - '_data/homepage.yml'
+
+jobs:
+  trigger-pages-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a new Pages build
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.repos.requestPagesBuild({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            })
