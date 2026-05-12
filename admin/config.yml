@@ -9,14 +9,13 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "index.html"
+      - file: "_data/homepage.yml"
         label: "Homepage"
         name: "home"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
           - { label: "Sidebar Slogan", name: "sidebar_slogan", widget: "string" }
-
   - name: "posts"
     label: "Articles"
     folder: "_posts"
