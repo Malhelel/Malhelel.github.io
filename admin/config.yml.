@@ -2,6 +2,10 @@ backend:
   name: github
   repo: Malhelel/malhelel.github.io
   branch: main
+  base_url: https://api.sveltia-cms.com
+  auth_endpoint: auth
+  client_id:Ov23liiRGhQxuX9v67Ml
+  client_secret:8bd7160e3da4ae963c922705da47e98d1a4ea71c
 
 media_folder: "images/uploads"
 
