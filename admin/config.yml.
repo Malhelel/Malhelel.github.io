@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: Malhelel/malhelel.github.io
+  branch: main
+
+media_folder: "images/uploads"
+
+collctions: 
+  - name: "pages"
+    label: "pages"
+    files:
+      - file: "index.html"
+        label: "homepage"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "sidebar Slogan", name: "sidebar_slogan", widget: "string" }
+  -name: "post"
+  label: "Articles"
+  folder: "_posts"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields: 
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "Body", name: "body", widget: "markdown" }
+    
