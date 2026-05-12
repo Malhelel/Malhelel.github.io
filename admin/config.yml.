@@ -1,32 +1,30 @@
 backend:
   name: github
-  repo: Malhelel/malhelel.github.io
+  repo: Malhelel/Malhelel.github.io
   branch: main
-  base_url: https://api.sveltia-cms.com
-  auth_endpoint: auth
-  client_id:Ov23liiRGhQxuX9v67Ml
-  client_secret:8bd7160e3da4ae963c922705da47e98d1a4ea71c
+  auth_type: pkce
+  client_id: Ov23liiRGHqXuxX9v67Ml
 
 media_folder: "images/uploads"
 
-collctions: 
+collections:
   - name: "pages"
-    label: "pages"
+    label: "Pages"
     files:
       - file: "index.html"
-        label: "homepage"
+        label: "Homepage"
         name: "home"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
-          - { label: "sidebar Slogan", name: "sidebar_slogan", widget: "string" }
-  -name: "post"
-  label: "Articles"
-  folder: "_posts"
-  create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  fields: 
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
-    - { label: "Body", name: "body", widget: "markdown" }
-    
+          - { label: "Sidebar Slogan", name: "sidebar_slogan", widget: "string" }
+
+  - name: "posts"
+    label: "Articles"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
