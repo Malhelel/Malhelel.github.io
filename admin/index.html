@@ -1,12 +1,53 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewpoint"
-content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
 </head>
 <body>
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia/cms.js"></script>
+  <script>
+    // Correct global variable name required by Sveltia CMS
+    window.SVELTIA_CMS_CONFIG = {
+      backend: {
+        name: "github",
+        repo: "Malhelel/Malhelel.github.io",
+        branch: "main"
+      },
+      media_folder: "images/uploads",
+      collections: [
+        {
+          name: "pages",
+          label: "Pages",
+          files: [
+            {
+              file: "index.html",
+              label: "Homepage",
+              name: "home",
+              fields: [
+                { label: "Hero Title", name: "hero_title", widget: "string" },
+                { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" },
+                { label: "Sidebar Slogan", name: "sidebar_slogan", widget: "string" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "posts",
+          label: "Articles",
+          folder: "_posts",
+          create: true,
+          slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Publish Date", name: "date", widget: "datetime" },
+            { label: "Body", name: "body", widget: "markdown" }
+          ]
+        }
+      ]
+    };
+  </script>
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </body>
 </html>
+
