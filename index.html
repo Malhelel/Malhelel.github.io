@@ -1,11 +1,5 @@
 ---
-hero_title: test title to check.
-hero_subtitle: A community based nonprofit press organization.
-sidebar_slogan: IRCNA
-layout: default
-title: Home
 ---
-
 <!DOCTYPE HTML>
 <!-- 
 	Editorial by HTML5 UP
@@ -30,7 +24,7 @@ title: Home
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Independent Reporting and Community Networking</strong> in Armenia</a>
+									<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -44,9 +38,8 @@ title: Home
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Welcome to IRCN<br />
-											Armenia</h1>
-											<p>A community based non-profit press organization</p>
+											<h1>{{ site.data.homepage.hero_title }}</h1>
+											<p>{{ site.data.homepage.hero_subtitle }}</p>
 										</header>
 										<p>IRCNA is built upon a simple belief: people living the story should be able to help tell it. i'm Mikael, the founder and journalist. I created IRCNA to filla gap - independent, English-language reporting and journalism from Armenia that doesn't just talk to you, but listens first. My reporting covers politics, breaking events, festivals and the everyday realities that don't always make headlines. IRCNA is funded entirely by it's community, not by political parties nor corporate owners. If you value journalismrooted in place and accountable to its audience, you're in the right place.</p>
 										<ul class="actions">
