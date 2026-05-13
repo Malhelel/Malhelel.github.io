@@ -106,4 +106,4 @@ Vassilis Maragos — EU Ambassador to Armenia. He has been the public face of th
 
 Vahagn Khachaturyan — President of Armenia (2022–present). He signed the 2025 bill formally launching the EU accession process into law.
 
-Emmanuel Macron — President of France. Attended the Yerevan summit and issued the starkest assessment, stating that Armenia has chosen to "break free" from being "in a way, a satellite of Russia".![](/images/uploads/736CAFF4-4C85-4AAF-9FBB-171B3568588F.png)
+Emmanuel Macron — President of France. Attended the Yerevan summit and issued the starkest assessment, stating that Armenia has chosen to "break free" from being "in a way, a satellite of Russia".
