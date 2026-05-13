@@ -1,4 +1,63 @@
-hero_title: Welcome to IRCN Armenia
-hero_subtitle: A community based non-profit press organization
-sidebar_slogan: Independent Reporting and Community Networking
-banner_image: /images/uploads/736CAFF4-4C85-4AAF-9FBB-171B3568588F.png
+hero_title: "Welcome to IRCNA Armenia"
+hero_subtitle: "A community based non-profit press organization"
+sidebar_slogan: "Independent Reporting and Community Networking"
+banner_image: "images/pic10.jpg"
+
+intro_text: "IRCNA is built upon a simple belief: people living the story should be able to help tell it. I'm Mikael, the founder and journalist. I created IRCNA to fill a gap - independent, English-language reporting and journalism from Armenia that doesn't just talk to you, but listens first. My reporting covers politics, breaking events, festivals and the everyday realities that don't always make headlines. IRCNA is funded entirely by its community, not by political parties nor corporate owners. If you value journalism rooted in place and accountable to its audience, you're in the right place."
+
+mission_section_title: "Our Mission"
+
+mission_1_title: "Unbiased Reporting"
+mission_1_desc: "IRCNA exists to bring you facts, not partisan spin. Every story is reported from the ground, verified against multiple sources, and told without fear or favor. As a nonprofit, nonpartisan initiative, we answer only to our community - not political parties, oligarchs, or foreign agendas. Our loyalty is to accuracy, context and the truth, giving you the information you need to understand Armenia on its own terms."
+
+mission_2_title: "Community Connection"
+mission_2_desc: "Our journalism begins by listening. IRCNA's 'community networking' model means your questions, tips and on-the-ground perspectives directly shape what we cover. Through tip lines, conversations, and open calls, we close the gap between journalist and audience. This isn't a one-way broadcast; it's a relationship built on mutual trust. When you send us a lead, you're not just a source - you're a partner in the reporting process."
+
+mission_3_title: "Giving Armenians a Voice"
+mission_3_desc: "Too often stories about Armenia are filtered through outside voices or loud partisan megaphones. IRCNA flips that script. We amplify the voices of ordinary people - residents of Yerevan neighborhoods, villagers in the regions, diaspora members with stake in the homeland - and ensure their experiences, struggles, and hopes are part of the public record. In English, we make sure these perspectives reach a wider world that rarely hears them directly."
+
+mission_4_title: "Supporting Independent Journalism"
+mission_4_desc: "Independent reporting in Armenia can't survive on good intentions alone. IRCNA is built to be community-funded: powered by donations, memberships, and grants rather than advertising or state money. By building an audience that directly supports our work, we safeguard editorial freedom. When you contribute, you're not just sustaining one journalist - you're helping prove that sustainable, trustworthy, English-language journalism from Armenia is possible."
+
+posts_section_title: "Latest Stories"
+
+post_1_image: "images/pic01.jpg"
+post_1_title: "Interdum aenean"
+post_1_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+post_2_image: "images/pic02.jpg"
+post_2_title: "Nulla amet dolore"
+post_2_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+post_3_image: "images/pic03.jpg"
+post_3_title: "Tempus ullamcorper"
+post_3_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+post_4_image: "images/pic04.jpg"
+post_4_title: "Sed etiam facilis"
+post_4_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+post_5_image: "images/pic05.jpg"
+post_5_title: "Feugiat lorem aenean"
+post_5_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+post_6_image: "images/pic06.jpg"
+post_6_title: "Amet varius aliquam"
+post_6_excerpt: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+
+sidebar_about_title: "Ante interdum"
+sidebar_mini_1_image: "images/pic07.jpg"
+sidebar_mini_1_text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+sidebar_mini_2_image: "images/pic08.jpg"
+sidebar_mini_2_text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+sidebar_mini_3_image: "images/pic09.jpg"
+sidebar_mini_3_text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+
+contact_section_title: "Get in touch"
+contact_desc: "Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam."
+contact_email: "information@untitled.tld"
+contact_phone: "(000) 000-0000"
+contact_address_line1: "1234 Somewhere Road #8254"
+contact_address_line2: "Nashville, TN 00000-0000"
+
+footer_text: "&copy; Untitled. All rights reserved. Demo Images: <a href='https://unsplash.com'>Unsplash</a>. Design: <a href='https://html5up.net'>HTML5 UP</a>."
