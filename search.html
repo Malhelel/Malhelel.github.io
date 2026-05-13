@@ -1,0 +1,123 @@
+---
+title: Search
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Search - IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+	  #search-results { margin-top: 2em; }
+	  #search-results article { margin-bottom: 1.5em; }
+	  #search-results h3 a { border-bottom: none; }
+	  #search-input { width: 100%; padding: 0.5em; font-size: 1em; border: 1px solid #ddd; border-radius: 4px; }
+	</style>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header">
+		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
+	</header>
+
+	<section>
+		<header class="major">
+			<h1>Search IRCNA</h1>
+		</header>
+		<input type="text" id="search-input" placeholder="Type to search articles..." autofocus />
+		<div id="search-results"></div>
+	</section>
+
+</div>
+</div>
+
+<!-- Sidebar – same as always -->
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  // Simple client-side search that fetches search.json
+  (function() {
+    var input = document.getElementById('search-input');
+    var results = document.getElementById('search-results');
+    var articles = [];
+
+    // Load the article index
+    fetch('/search.json')
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        articles = data;
+        // If a query was passed in the URL (from the sidebar), pre-fill the search
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get('q');
+        if (q) {
+          input.value = q;
+          performSearch(q);
+        }
+      })
+      .catch(function(e) { console.error('Search index failed to load', e); });
+
+    // Listen for typing
+    var timer;
+    input.addEventListener('input', function() {
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        performSearch(input.value.trim());
+      }, 300);
+    });
+
+    function performSearch(query) {
+      if (!query) {
+        results.innerHTML = '';
+        return;
+      }
+      query = query.toLowerCase();
+      var matches = articles.filter(function(article) {
+        return article.title.toLowerCase().indexOf(query) !== -1 ||
+               article.content.toLowerCase().indexOf(query) !== -1;
+      });
+
+      if (matches.length === 0) {
+        results.innerHTML = '<p>No articles found. Try different keywords.</p>';
+        return;
+      }
+
+      var html = '<h2>Found ' + matches.length + ' article(s)</h2>';
+      matches.forEach(function(article) {
+        html += '<article><h3><a href="' + article.url + '">' + article.title + '</a></h3>';
+        html += '<p>' + article.content + '…</p></article>';
+      });
+      results.innerHTML = html;
+    }
+  })();
+</script>
+
+</body>
+</html>
