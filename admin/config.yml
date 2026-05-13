@@ -17,6 +17,49 @@ collections:
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
           - { label: "Sidebar Slogan", name: "sidebar_slogan", widget: "string" }
           - { label: "Banner Image", name: "banner_image", widget: "image" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - { label: "Mission Section Title", name: "mission_section_title", widget: "string" }
+          - { label: "Mission 1 Title", name: "mission_1_title", widget: "string" }
+          - { label: "Mission 1 Description", name: "mission_1_desc", widget: "text" }
+          - { label: "Mission 2 Title", name: "mission_2_title", widget: "string" }
+          - { label: "Mission 2 Description", name: "mission_2_desc", widget: "text" }
+          - { label: "Mission 3 Title", name: "mission_3_title", widget: "string" }
+          - { label: "Mission 3 Description", name: "mission_3_desc", widget: "text" }
+          - { label: "Mission 4 Title", name: "mission_4_title", widget: "string" }
+          - { label: "Mission 4 Description", name: "mission_4_desc", widget: "text" }
+          - { label: "Posts Section Title", name: "posts_section_title", widget: "string" }
+          - { label: "Post 1 Image", name: "post_1_image", widget: "image" }
+          - { label: "Post 1 Title", name: "post_1_title", widget: "string" }
+          - { label: "Post 1 Excerpt", name: "post_1_excerpt", widget: "text" }
+          - { label: "Post 2 Image", name: "post_2_image", widget: "image" }
+          - { label: "Post 2 Title", name: "post_2_title", widget: "string" }
+          - { label: "Post 2 Excerpt", name: "post_2_excerpt", widget: "text" }
+          - { label: "Post 3 Image", name: "post_3_image", widget: "image" }
+          - { label: "Post 3 Title", name: "post_3_title", widget: "string" }
+          - { label: "Post 3 Excerpt", name: "post_3_excerpt", widget: "text" }
+          - { label: "Post 4 Image", name: "post_4_image", widget: "image" }
+          - { label: "Post 4 Title", name: "post_4_title", widget: "string" }
+          - { label: "Post 4 Excerpt", name: "post_4_excerpt", widget: "text" }
+          - { label: "Post 5 Image", name: "post_5_image", widget: "image" }
+          - { label: "Post 5 Title", name: "post_5_title", widget: "string" }
+          - { label: "Post 5 Excerpt", name: "post_5_excerpt", widget: "text" }
+          - { label: "Post 6 Image", name: "post_6_image", widget: "image" }
+          - { label: "Post 6 Title", name: "post_6_title", widget: "string" }
+          - { label: "Post 6 Excerpt", name: "post_6_excerpt", widget: "text" }
+          - { label: "Sidebar About Title", name: "sidebar_about_title", widget: "string" }
+          - { label: "Sidebar Mini 1 Image", name: "sidebar_mini_1_image", widget: "image" }
+          - { label: "Sidebar Mini 1 Text", name: "sidebar_mini_1_text", widget: "text" }
+          - { label: "Sidebar Mini 2 Image", name: "sidebar_mini_2_image", widget: "image" }
+          - { label: "Sidebar Mini 2 Text", name: "sidebar_mini_2_text", widget: "text" }
+          - { label: "Sidebar Mini 3 Image", name: "sidebar_mini_3_image", widget: "image" }
+          - { label: "Sidebar Mini 3 Text", name: "sidebar_mini_3_text", widget: "text" }
+          - { label: "Contact Section Title", name: "contact_section_title", widget: "string" }
+          - { label: "Contact Description", name: "contact_desc", widget: "text" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Contact Phone", name: "contact_phone", widget: "string" }
+          - { label: "Contact Address Line 1", name: "contact_address_line1", widget: "string" }
+          - { label: "Contact Address Line 2", name: "contact_address_line2", widget: "string" }
+          - { label: "Footer Text (HTML allowed)", name: "footer_text", widget: "text" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
