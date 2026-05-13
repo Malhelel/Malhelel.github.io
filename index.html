@@ -13,17 +13,13 @@
 <div id="main">
 <div class="inner">
 
+	<!-- Header -->
 	<header id="header">
 		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
-		<ul class="icons">
-			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-		</ul>
+		{{ site.data.homepage.social_icons_html }}
 	</header>
 
+	<!-- Banner -->
 	<section id="banner">
 		<div class="content">
 			<header>
@@ -32,7 +28,7 @@
 			</header>
 			<p>{{ site.data.homepage.intro_text }}</p>
 			<ul class="actions">
-				<li><a href="#" class="button big">Learn More</a></li>
+				<li><a href="{{ site.data.homepage.learn_more_url }}" class="button big">{{ site.data.homepage.learn_more_text }}</a></li>
 			</ul>
 		</div>
 		<span class="image object">
@@ -40,6 +36,7 @@
 		</span>
 	</section>
 
+	<!-- Our Mission -->
 	<section>
 		<header class="major">
 			<h2>{{ site.data.homepage.mission_section_title }}</h2>
@@ -76,6 +73,7 @@
 		</div>
 	</section>
 
+	<!-- Latest Stories (manual, editable) -->
 	<section>
 		<header class="major">
 			<h2>{{ site.data.homepage.posts_section_title }}</h2>
@@ -117,94 +115,3 @@
 				<p>{{ site.data.homepage.post_6_excerpt }}</p>
 				<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
 			</article>
-		</div>
-	</section>
-
-</div>
-</div>
-
-<div id="sidebar">
-<div class="inner">
-
-	<section id="search" class="alt">
-		<form method="post" action="#">
-			<input type="text" name="query" id="query" placeholder="Search" />
-		</form>
-	</section>
-
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		<ul>
-			<li><a href="index.html">Homepage</a></li>
-			<li><a href="generic.html">Generic</a></li>
-			<li><a href="elements.html">Elements</a></li>
-			<li>
-				<span class="opener">Submenu</span>
-				<ul>
-					<li><a href="#">Lorem Dolor</a></li>
-					<li><a href="#">Ipsum Adipiscing</a></li>
-					<li><a href="#">Tempus Magna</a></li>
-					<li><a href="#">Feugiat Veroeros</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Etiam Dolore</a></li>
-			<li><a href="#">Adipiscing</a></li>
-			<li>
-				<span class="opener">Another Submenu</span>
-				<ul>
-					<li><a href="#">Lorem Dolor</a></li>
-					<li><a href="#">Ipsum Adipiscing</a></li>
-					<li><a href="#">Tempus Magna</a></li>
-					<li><a href="#">Feugiat Veroeros</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Maximus Erat</a></li>
-			<li><a href="#">Sapien Mauris</a></li>
-			<li><a href="#">Amet Lacinia</a></li>
-		</ul>
-	</nav>
-
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
-		<div class="mini-posts">
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_1_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_1_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_2_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_2_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_3_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_3_text }}</p>
-			</article>
-		</div>
-		<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
-	</section>
-
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.contact_section_title }}</h2></header>
-		<p>{{ site.data.homepage.contact_desc }}</p>
-		<ul class="contact">
-			<li class="icon solid fa-envelope"><a href="#">{{ site.data.homepage.contact_email }}</a></li>
-			<li class="icon solid fa-phone">{{ site.data.homepage.contact_phone }}</li>
-			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
-		</ul>
-	</section>
-
-	<footer id="footer">
-		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
-	</footer>
-
-</div>
-</div>
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
