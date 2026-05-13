@@ -115,3 +115,74 @@
 				<p>{{ site.data.homepage.post_6_excerpt }}</p>
 				<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
 			</article>
+		</div>
+	</section>
+
+</div>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+<div class="inner">
+
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<!-- Menu (fully editable HTML) -->
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<!-- Sidebar Mini Posts -->
+	<section>
+		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
+		<div class="mini-posts">
+			<article>
+				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_1_image }}" alt="" /></a>
+				<p>{{ site.data.homepage.sidebar_mini_1_text }}</p>
+			</article>
+			<article>
+				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_2_image }}" alt="" /></a>
+				<p>{{ site.data.homepage.sidebar_mini_2_text }}</p>
+			</article>
+			<article>
+				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_3_image }}" alt="" /></a>
+				<p>{{ site.data.homepage.sidebar_mini_3_text }}</p>
+			</article>
+		</div>
+		<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
+	</section>
+
+	<!-- Contact -->
+	<section>
+		<header class="major"><h2>{{ site.data.homepage.contact_section_title }}</h2></header>
+		<p>{{ site.data.homepage.contact_desc }}</p>
+		<ul class="contact">
+			<li class="icon solid fa-envelope"><a href="#">{{ site.data.homepage.contact_email }}</a></li>
+			<li class="icon solid fa-phone">{{ site.data.homepage.contact_phone }}</li>
+			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
+		</ul>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+
+</div>
+</div>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
