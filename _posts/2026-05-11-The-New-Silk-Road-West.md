@@ -30,7 +30,7 @@ For several years, relations remained frozen. But the political earthquake of th
 
 ## How the 8th European Political Community summit transformed the continent's political map.
 
-![alt_text](/images/uplaods/image2.png "image_tooltip")
+![alt_text](/images/uploads/image2.png "image_tooltip")
 
  Picture by Lauren Hurley / No 10 Downing Street.
 
