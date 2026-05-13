@@ -10,7 +10,7 @@ layout: post
 
 By: Mikael Yamiosei, IRCNA
 
-![alt_text](/images/uplaods/image5.png "image_tooltip")
+![alt_text](/images/uploads/Gemini_Generated_Image_ososueososueosos.png "image_tooltip")
 
 For three decades, the Republic of Armenia has navigated a precarious path between East and West, bound by history to Moscow the USSR, and by aspiration to Brussels. What was once a careful diplomatic dance has, in the past two years, accelerated into a determined sprint. From the ashes of a catastrophic war and the erosion of old security guarantees, a new vision for Armenia is emerging: one anchored in European values, connectivity, and a future within the European Union itself.
 
@@ -67,12 +67,9 @@ At the core of the rapprochement is a massive influx of European investment, des
 The headline figure, however, is staggering: under the \*Global Gateway strategy\* the EU estimates its total investments in Armenia in the near future at \*\*€2.5 billion\*\*, These investments target four key areas:
 
 1. \*\* Connectivity:\*\* The newly signed EU-Armenia Connectivity Partnership will integrate Armenia into the \*Trans-Caspian "Middle Corridor\*" , a trade route bypassing Russia, linking Europe with Central Asia. This positions Armenia as a crucial land bridge.
-
-2.  \*\*Energy Security\*\*: The EU will invest €25 million into constructing energy storage facilities and help diversify energy supplies, including support for developing solar power and a roadmap for decommissioning the aging Armenian Nuclear Power Plant.
-
-3.  \*\*Digital and High-Tech\*\*: A call for expressions of interest has been launched to mobilize strategic investments in digital infrastructure, semiconductor skills, AI, and innovation ecosystems.
-
-4.  \*\*Private Sector and SMEs\*\*: The EIB Group and Ameriabank have signed a deal unlocking up to \*\*€106.25 million\*\* in new SME financing, expected to support 900 small businesses and sustain over 5,000 jobs. This builds on a \*\*€140 million funding agreement for 2025–2027\*\* specifically tied to visa liberalisation reforms.
+2.  \*\*Energy Security\*\*: The EU will invest €25 million into constructing energy storage facilities and help diversify energy supplies, including support for developing solar power and a roadmap for decommissioning the aging Armenian Nuclear Power Plant.
+3.  \*\*Digital and High-Tech\*\*: A call for expressions of interest has been launched to mobilize strategic investments in digital infrastructure, semiconductor skills, AI, and innovation ecosystems.
+4.  \*\*Private Sector and SMEs\*\*: The EIB Group and Ameriabank have signed a deal unlocking up to \*\*€106.25 million\*\* in new SME financing, expected to support 900 small businesses and sustain over 5,000 jobs. This builds on a \*\*€140 million funding agreement for 2025–2027\*\* specifically tied to visa liberalisation reforms.
 
 This is not aid; it is a multi-billion-euro bet on Armenia's economic future.
 
