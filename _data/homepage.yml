@@ -153,36 +153,33 @@ menu_html: |-
   <ul>
     <li><a href="index.html">Homepage</a></li>
     <li><a href="/articles/">All Articles</a></li>
-    <li><a href="elements.html">Elements</a></li>
+    <li><a href="/stories">Latest Stories</a></li>
     <li>
-      <span class="opener">Submenu</span>
+      <span class="opener">News Topics</span>
       <ul>
-        <li><a href="#">Lorem Dolor</a></li>
-        <li><a href="#">Ipsum Adipiscing</a></li>
-        <li><a href="#">Tempus Magna</a></li>
-        <li><a href="#">Feugiat Veroeros</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Local Stories</a></li>
+        <li><a href="#">Breaking News</a></li>
+        <li><a href="#">Politics</a></li>
       </ul>
     </li>
-    <li><a href="#">Etiam Dolore</a></li>
-    <li><a href="#">Adipiscing</a></li>
+    <li><a href="#">Independent Journalists</a></li>
+    <li><a href="#">Community Connections and Networking</a></li>
     <li>
-      <span class="opener">Another Submenu</span>
+      <span class="opener">Reach Out To Us</span>
       <ul>
-        <li><a href="#">Lorem Dolor</a></li>
-        <li><a href="#">Ipsum Adipiscing</a></li>
-        <li><a href="#">Tempus Magna</a></li>
-        <li><a href="#">Feugiat Veroeros</a></li>
+        <li><a href="#">Submit a Story or Interview Request</a></li>
+        <li><a href="#">Apply to Join IRCNA as an Independent Journalist</a></li>
+        <li><a href="#">Submit a Tip or Information on Upcoming Events</a></li>
+        <li><a href="#">Inquire or Request Removal/Credentials of Certain Content on IRCNA</a></li>
       </ul>
     </li>
-    <li><a href="#">Maximus Erat</a></li>
-    <li><a href="#">Sapien Mauris</a></li>
-    <li><a href="#">Amet Lacinia</a></li>
+    <li><a href="#">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
+    <li><a href="#">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+    <li><a href="#">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
   </ul>
 social_icons_html: |-
   <ul class="icons">
     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-  </ul>
