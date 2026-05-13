@@ -1,11 +1,35 @@
 ---
-layout: default
 title: All Articles
 permalink: /articles/
 ---
-
-# All Articles
-
-{% for post in site.posts %}
-* [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>All Articles – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+	<header id="header">
+		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
+	</header>
+	<section>
+		<header class="major"><h1>All Articles</h1></header>
+		<ul>
+		{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				<small> — {{ post.date | date: "%B %d, %Y" }}</small>
+			</li>
+		{% endfor %}
+		</ul>
+	</section>
+</div>
+</div>
+</div>
+</body>
+</html>
