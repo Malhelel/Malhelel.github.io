@@ -18,6 +18,8 @@ collections:
           - { label: "Sidebar Slogan", name: "sidebar_slogan", widget: "string" }
           - { label: "Banner Image", name: "banner_image", widget: "image" }
           - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - { label: "Learn More Button Text", name: "learn_more_text", widget: "string" }
+          - { label: "Learn More Button URL", name: "learn_more_url", widget: "string" }
           - { label: "Mission Section Title", name: "mission_section_title", widget: "string" }
           - { label: "Mission 1 Title", name: "mission_1_title", widget: "string" }
           - { label: "Mission 1 Description", name: "mission_1_desc", widget: "text" }
@@ -59,7 +61,9 @@ collections:
           - { label: "Contact Phone", name: "contact_phone", widget: "string" }
           - { label: "Contact Address Line 1", name: "contact_address_line1", widget: "string" }
           - { label: "Contact Address Line 2", name: "contact_address_line2", widget: "string" }
-          - { label: "Footer Text (HTML allowed)", name: "footer_text", widget: "text" }
+          - { label: "Footer Text", name: "footer_text", widget: "text" }
+          - { label: "Sidebar Menu HTML", name: "menu_html", widget: "markdown" }
+          - { label: "Social Icons HTML", name: "social_icons_html", widget: "markdown" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
