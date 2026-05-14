@@ -6,7 +6,7 @@ permalink: /contact/
 <html>
 <head>
 	<base href="/">
-	<title>Contact – IRCNA</title>
+	<title>{{ site.data.contact.heading }} – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,115 +15,37 @@ permalink: /contact/
 <div id="wrapper">
 <div id="main">
 <div class="inner">
-
-	<!-- Header -->
 	<header id="header">
 		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
 		{{ site.data.homepage.social_icons_html }}
 	</header>
-
-	<!-- Contact Section -->
 	<section>
-		<header class="major">
-			<h1>Contact IRCNA</h1>
-		</header>
-		<p>Have a tip, a story idea, or want to get involved? Send us a message using the form below. We read every submission.</p>
-
-		<form action="https://formspree.io/f/mlgzyeky" method="POST">
+		<header class="major"><h1>{{ site.data.contact.heading }}</h1></header>
+		<p>{{ site.data.contact.intro }}</p>
+		<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 			<div class="row gtr-uniform">
-				<div class="col-6 col-12-xsmall">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" placeholder="Your name" required />
-				</div>
-				<div class="col-6 col-12-xsmall">
-					<label for="email">Email</label>
-					<input type="email" name="_replyto" id="email" placeholder="your@email.com" required />
-				</div>
-				<div class="col-12">
-					<label for="subject">Subject</label>
-					<input type="text" name="subject" id="subject" placeholder="What's this about?" />
-				</div>
-				<div class="col-12">
-					<label for="message">Message</label>
-					<textarea name="message" id="message" rows="6" placeholder="Write your message here..." required></textarea>
-				</div>
-				<div class="col-12">
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
-					</ul>
-				</div>
+				<div class="col-6 col-12-xsmall"><label for="name">Name</label><input type="text" name="name" id="name" placeholder="Your name" required /></div>
+				<div class="col-6 col-12-xsmall"><label for="email">Email</label><input type="email" name="_replyto" id="email" placeholder="your@email.com" required /></div>
+				<div class="col-12"><label for="subject">Subject</label><input type="text" name="subject" id="subject" placeholder="What's this about?" /></div>
+				<div class="col-12"><label for="message">Message</label><textarea name="message" id="message" rows="6" placeholder="Write your message here..." required></textarea></div>
+				<div class="col-12"><ul class="actions"><li><input type="submit" value="Send Message" class="primary" /></li><li><input type="reset" value="Reset" /></li></ul></div>
 			</div>
 		</form>
-
 		<hr />
-
 		<h3>Other Ways to Reach Us</h3>
 		<ul class="contact">
 			<li class="icon solid fa-envelope"><a href="mailto:Mikael.Yamiosei@gmail.com">Mikael.Yamiosei@gmail.com</a></li>
 			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
 		</ul>
 	</section>
-
 </div>
 </div>
-
-<!-- Sidebar -->
-<div id="sidebar">
-<div class="inner">
-
-	<section id="search" class="alt">
-		<form method="get" action="search.html">
-			<input type="text" name="q" id="query" placeholder="Search" />
-		</form>
-	</section>
-
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		{{ site.data.homepage.menu_html }}
-	</nav>
-
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
-		<div class="mini-posts">
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_1_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_1_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_2_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_2_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_3_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_3_text }}</p>
-			</article>
-		</div>
-		<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
-	</section>
-
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.contact_section_title }}</h2></header>
-		<p>{{ site.data.homepage.contact_desc }}</p>
-		<ul class="contact">
-			<li class="icon solid fa-envelope"><a href="#">{{ site.data.homepage.contact_email }}</a></li>
-			<li class="icon solid fa-phone">{{ site.data.homepage.contact_phone }}</li>
-			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
-		</ul>
-	</section>
-
-	<footer id="footer">
-		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
-	</footer>
-
+<div id="sidebar"><div class="inner">
+	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" id="query" placeholder="Search" /></form></section>
+	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div></div>
 </div>
-</div>
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
 </body>
 </html>
