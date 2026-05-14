@@ -6,7 +6,7 @@ permalink: /image-gallery/
 <html>
 <head>
 	<base href="/">
-	<title>IRCNA Gallery</title>
+	<title>{{ site.data.gallery.heading }} – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,32 +20,17 @@ permalink: /image-gallery/
 		{{ site.data.homepage.social_icons_html }}
 	</header>
 	<section>
-		<header class="major"><h1>IRCNA Gallery</h1></header>
-		<p>Images from the field, events, and community submissions. This gallery will grow with our coverage.</p>
+		<header class="major"><h1>{{ site.data.gallery.heading }}</h1></header>
+		<p>{{ site.data.gallery.intro }}</p>
 	</section>
 </div>
 </div>
-<div id="sidebar">
-<div class="inner">
-	<section id="search" class="alt">
-		<form method="get" action="search.html">
-			<input type="text" name="q" id="query" placeholder="Search" />
-		</form>
-	</section>
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		{{ site.data.homepage.menu_html }}
-	</nav>
-	<footer id="footer">
-		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
-	</footer>
+<div id="sidebar"><div class="inner">
+	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" id="query" placeholder="Search" /></form></section>
+	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div></div>
 </div>
-</div>
-</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
 </body>
 </html>
