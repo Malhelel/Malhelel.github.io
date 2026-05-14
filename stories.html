@@ -6,7 +6,7 @@ permalink: /stories/
 <html>
 <head>
 	<base href="/">
-	<title>Latest Stories – IRCNA</title>
+	<title>{{ site.data.stories.heading }} – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,22 +20,17 @@ permalink: /stories/
 		{{ site.data.homepage.social_icons_html }}
 	</header>
 	<section>
-		<header class="major"><h1>Latest Stories</h1></header>
-		<p>Here you'll find our most recent reports, investigations, and community updates. Check back often — new stories are added regularly.</p>
-		<!-- You can later replace this with a dynamic list of articles tagged "featured" -->
+		<header class="major"><h1>{{ site.data.stories.heading }}</h1></header>
+		<p>{{ site.data.stories.intro }}</p>
 	</section>
 </div>
 </div>
-<div id="sidebar">
-<div class="inner">
-	<section id="search" class="alt">
-		<form method="get" action="search.html">
-			<input type="text" name="q" id="query" placeholder="Search" />
-		</form>
-	</section>
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		{{ site.data.homepage.menu_html }}
-	</nav>
-	<footer id="footer">
-		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+<div id="sidebar"><div class="inner">
+	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" id="query" placeholder="Search" /></form></section>
+	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div></div>
+</div>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
+</body>
+</html>
