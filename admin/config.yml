@@ -64,6 +64,30 @@ collections:
           - { label: "Footer Text", name: "footer_text", widget: "text" }
           - { label: "Sidebar Menu HTML", name: "menu_html", widget: "markdown" }
           - { label: "Social Icons HTML", name: "social_icons_html", widget: "markdown" }
+      - file: "_data/disclaimer.yml"
+        label: "Disclaimer"
+        name: "disclaimer"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/contact.yml"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+      - file: "_data/gallery.yml"
+        label: "Gallery"
+        name: "gallery"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+      - file: "_data/stories.yml"
+        label: "Stories"
+        name: "stories"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
