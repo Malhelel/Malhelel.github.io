@@ -15,14 +15,22 @@ permalink: /contact/
 <div id="wrapper">
 <div id="main">
 <div class="inner">
+
+	<!-- Header with logo support -->
 	<header id="header">
-		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
 		{{ site.data.homepage.social_icons_html }}
 	</header>
+
 	<section>
 		<header class="major"><h1>{{ site.data.contact.heading }}</h1></header>
 		<p>{{ site.data.contact.intro }}</p>
-		<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+		<form action="https://formspree.io/f/mlgzyeky" method="POST">
 			<div class="row gtr-uniform">
 				<div class="col-6 col-12-xsmall"><label for="name">Name</label><input type="text" name="name" id="name" placeholder="Your name" required /></div>
 				<div class="col-6 col-12-xsmall"><label for="email">Email</label><input type="email" name="_replyto" id="email" placeholder="your@email.com" required /></div>
@@ -38,14 +46,23 @@ permalink: /contact/
 			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
 		</ul>
 	</section>
+
 </div>
 </div>
-<div id="sidebar"><div class="inner">
+
+<div id="sidebar">
+<div class="inner">
 	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" id="query" placeholder="Search" /></form></section>
 	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
 	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
-</div></div>
 </div>
-<script src="assets/js/jquery.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
