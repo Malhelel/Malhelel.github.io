@@ -16,13 +16,17 @@ permalink: /articles/
 <div id="main">
 <div class="inner">
 
-	<!-- Header -->
+	<!-- Header with logo support -->
 	<header id="header">
-		<a href="index.html" class="logo"><strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia</a>
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
 		{{ site.data.homepage.social_icons_html }}
 	</header>
 
-	<!-- All Articles -->
 	<section>
 		<header class="major">
 			<h1>All Articles</h1>
@@ -40,7 +44,6 @@ permalink: /articles/
 </div>
 </div>
 
-<!-- Sidebar -->
 <div id="sidebar">
 <div class="inner">
 
@@ -55,44 +58,13 @@ permalink: /articles/
 		{{ site.data.homepage.menu_html }}
 	</nav>
 
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
-		<div class="mini-posts">
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_1_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_1_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_2_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_2_text }}</p>
-			</article>
-			<article>
-				<a href="#" class="image"><img src="{{ site.data.homepage.sidebar_mini_3_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_3_text }}</p>
-			</article>
-		</div>
-		<ul class="actions"><li><a href="#" class="button">More</a></li></ul>
-	</section>
-
-	<section>
-		<header class="major"><h2>{{ site.data.homepage.contact_section_title }}</h2></header>
-		<p>{{ site.data.homepage.contact_desc }}</p>
-		<ul class="contact">
-			<li class="icon solid fa-envelope"><a href="#">{{ site.data.homepage.contact_email }}</a></li>
-			<li class="icon solid fa-phone">{{ site.data.homepage.contact_phone }}</li>
-			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
-		</ul>
-	</section>
-
 	<footer id="footer">
 		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
 	</footer>
-
 </div>
 </div>
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
