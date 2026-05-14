@@ -170,6 +170,8 @@ menu_html: |-
     <li>
       <span class="opener">Reach Out To Us</span>
       <ul>
+
+  <li><a href="/contact/"> General Contact Form</a></li>
         <li><a href="#">Submit a Story or Interview Request</a></li>
         <li><a href="#">Apply to Join IRCNA as an Independent Journalist</a></li>
         <li><a href="#">Submit a Tip or Information on Upcoming Events</a></li>
