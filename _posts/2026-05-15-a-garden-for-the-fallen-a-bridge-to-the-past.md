@@ -1,24 +1,13 @@
 ---
-title: "A Garden for the Fallen, A Bridge to the Past"
+title: A Garden for the Fallen A Bridge to the Past
 date: 2026-05-15T15:12:00
-layout: post
 ---
 
 # A Garden for the Fallen, A Bridge to the Past: Yerevan’s 2026 Memorial and the Duality of Armenian Memory
 
-
-
-
-
 >
 
-
-
-
 ![alt_text](/images/uploads/coverimage.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Taken in Victory Park on May 6th
 
@@ -28,16 +17,9 @@ Just weeks after the EU pledged a €2.5 billion "connectivity partnership" for 
 
 The Russian ambassador to Armenia, Sergey Kopyrkin, was not in Brussels or Strasbourg. He was in Victory Park, sleeves rolled up, planting a sapling. He was there for the international "Garden of Memory" (Сад памяти) campaign, a living monument to the 27 million Soviet citizens who perished in the Great Patriotic War (1941–1945). The event is in its sixth year, a quiet but potent counterbalance to the high-level summits and geopolitical realignments that have recently defined Armenian diplomacy. It is a testament to the fact that while a country’s political alliances may shift, the memory of a shared, world-altering sacrifice often proves immovable.
 
-
-
-
 # The 2026 Ceremony: Saplings and Statesmen
 
-
 ![alt_text](/images/uploads/poster.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Taken on Alley of Border Glory on May 6th
 
@@ -49,18 +31,9 @@ For some, these words might seem at odds with the backdrop of Armenia’s rapidl
 
 Yet, the presence of Kopyrkin and the Belarusian ambassador at a memorial event just hours after the heads of 47 European nations had left Yerevan speaks to a persistent and essential truth of the South Caucasus: geopolitical realignment does not erase shared history.
 
-
-
-
 # The Ground Beneath the Politics: Why Victory Park?
 
-
-
-
 ![alt_text](/images/uploads/eternal flame.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Taken near The Eternal Flame on May 9th
 
@@ -68,22 +41,9 @@ The choice of location is the story’s silent, powerful narrator. Victory Park 
 
 For decades, Armenians have marked May 9th, Victory Day, at this site, not as a foreign ritual but as a distinctly Armenian one. Over 500,000 Armenians served in the Soviet armed forces during the war, and nearly half of them perished. In Armenian families, the memory is not abstract; it is genealogical. The "Garden of Memory" campaign, therefore, is not an import. It is an extension of a local, sacred tradition of honoring the fallen, woven into the very geography of the capital.
 
-
-
-
 # Voices from the Soil: Locals on Memory and Meaning
 
-
-
-
-
-
-
-
 ![alt_text](/images/uploads/borderglory.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Tree saplings planted in Border Glory Alley on May 6th
 
@@ -97,18 +57,9 @@ Such sentiments are not confined to the older generation. Youth volunteers, incl
 
 These voices reveal that for many Yerevan residents, the "Garden of Memory" occupies a separate, non-conflictual space from the EPC summit and the EU association agreements. One can advocate for visa liberalization with Brussels in the morning and honor the Red Army’s role in defeating fascism in the afternoon. The two identities, for many, are not opposed; they are simply layers of a complex national story.
 
-
-
-
 # The Weight of History: A Shared Soviet Sacrifice
 
-
-
-
 ![alt_text](/images/uploads/postertree.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Taken in Victory Park on May 6th
 
@@ -118,19 +69,9 @@ For Armenia, the "Garden" is a particularly resonant symbol. The country’s con
 
 This is the heart of the matter that is often lost in news reports about "Russian influence" or "Westward pivots." The memory of the war is not a tool of Russian foreign policy for many Armenians; it is a family heirloom. When Ambassador Kopyrkin speaks of the "younger generation" inheriting this memory, he is tapping into a well of feeling that is authentically Armenian.
 
-
-
-
 # From the EPC Summit to the Garden: Armenia’s Two Faces
 
-
-
-
-
 ![alt_text](/images/uploads/tomb.jpg "image_tooltip")
-
-
-
 
 Photo by: IRCNA | Taken at the Tomb of the Unknown Soldier on May 9th
 
@@ -140,18 +81,9 @@ The EPC Summit was a landmark event. Prime Minister Pashinyan called it "histori
 
 However, to see the pivot as a complete rejection of the past is to misread the depth of cultural memory. The "Garden of Memory" event two days later was a reminder that while governments can change treaties and trade routes, they cannot rewrite the personal histories of millions of citizens. For the veterans present, some nearly a century old, the Russian ambassador is not merely the representative of a geopolitical rival; he is the representative of a nation whose soldiers stood with their grandfathers in the mud of Kursk and the rubble of Berlin.
 
-
-
-
 # Roots for the Future
 
-
-
-
 ![alt_text](/images/uploads/charttrees.png "image_tooltip")
-
-
-
 
 Timeline Chart provided by IRCNA 
 
@@ -161,21 +93,14 @@ The "Garden of Memory" is, at its core, an act of stubborn hope. It is a belief 
 
 For IRCNA’s readers, the lesson of Yerevan’s 2026 plantings is this: Geopolitics is a story of the present and the future, but memory is a claim on the past. And as long as trees are planted in the shadow of Mother Armenia for the fallen of the Great Patriotic War, that past will be a living presence, no matter which flags fly over government buildings.
 
-
-
-
 ## Sources and Attribution
 
 This article was built from public reports, official statements, and original analysis based on the principles of transparent journalism. All direct quotations are attributed. The primary sources for the 2026 event information are:
 
 1. ArmInfo: For details on the May 6, 2026 "Garden of Memory" event, including the direct quotes from Ambassador Sergey Kopyrkin.
-
 2. NovostiNK: For additional context on the "Garden of Memory" campaign in Yerevan, including the remarks of Ambassador Kopyrkin and Armais Kamalov.
-
 3. Public Radio of Armenia / Euractiv: For analysis and direct quotes concerning the 8th European Political Community Summit and the EU-Armenia bilateral summit.
-
 4. Wikipedia / HyurService: For historical and descriptive context regarding Victory Park and the Mother Armenia monument.
-
 5. RIA Novosti and Sputnik Armenia: For contextual analysis regarding Russian-Armenian historical ties and contemporary relations.
 
 This article is an original piece of journalism, Written By: Mikael Yamiosei - specifically for IRCNA. The analysis, framing, and any reported opinions from unnamed sources are the original work of the author and were not derived from any other published article.
