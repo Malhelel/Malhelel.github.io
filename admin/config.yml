@@ -34,21 +34,27 @@ collections:
           - { label: "Post 1 Image", name: "post_1_image", widget: "image" }
           - { label: "Post 1 Title", name: "post_1_title", widget: "string" }
           - { label: "Post 1 Excerpt", name: "post_1_excerpt", widget: "text" }
+          - { label: "Post 1 URL", name: "post_1_url", widget: "string" }
           - { label: "Post 2 Image", name: "post_2_image", widget: "image" }
           - { label: "Post 2 Title", name: "post_2_title", widget: "string" }
           - { label: "Post 2 Excerpt", name: "post_2_excerpt", widget: "text" }
+          - { label: "Post 2 URL", name: "post_2_url", widget: "string" }
           - { label: "Post 3 Image", name: "post_3_image", widget: "image" }
           - { label: "Post 3 Title", name: "post_3_title", widget: "string" }
           - { label: "Post 3 Excerpt", name: "post_3_excerpt", widget: "text" }
+          - { label: "Post 3 URL", name: "post_3_url", widget: "string" }
           - { label: "Post 4 Image", name: "post_4_image", widget: "image" }
           - { label: "Post 4 Title", name: "post_4_title", widget: "string" }
           - { label: "Post 4 Excerpt", name: "post_4_excerpt", widget: "text" }
+          - { label: "Post 4 URL", name: "post_4_url", widget: "string" }
           - { label: "Post 5 Image", name: "post_5_image", widget: "image" }
           - { label: "Post 5 Title", name: "post_5_title", widget: "string" }
           - { label: "Post 5 Excerpt", name: "post_5_excerpt", widget: "text" }
+          - { label: "Post 5 URL", name: "post_5_url", widget: "string" }
           - { label: "Post 6 Image", name: "post_6_image", widget: "image" }
           - { label: "Post 6 Title", name: "post_6_title", widget: "string" }
           - { label: "Post 6 Excerpt", name: "post_6_excerpt", widget: "text" }
+          - { label: "Post 6 URL", name: "post_6_url", widget: "string" }
           - { label: "Sidebar About Title", name: "sidebar_about_title", widget: "string" }
           - { label: "Sidebar Mini 1 Image", name: "sidebar_mini_1_image", widget: "image" }
           - { label: "Sidebar Mini 1 Text", name: "sidebar_mini_1_text", widget: "text" }
