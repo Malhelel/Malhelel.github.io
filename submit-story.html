@@ -1,0 +1,73 @@
+---
+title: Submit a Story
+permalink: /submit-story/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Submit a Story – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<!-- Header with logo support -->
+	<header id="header">
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<!-- Page Content -->
+	<section>
+		<header class="major">
+			<h1>Submit a Story</h1>
+		</header>
+		<p>Use the form below to send us your story, photos, or tips. We read every submission.</p>
+
+		<iframe data-tally-src="https://tally.so/embed/68We1P?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="823" frameborder="0" marginheight="0" marginwidth="0" title="Submit Story or Interview Request"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+	</section>
+
+</div>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+<div class="inner">
+
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
