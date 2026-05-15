@@ -101,8 +101,7 @@ collections:
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   fields:
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
-    - { label: "Body", name: "body", widget: "markdown" }
-    - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-
+  - { label: "Title", name: "title", widget: "string", pattern: ['^".*"$', "Title must be enclosed in double quotes, e.g. \"My Title: Story\""] }
+  - { label: "Publish Date", name: "date", widget: "datetime" }
+  - { label: "Body", name: "body", widget: "markdown" }
+  - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
