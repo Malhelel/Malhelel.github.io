@@ -96,11 +96,13 @@ collections:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
   - name: "posts"
-    label: "Articles"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  label: "Articles"
+  folder: "_posts"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields:
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "Body", name: "body", widget: "markdown" }
+    - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+
