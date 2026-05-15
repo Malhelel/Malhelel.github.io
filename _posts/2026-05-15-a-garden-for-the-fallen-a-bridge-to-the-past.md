@@ -1,5 +1,5 @@
 ---
-title: A Garden for the Fallen, A Bridge to the Past
+title: "A Garden for the Fallen, A Bridge to the Past"
 date: 2026-05-15T15:12:00
 layout: post
 ---
