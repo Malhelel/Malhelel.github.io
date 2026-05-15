@@ -191,7 +191,7 @@ menu_html: |-
 
         <li><a href="/contact/">📬 General Contact Form</a></li>
 
-        <li><a href="javascript:void(0)">Submit a Story or Interview Request</a></li>
+        <li><a href="/submit-story/">Submit a Story or Interview Request</a></li>
 
         <li><a href="javascript:void(0)">Apply to Join IRCNA as an Independent Journalist</a></li>
 
