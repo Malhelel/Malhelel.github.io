@@ -26,7 +26,7 @@ post_1_excerpt: |-
   THE FOUNDATIONS OF PARTNERSHIP (1992–2026)
   How a relationship born in the collapse of the Soviet Union grew into a strategic alliance.
 
-  Diplomatic relations between the Republic of Armenia and the European Union were established on 10 August 1992, less than a year after Armenia’s independence referendum. The first concrete milestone was the Partnership and Cooperation Agreement (PCA), which entered into force on 1 July 1999, creating the initial legal framework for political dialogue and trade. This early period was marked by cautious optimism as the EU expanded eastward and Armenia sought to anchor itself in European institutions.
+  Diplomatic relations between the Republic of Armenia and the European Union were established on 10 August 1992, less than a year after Armenia's independence referendum. The first concrete milestone was the Partnership and Cooperation Agreement (PCA), which entered into force on 1 July 1999, creating the initial legal framework for political dialogue and trade. This early period was marked by cautious optimism as the EU expanded eastward and Armenia sought to anchor itself in European institutions.
 
   The relationship took a dramatic turn in 2013, a moment that would define Armenia's geopolitical identity for the next decade. After years of negotiations, Armenia was poised to sign an Association Agreement (AA) with the EU, including a Deep and Comprehensive Free Trade Area (DCFTA). However, under intense pressure from Russia, President Serzh Sargsyan abruptly reversed course, and Armenia instead joined the Russian-led Eurasian Economic Union (EAEU), abandoning the EU deal. The joint statement issued in November 2013 simply noted they would "not proceed with its initialing due to Armenia's new international commitments".
 
@@ -77,7 +77,7 @@ post_1_excerpt: |-
 
   Assessing the road to EU membership and the challenges that remain.
 
-  The climax of this process is the formal launch of Armenia's EU accession process. On March 26, 2025, and signed into law on April 4, 2025, the Armenian parliament adopted the law "On Launching the Accession Process of the Republic of Armenia to the European Union". The May 2026 joint declaration formally "acknowledges the European aspirations of the Armenian people... expressing the country’s intention to move towards the EU".
+  The climax of this process is the formal launch of Armenia's EU accession process. On March 26, 2025, and signed into law on April 4, 2025, the Armenian parliament adopted the law "On Launching the Accession Process of the Republic of Armenia to the European Union". The May 2026 joint declaration formally "acknowledges the European aspirations of the Armenian people... expressing the country's intention to move towards the EU".
 
   Despite this political breakthrough, significant structural challenges remain. Prime Minister Pashinyan has stated that Armenia has no immediate plan for a referendum on leaving the EAEU, acknowledging the complex economic ties with Russia. However, the direction of travel is unmistakable, especially given Armenia's suspension of its membership in the Moscow-led CSTO security alliance.
 
@@ -121,21 +121,27 @@ post_1_excerpt: |-
   Vahagn Khachaturyan — President of Armenia (2022–present). He signed the 2025 bill formally launching the EU accession process into law.
 
   Emmanuel Macron — President of France. Attended the Yerevan summit and issued the starkest assessment, stating that Armenia has chosen to "break free" from being "in a way, a satellite of Russia".
+post_1_url: /2026/05/11/the-new-silk-road-west.html
 post_2_image: images/pic02.jpg
 post_2_title: Nulla amet dolore
 post_2_excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+post_2_url: '#'
 post_3_image: images/pic03.jpg
 post_3_title: Tempus ullamcorper
 post_3_excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+post_3_url: '#'
 post_4_image: images/pic04.jpg
 post_4_title: Sed etiam facilis
 post_4_excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+post_4_url: '#'
 post_5_image: images/pic05.jpg
 post_5_title: Feugiat lorem aenean
 post_5_excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+post_5_url: '#'
 post_6_image: images/pic06.jpg
 post_6_title: Amet varius aliquam
 post_6_excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+post_6_url: '#'
 sidebar_about_title: Ante interdum
 sidebar_mini_1_image: images/pic07.jpg
 sidebar_mini_1_text: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.
@@ -153,61 +159,61 @@ footer_text: "&copy; IRCN. All rights reserved. &copy; IRCNA. All rights reserve
 menu_html: |-
   <ul>
 
-    <li><a href="index.html">Homepage</a></li>
+    <li><a href="index.html">Homepage</a></li>
 
-    <li><a href="/articles/">All Articles</a></li>
+    <li><a href="/articles/">All Articles</a></li>
 
-    <li><a href="/stories/">Latest Stories</a></li>
+    <li><a href="/stories/">Latest Stories</a></li>
 
-    <li><a href="/image-gallery/">IRCNA GALLERY</a></li>
+    <li><a href="/image-gallery/">IRCNA GALLERY</a></li>
 
-    <li>
+    <li>
 
-      <span class="opener">News Topics</span>
+      <span class="opener">News Topics</span>
 
-      <ul>
+      <ul>
 
-        <li><a href="javascript:void(0)">Events</a></li>
+        <li><a href="javascript:void(0)">Events</a></li>
 
-        <li><a href="javascript:void(0)">Local Stories</a></li>
+        <li><a href="javascript:void(0)">Local Stories</a></li>
 
-        <li><a href="javascript:void(0)">Breaking News</a></li>
+        <li><a href="javascript:void(0)">Breaking News</a></li>
 
-        <li><a href="javascript:void(0)">Politics</a></li>
+        <li><a href="javascript:void(0)">Politics</a></li>
 
-      </ul>
+      </ul>
 
-    </li>
+    </li>
 
-    <li><a href="javascript:void(0)">Independent Journalists</a></li>
+    <li><a href="javascript:void(0)">Independent Journalists</a></li>
 
-    <li><a href="javascript:void(0)">Community Connections and Networking</a></li>
+    <li><a href="javascript:void(0)">Community Connections and Networking</a></li>
 
-    <li>
+    <li>
 
-      <span class="opener">Reach Out To Us</span>
+      <span class="opener">Reach Out To Us</span>
 
-      <ul>
+      <ul>
 
-        <li><a href="/contact/">📬 General Contact Form</a></li>
+        <li><a href="/contact/">📬 General Contact Form</a></li>
 
-        <li><a href="/submit-story/">Submit a Story or Interview Request</a></li>
+        <li><a href="/submit-story/">Submit a Story or Interview Request</a></li>
 
-        <li><a href="/apply/">Apply to Join IRCNA (Members & Journalist)</a></li>
+        <li><a href="/apply/">Apply to Join IRCNA (Members & Journalist)</a></li>
 
-        <li><a href="javascript:void(0)">Submit a Tip or Information on Upcoming Events</a></li>
+        <li><a href="javascript:void(0)">Submit a Tip or Information on Upcoming Events</a></li>
 
-        <li><a href="javascript:void(0)">Inquire or Request Removal/Credentials of Certain Content on IRCNA</a></li>
+        <li><a href="javascript:void(0)">Inquire or Request Removal/Credentials of Certain Content on IRCNA</a></li>
 
-      </ul>
+      </ul>
 
-    </li>
+    </li>
 
-    <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
+    <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
 
-    <li><a href="javascript:void(0)">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+    <li><a href="javascript:void(0)">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
 
-    <li><a href="javascript:void(0)">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
+    <li><a href="javascript:void(0)">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
 
   </ul>
 social_icons_html: |-
@@ -215,3 +221,4 @@ social_icons_html: |-
     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+  </ul>
