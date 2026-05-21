@@ -1,0 +1,14 @@
+- title: "Ante interdum"
+  description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+  images:
+    - /images/pic07.jpg
+
+- title: "Nulla amet dolore"
+  description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+  images:
+    - /images/pic08.jpg
+
+- title: "Tempus ullamcorper"
+  description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+  images:
+    - /images/pic09.jpg
