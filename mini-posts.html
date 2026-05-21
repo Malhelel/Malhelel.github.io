@@ -11,16 +11,23 @@ permalink: /mini-posts/
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<style>
+		/* --- Carousel --- */
 		.carousel { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16/10; }
 		.carousel .slides { display: flex; scroll-snap-type: x mandatory; overflow-x: auto; scroll-behavior: smooth; }
 		.carousel .slides img { scroll-snap-align: start; flex: none; width: 100%; object-fit: cover; }
-		.carousel .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; padding: 0.5em; text-decoration: none; z-index: 10; }
+		.carousel .arrow { position: absolute; top: 50%; transform: translateY(-50%);
+			background: rgba(0,0,0,0.5); color: white; padding: 0.5em; text-decoration: none;
+			z-index: 10; cursor: pointer; }
 		.carousel .arrow.left { left: 0; }
 		.carousel .arrow.right { right: 0; }
-		.lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index:9999; text-align:center; }
-		.lightbox:target { display:block; }
-		.lightbox img { max-width:90%; max-height:90%; margin-top:2%; }
-		.lightbox .close { position:absolute; top:20px; right:40px; color:white; font-size:40px; text-decoration:none; }
+
+		/* --- Lightbox (JS-driven) --- */
+		.lightbox-overlay { display: none; position: fixed; top: 0; left: 0;
+			width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;
+			text-align: center; }
+		.lightbox-overlay img { max-width: 90%; max-height: 90%; margin-top: 2%; }
+		.lightbox-overlay .close { position: absolute; top: 20px; right: 40px;
+			color: white; font-size: 40px; text-decoration: none; cursor: pointer; }
 	</style>
 </head>
 <body class="is-preload">
@@ -42,22 +49,23 @@ permalink: /mini-posts/
 		<header class="major"><h1>Mini Posts</h1></header>
 		<div class="posts">
 			{% for post in site.data.mini_posts.posts %}
+			{% assign post_index = forloop.index %}
 			<article>
-				<div class="carousel">
+				<div class="carousel" id="carousel-{{ post_index }}">
 					{% if post.images.size > 1 %}
-					<a href="#slide-{{ forloop.index }}-{{ forloop.parentloop.index }}-next" class="arrow left">&#10094;</a>
-					<a href="#slide-{{ forloop.index }}-{{ forloop.parentloop.index }}-prev" class="arrow right">&#10095;</a>
+					<span class="arrow left" onclick="scrollCarousel('{{ post_index }}', -1)">&#10094;</span>
+					<span class="arrow right" onclick="scrollCarousel('{{ post_index }}', 1)">&#10095;</span>
 					{% endif %}
-					<div class="slides" id="slides-{{ forloop.index }}">
+					<div class="slides" id="slides-{{ post_index }}">
 						{% for img in post.images %}
-						<img id="slide-{{ forloop.index }}-{{ forloop.parentloop.index }}" src="{{ img.image }}" alt="{{ post.title }}" />
+						<img src="{{ img.image }}" alt="{{ post.title }}" />
 						{% endfor %}
 					</div>
 				</div>
 				<h3>{{ post.title }}</h3>
 				<p>{{ post.description }}</p>
 				{% for img in post.images %}
-				<a href="#lightbox-{{ forloop.parentloop.index }}-{{ forloop.index }}">View full size</a>
+				<a href="#" onclick="openLightbox('{{ img.image }}'); return false;">View full size</a>
 				{% endfor %}
 			</article>
 			{% endfor %}
@@ -81,19 +89,36 @@ permalink: /mini-posts/
 </div>
 </div>
 
-{% for post in site.data.mini_posts.posts %}
-  {% for img in post.images %}
-  <div id="lightbox-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="{{ img.image }}" alt="{{ post.title }}" />
-  </div>
-  {% endfor %}
-{% endfor %}
+<!-- Lightbox overlay (single, reused) -->
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+	<span class="close" onclick="closeLightbox()">&times;</span>
+	<img id="lightbox-image" src="" alt="" />
+</div>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+	// Carousel scroll
+	function scrollCarousel(postIndex, direction) {
+		var slides = document.getElementById('slides-' + postIndex);
+		if (!slides) return;
+		var imgWidth = slides.querySelector('img').clientWidth;
+		slides.scrollBy({ left: direction * imgWidth, behavior: 'smooth' });
+	}
+
+	// Lightbox
+	function openLightbox(imageUrl) {
+		document.getElementById('lightbox-image').src = imageUrl;
+		document.getElementById('lightbox-overlay').style.display = 'block';
+	}
+	function closeLightbox() {
+		document.getElementById('lightbox-overlay').style.display = 'none';
+		document.getElementById('lightbox-image').src = '';
+	}
+</script>
 </body>
 </html>
