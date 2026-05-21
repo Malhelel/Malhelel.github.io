@@ -50,7 +50,7 @@ permalink: /mini-posts/
 					{% endif %}
 					<div class="slides" id="slides-{{ forloop.index }}">
 						{% for img in post.images %}
-						<img id="slide-{{ forloop.index }}-{{ forloop.parentloop.index }}" src="{{ img }}" alt="{{ post.title }}" />
+						<img id="slide-{{ forloop.index }}-{{ forloop.parentloop.index }}" src="{{ img.image }}" alt="{{ post.title }}" />
 						{% endfor %}
 					</div>
 				</div>
@@ -85,7 +85,7 @@ permalink: /mini-posts/
   {% for img in post.images %}
   <div id="lightbox-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="lightbox">
     <a href="#" class="close">&times;</a>
-    <img src="{{ img }}" alt="{{ post.title }}" />
+    <img src="{{ img.image }}" alt="{{ post.title }}" />
   </div>
   {% endfor %}
 {% endfor %}
