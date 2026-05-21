@@ -95,7 +95,7 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
-     - file: "_data/mini_posts.yml"
+      - file: "_data/mini_posts.yml"
         label: "Mini Posts"
         name: "mini_posts"
         fields:
