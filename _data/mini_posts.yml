@@ -1,3 +1,5 @@
+posts:
+
 title: COP17 IS COMING TO YEREVAN
 description: |-
   In October 2026, Armenia will host one of the world’s most important environmental gatherings — and for the first time, it’s happening in Yerevan. 🇦🇲
@@ -37,3 +39,16 @@ images:
   - image: /images/uploads/SnapInsta.to_703227557_17951330067168707_3818635510674736803_n.jpg
   - image: /images/uploads/SnapInsta.to_701558402_17951330040168707_3775274115119454378_n.jpg
   - image: /images/uploads/SnapInsta.to_698283631_17951330049168707_3669787465521034466_n.jpg
+  
+  - title: "Ante interdum"
+    description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+    images:
+      - /images/pic07.jpg
+  - title: "Nulla amet dolore"
+    description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+    images:
+      - /images/pic08.jpg
+  - title: "Tempus ullamcorper"
+    description: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam."
+    images:
+      - /images/pic09.jpg
