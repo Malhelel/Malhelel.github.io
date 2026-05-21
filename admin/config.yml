@@ -95,17 +95,21 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
-      - file: "_data/mini_posts.yml"
+     - file: "_data/mini_posts.yml"
         label: "Mini Posts"
         name: "mini_posts"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - name: "images"
-            label: "Images"
+          - name: "posts"
+            label: "Mini Posts"
             widget: "list"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - name: "images"
+                label: "Images"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
