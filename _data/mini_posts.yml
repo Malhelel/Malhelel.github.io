@@ -1,104 +1,39 @@
----
-title: Mini Posts
-permalink: /mini-posts/
----
-<!DOCTYPE HTML>
-<html>
-<head>
-	<base href="/">
-	<title>Mini Posts – IRCNA</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-		/* carousel base */
-		.carousel { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16/10; }
-		.carousel .slides { display: flex; scroll-snap-type: x mandatory; overflow-x: auto; scroll-behavior: smooth; }
-		.carousel .slides img { scroll-snap-align: start; flex: none; width: 100%; object-fit: cover; }
-		.carousel .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; padding: 0.5em; text-decoration: none; z-index: 10; }
-		.carousel .arrow.left { left: 0; }
-		.carousel .arrow.right { right: 0; }
-		/* lightbox */
-		.lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index:9999; text-align:center; }
-		.lightbox:target { display:block; }
-		.lightbox img { max-width:90%; max-height:90%; margin-top:2%; }
-		.lightbox .close { position:absolute; top:20px; right:40px; color:white; font-size:40px; text-decoration:none; }
-	</style>
-</head>
-<body class="is-preload">
-<div id="wrapper">
-<div id="main">
-<div class="inner">
+title: COP17 IS COMING TO YEREVAN
+description: |-
+  In October 2026, Armenia will host one of the world’s most important environmental gatherings — and for the first time, it’s happening in Yerevan. 🇦🇲
 
-	<header id="header">
-		<a href="index.html" class="logo">
-			{% if site.data.homepage.logo_image %}
-				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
-			{% endif %}
-			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
-		</a>
-		{{ site.data.homepage.social_icons_html }}
-	</header>
+  COP17 is the UN Biodiversity Conference, where nearly 200 countries meet to negotiate the future of the planet’s ecosystems, species, and genetic diversity. Armenia isn’t just providing the venue — it holds the presidency and will guide these negotiations.
 
-	<section>
-		<header class="major"><h1>Mini Posts</h1></header>
-		<div class="posts">
-			{% for post in site.data.mini_posts %}
-			<article>
-				<!-- carousel -->
-				<div class="carousel">
-					{% if post.images.size > 1 %}
-					<a href="#slide-{{ forloop.index }}-{{ forloop.parentloop.index }}-next" class="arrow left">&#10094;</a>
-					<a href="#slide-{{ forloop.index }}-{{ forloop.parentloop.index }}-prev" class="arrow right">&#10095;</a>
-					{% endif %}
-					<div class="slides" id="slides-{{ forloop.index }}">
-						{% for img in post.images %}
-						<img id="slide-{{ forloop.index }}-{{ forloop.parentloop.index }}" src="{{ img }}" alt="{{ post.title }}" />
-						{% endfor %}
-					</div>
-				</div>
-				<h3>{{ post.title }}</h3>
-				<p>{{ post.description }}</p>
-				<!-- lightbox links for each image -->
-				{% for img in post.images %}
-				<a href="#lightbox-{{ forloop.parentloop.index }}-{{ forloop.index }}">View full size</a>
-				{% endfor %}
-			</article>
-			{% endfor %}
-		</div>
-	</section>
+  Swipe through to understand:
+  ➡️ What COP17 actually is
+  ➡️ Why Armenia was chosen
+  ➡️ The Leaders’ Summit before the conference
+  ➡️ What’s at stake — for the world and for Armenia
+  ➡️ The state of global progress (and the gaps)
+  ➡️ Key issues that will define the negotiations
+  ➡️ Armenia’s own biodiversity commitments
+  ➡️ How IRCNA will cover it all
 
-</div>
-</div>
+  This is the kind of story IRCNA was built for: complex, consequential, and too often reported without local context. We’re preparing months of coverage — and we want your questions to shape it.
 
-<div id="sidebar">
-<div class="inner">
-	<section id="search" class="alt">
-		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
-	</section>
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		{{ site.data.homepage.menu_html }}
-	</nav>
-	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
-</div>
-</div>
-</div>
+  What do you want to understand about COP17? What worries you about Armenia’s environment? Drop it in the comments or send a voice note to our tip line. Your curiosity becomes our coverage.
 
-<!-- lightbox overlays -->
-{% for post in site.data.mini_posts %}
-  {% for img in post.images %}
-  <div id="lightbox-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="{{ img }}" alt="{{ post.title }}" />
-  </div>
-  {% endfor %}
-{% endfor %}
+  📩 Signal: Mikael.yamiosei@gmail.com
+  🔗 More resources at: Malhelel.github.io/contact
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+  #COP17 #Yerevan #Biodiversity #CBDCOP17 #leadersfornature
+images:
+  - image: /images/uploads/SnapInsta.to_702911429_17951329941168707_3647707275814292475_n.jpg
+  - image: /images/uploads/SnapInsta.to_700890378_17951329959168707_4465422852667240088_n.jpg
+  - image: /images/uploads/SnapInsta.to_703242289_17951329932168707_6722119970252286324_n.jpg
+  - image: /images/uploads/SnapInsta.to_701756605_17951329974168707_6345000604391908394_n.jpg
+  - image: /images/uploads/SnapInsta.to_703120468_17951329977168707_4367118570664690904_n.jpg
+  - image: /images/uploads/SnapInsta.to_702090129_17951329950168707_4744066333341804925_n.jpg
+  - image: /images/uploads/SnapInsta.to_702991291_17951330031168707_7326050521934126290_n.jpg
+  - image: /images/uploads/SnapInsta.to_702590037_17951330016168707_6192640892049832579_n.jpg
+  - image: /images/uploads/SnapInsta.to_703519879_17951330070168707_7743719813589442364_n.jpg
+  - image: /images/uploads/SnapInsta.to_701686840_17951330094168707_8810661577741005982_n.jpg
+  - image: /images/uploads/SnapInsta.to_698283611_17951330079168707_7342885479038407924_n.jpg
+  - image: /images/uploads/SnapInsta.to_703227557_17951330067168707_3818635510674736803_n.jpg
+  - image: /images/uploads/SnapInsta.to_701558402_17951330040168707_3775274115119454378_n.jpg
+  - image: /images/uploads/SnapInsta.to_698283631_17951330049168707_3669787465521034466_n.jpg
