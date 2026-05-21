@@ -116,7 +116,6 @@ menu_html: |-
   </ul>
 social_icons_html: |-
   <ul class="icons">
-    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+    <li><a href="https://www.facebook.com/share/1DBQ73XmxX/?mibextid=wwXIfr" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+    <li><a href="https://www.instagram.com/ircn_arm?igsh=eXlxbHliczF4dmIz&utm_source=qr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
   </ul>
