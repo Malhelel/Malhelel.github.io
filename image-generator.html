@@ -12,15 +12,19 @@ permalink: /image-generator/
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		#auth-section, #generator-section { max-width: 900px; margin: 2em auto; }
+		#auth-section, #generator-section { max-width: 700px; margin: 2em auto; }
 		#auth-section input { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
 		.error { color: #c00; margin-top: 0.5em; }
-		.perchance-wrapper { width: 100%; height: 85vh; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; margin: 1.5em 0; }
-		.perchance-wrapper iframe { width: 100%; height: 100%; border: none; }
+		#result-image { max-width: 100%; margin-top: 1.5em; border-radius: 6px; display: none; }
+		#loading { display: none; text-align: center; margin: 2em 0; }
+		.spinner { border: 4px solid #ddd; border-top: 4px solid #e44; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1em; }
+		@keyframes spin { to { transform: rotate(360deg); } }
+		#error-msg { color: #c00; margin-top: 0.5em; display: none; }
+		#download-section { display: none; margin-top: 1em; }
+		#logout-btn { float: right; margin-bottom: 1em; }
 		.disclaimer-box { background: #fff9e6; border-left: 4px solid #e6c300; padding: 1em 1.2em; border-radius: 4px; margin: 1.5em 0; font-size: 0.9em; color: #5c4a00; }
 		.disclaimer-box p { margin: 0 0 0.5em; }
 		.disclaimer-box p:last-child { margin-bottom: 0; }
-		#logout-btn { float: right; margin-bottom: 1em; }
 	</style>
 </head>
 <body class="is-preload">
@@ -38,10 +42,10 @@ permalink: /image-generator/
 		{{ site.data.homepage.social_icons_html }}
 	</header>
 
-	<!-- LOGIN WALL (shown when NOT logged in) -->
+	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Journalist Login</h2>
-		<p>This tool is restricted to approved IRCNA journalists. Please sign in to access the AI image generator.</p>
+		<p>This tool is restricted to approved IRCNA journalists. Please sign in to access the on‑site AI image generator.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -54,20 +58,53 @@ permalink: /image-generator/
 	<div id="generator-section" style="display:none;">
 		<header class="major">
 			<h1>AI Image Generator <button id="logout-btn" class="button">Logout</button></h1>
-			<p>Describe the image you want, and the AI will create it. Free, unlimited, and unrestricted — ideal for article illustrations, thumbnails, and creative visual journalism.</p>
+			<p>Type a prompt, choose a model, and generate an image directly on this page. Powered by Pollinations.ai — free, unlimited, and hosted right here.</p>
 		</header>
 
-		<div class="perchance-wrapper">
-			<iframe src="https://null.perchance.org/text2image-generator" title="AI Image Generator">
-				<p>Your browser does not support iframes. <a href="https://perchance.org/text2image-generator" target="_blank">Open the generator directly</a>.</p>
-			</iframe>
+		<form id="generate-form">
+			<label for="prompt">Prompt</label>
+			<input type="text" id="prompt" placeholder="e.g. A journalist typing on a laptop in Yerevan at sunset" required />
+
+			<label for="model">Model</label>
+			<select id="model">
+				<option value="flux">Flux (photorealistic)</option>
+				<option value="turbo">Turbo (fast)</option>
+			</select>
+
+			<label for="width">Width</label>
+			<select id="width">
+				<option value="1024" selected>1024px</option>
+				<option value="512">512px</option>
+				<option value="768">768px</option>
+			</select>
+
+			<label for="height">Height</label>
+			<select id="height">
+				<option value="1024" selected>1024px</option>
+				<option value="512">512px</option>
+				<option value="768">768px</option>
+			</select>
+
+			<button type="submit" class="button primary">Generate Image</button>
+		</form>
+
+		<div id="loading">
+			<div class="spinner"></div>
+			<p>Generating your image… this may take a few seconds.</p>
+		</div>
+
+		<p id="error-msg"></p>
+
+		<img id="result-image" src="" alt="Generated image" />
+
+		<div id="download-section">
+			<a id="download-link" href="#" class="button" download="ircna-generated-image.jpg">⬇ Download Image</a>
 		</div>
 
 		<div class="disclaimer-box">
 			<p><strong>⚠️ Journalist Advisory</strong></p>
-			<p>This tool is powered by <strong>Perchance.org</strong>, a free community platform built on Stable Diffusion. IRCNA does not monitor, restrict, or endorse any imagery created here. Journalists are trusted to use this tool in accordance with their own professional ethics and applicable laws.</p>
-			<p>AI-generated images <strong>cannot be copyrighted</strong> under current U.S. and international law. By using this generator, you agree to the Stable Diffusion <a href="https://github.com/Stability-AI/generative-models/blob/main/LICENSE" target="_blank">open license terms</a>, which prohibit generating verifiably false information with intent to harm, exploiting minors, and certain other use‑based restrictions. Full terms are linked above.</p>
-			<p>Generated images may be saved by right‑clicking and selecting "Save image as…" or by using the download button within the generator.</p>
+			<p>This tool uses the open‑source Pollinations.ai API. IRCNA does not monitor, restrict, or endorse any imagery created here. Journalists are trusted to use this tool in accordance with their own professional ethics and applicable laws.</p>
+			<p>AI‑generated images cannot be copyrighted. By using this generator, you agree to the Stable Diffusion open license terms.</p>
 		</div>
 	</div>
 
@@ -135,7 +172,6 @@ permalink: /image-generator/
 			const allowedRef = collection(db, 'allowed_journalists');
 			const q = query(allowedRef, where('email', '==', user.email));
 			const snapshot = await getDocs(q);
-
 			if (snapshot.empty) {
 				authSection.style.display = 'block';
 				generatorSection.style.display = 'none';
@@ -148,6 +184,51 @@ permalink: /image-generator/
 			authSection.style.display = 'block';
 			generatorSection.style.display = 'none';
 		}
+	});
+
+	// ---------- IMAGE GENERATION ----------
+	const generateForm = document.getElementById('generate-form');
+	const promptInput = document.getElementById('prompt');
+	const modelSelect = document.getElementById('model');
+	const widthSelect = document.getElementById('width');
+	const heightSelect = document.getElementById('height');
+	const resultImg = document.getElementById('result-image');
+	const loadingDiv = document.getElementById('loading');
+	const errorMsg = document.getElementById('error-msg');
+	const downloadSection = document.getElementById('download-section');
+	const downloadLink = document.getElementById('download-link');
+
+	generateForm.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const prompt = promptInput.value.trim();
+		if (!prompt) return;
+
+		const model = modelSelect.value;
+		const width = widthSelect.value;
+		const height = heightSelect.value;
+
+		resultImg.style.display = 'none';
+		errorMsg.style.display = 'none';
+		downloadSection.style.display = 'none';
+		loadingDiv.style.display = 'block';
+
+		const encodedPrompt = encodeURIComponent(prompt);
+		const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?model=${model}&width=${width}&height=${height}&nologo=true&seed=${Math.floor(Math.random() * 100000)}`;
+
+		const testImg = new Image();
+		testImg.onload = function() {
+			resultImg.src = imageUrl;
+			resultImg.style.display = 'block';
+			loadingDiv.style.display = 'none';
+			downloadLink.href = imageUrl;
+			downloadSection.style.display = 'block';
+		};
+		testImg.onerror = function() {
+			loadingDiv.style.display = 'none';
+			errorMsg.textContent = 'Failed to generate image. Please try a different prompt or check your connection.';
+			errorMsg.style.display = 'block';
+		};
+		testImg.src = imageUrl;
 	});
 </script>
 
