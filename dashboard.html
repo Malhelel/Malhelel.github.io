@@ -1,0 +1,209 @@
+---
+title: Journalist Dashboard
+permalink: /dashboard/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Journalist Dashboard – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		#auth-section, #dashboard-section { max-width: 500px; margin: 2em auto; }
+		#auth-section input { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
+		.error { color: #c00; margin-top: 0.5em; }
+		.post-card { background: #f9f9f9; padding: 1.2em; margin-bottom: 1em; border-radius: 4px; }
+		.post-card h3 { margin-top: 0; }
+		.logout-btn { float: right; }
+	</style>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header">
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<section>
+		<!-- LOGIN / REGISTER (shown when NOT logged in) -->
+		<div id="auth-section">
+			<h2>Journalist Login</h2>
+			<form id="login-form">
+				<input type="email" id="login-email" placeholder="Email" required />
+				<input type="password" id="login-password" placeholder="Password" required />
+				<button type="submit" class="button primary">Sign In</button>
+				<button type="button" id="show-register" class="button">Create Account</button>
+				<p class="error" id="login-error"></p>
+			</form>
+
+			<form id="register-form" style="display:none;">
+				<h3>Register</h3>
+				<input type="email" id="register-email" placeholder="Email" required />
+				<input type="password" id="register-password" placeholder="Password (min 6 characters)" required />
+				<button type="submit" class="button primary">Register</button>
+				<button type="button" id="show-login" class="button">Back to Login</button>
+				<p class="error" id="register-error"></p>
+			</form>
+		</div>
+
+		<!-- DASHBOARD (shown when logged in) -->
+		<div id="dashboard-section" style="display:none;">
+			<h2>Private Articles <button id="logout-btn" class="button logout-btn">Logout</button></h2>
+			<div id="posts-container">
+				<p>Loading…</p>
+			</div>
+		</div>
+	</section>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div>
+</div>
+</div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
+	import { getFirestore, collection, query, orderBy, getDocs } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		authDomain: "ircna-dashboard.firebaseapp.com",
+		projectId: "ircna-dashboard",
+		storageBucket: "ircna-dashboard.firebasestorage.app",
+		messagingSenderId: "529973479613",
+		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		measurementId: "G-L91C0B65LC"
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const auth = getAuth(app);
+	const db = getFirestore(app);
+
+	// ---- UI elements ----
+	const authSection = document.getElementById('auth-section');
+	const dashboardSection = document.getElementById('dashboard-section');
+	const loginForm = document.getElementById('login-form');
+	const registerForm = document.getElementById('register-form');
+	const showRegister = document.getElementById('show-register');
+	const showLogin = document.getElementById('show-login');
+	const loginError = document.getElementById('login-error');
+	const registerError = document.getElementById('register-error');
+	const logoutBtn = document.getElementById('logout-btn');
+	const postsContainer = document.getElementById('posts-container');
+
+	// ---- Toggle between login and register forms ----
+	showRegister.addEventListener('click', () => {
+		loginForm.style.display = 'none';
+		registerForm.style.display = 'block';
+	});
+	showLogin.addEventListener('click', () => {
+		registerForm.style.display = 'none';
+		loginForm.style.display = 'block';
+	});
+
+	// ---- Register ----
+	registerForm.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('register-email').value;
+		const password = document.getElementById('register-password').value;
+		registerError.textContent = '';
+		try {
+			await createUserWithEmailAndPassword(auth, email, password);
+			// onAuthStateChanged will automatically show the dashboard
+		} catch (err) {
+			registerError.textContent = err.message;
+		}
+	});
+
+	// ---- Login ----
+	loginForm.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('login-email').value;
+		const password = document.getElementById('login-password').value;
+		loginError.textContent = '';
+		try {
+			await signInWithEmailAndPassword(auth, email, password);
+			// onAuthStateChanged will automatically show the dashboard
+		} catch (err) {
+			loginError.textContent = err.message;
+		}
+	});
+
+	// ---- Logout ----
+	logoutBtn.addEventListener('click', async () => {
+		await signOut(auth);
+	});
+
+	// ---- Listen for auth state changes ----
+	onAuthStateChanged(auth, async (user) => {
+		if (user) {
+			// Logged in
+			authSection.style.display = 'none';
+			dashboardSection.style.display = 'block';
+			loadPrivatePosts();
+		} else {
+			// Logged out
+			authSection.style.display = 'block';
+			dashboardSection.style.display = 'none';
+		}
+	});
+
+	// ---- Load private posts from Firestore ----
+	async function loadPrivatePosts() {
+		postsContainer.innerHTML = '<p>Loading…</p>';
+		try {
+			const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+			const snapshot = await getDocs(q);
+			if (snapshot.empty) {
+				postsContainer.innerHTML = '<p>No private articles yet.</p>';
+				return;
+			}
+			let html = '';
+			snapshot.forEach(doc => {
+				const data = doc.data();
+				html += `
+					<div class="post-card">
+						<h3>${data.title || 'Untitled'}</h3>
+						<p><small>${data.date || ''}</small></p>
+						<p>${data.body || ''}</p>
+					</div>
+				`;
+			});
+			postsContainer.innerHTML = html;
+		} catch (err) {
+			postsContainer.innerHTML = `<p class="error">Error loading posts: ${err.message}</p>`;
+		}
+	}
+</script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
