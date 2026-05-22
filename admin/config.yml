@@ -231,7 +231,6 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-
   - name: "posts"
     label: "Articles"
     folder: "_posts"
