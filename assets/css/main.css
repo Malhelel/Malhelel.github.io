@@ -2273,6 +2273,22 @@ button,
     padding-top: 0; }
 /* Responsive images – scale down on smaller screens */
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    height: auto !important;
 }
+
+/* Ensure carousel slides also respect container width */
+.carousel .slides img,
+.lightbox-overlay img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover; /* maintain aspect ratio in carousel */
+}
+
+/* For images inside the main column */
+#main img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
