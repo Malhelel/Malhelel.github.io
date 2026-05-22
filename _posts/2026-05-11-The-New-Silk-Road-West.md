@@ -1,6 +1,7 @@
 ---
-title: The New Silk Road West
+title: '"The New Silk Road West"'
 date: 2026-05-11T22:31:00
+image: /images/uploads/Gemini_Generated_Image_ososueososueosos.png
 layout: post
 ---
 
