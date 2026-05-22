@@ -106,10 +106,12 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - name: "images"
-                label: "Images"
+                label: "Media Items"
                 widget: "list"
                 fields:
-                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Media Type", name: "type", widget: "select", options: ["image", "video"], default: "image" }
+                  - { label: "Video URL", name: "video_url", widget: "string", required: false }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
