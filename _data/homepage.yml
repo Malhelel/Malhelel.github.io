@@ -59,7 +59,19 @@ menu_html: |-
 
     <li><a href="index.html">Homepage</a></li>
 
-  <li><a href="/dashboard/"> Journalist Dashboard</a></li>
+  <li>
+
+        <span class="opener">IRCNA Member Tools</span>
+
+      <ul>
+
+       <li><a href="/dashboard/"> Journalist Dashboard</a></li>
+
+       <li><a href="/image-generator/"> Member Tools</a></li>
+
+  </ul>
+
+  </li>
 
     <li><a href="/articles/">All Articles</a></li>
 
