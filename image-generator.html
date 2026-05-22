@@ -1,0 +1,83 @@
+---
+title: AI Image Generator
+permalink: /image-generator/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>AI Image Generator – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		#generator-section { max-width: 900px; margin: 2em auto; }
+		.perchance-wrapper { width: 100%; height: 85vh; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; margin: 1.5em 0; }
+		.perchance-wrapper iframe { width: 100%; height: 100%; border: none; }
+		.disclaimer-box { background: #fff9e6; border-left: 4px solid #e6c300; padding: 1em 1.2em; border-radius: 4px; margin: 1.5em 0; font-size: 0.9em; color: #5c4a00; }
+		.disclaimer-box p { margin: 0 0 0.5em; }
+		.disclaimer-box p:last-child { margin-bottom: 0; }
+	</style>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header">
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<section id="generator-section">
+		<header class="major">
+			<h1>AI Image Generator</h1>
+			<p>Describe the image you want, and the AI will create it. Free, unlimited, and unrestricted — ideal for article illustrations, thumbnails, and creative visual journalism.</p>
+		</header>
+
+		<!-- Perchance embed -->
+		<div class="perchance-wrapper">
+			<iframe src="https://null.perchance.org/text2image-generator" title="AI Image Generator">
+				<p>Your browser does not support iframes. <a href="https://perchance.org/text2image-generator" target="_blank">Open the generator directly</a>.</p>
+			</iframe>
+		</div>
+
+		<!-- Disclaimer -->
+		<div class="disclaimer-box">
+			<p><strong>⚠️ Journalist Advisory</strong></p>
+			<p>This tool is powered by <strong>Perchance.org</strong>, a free community platform built on Stable Diffusion. IRCNA does not monitor, restrict, or endorse any imagery created here. Journalists are trusted to use this tool in accordance with their own professional ethics and applicable laws.</p>
+			<p>AI-generated images <strong>cannot be copyrighted</strong> under current U.S. and international law. By using this generator, you agree to the Stable Diffusion <a href="https://github.com/Stability-AI/generative-models/blob/main/LICENSE" target="_blank">open license terms</a>, which prohibit generating verifiably false information with intent to harm, exploiting minors, and certain other use‑based restrictions. Full terms are linked above.</p>
+			<p>Generated images may be saved by right‑clicking and selecting "Save image as…" or by using the download button within the generator.</p>
+		</div>
+	</section>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
