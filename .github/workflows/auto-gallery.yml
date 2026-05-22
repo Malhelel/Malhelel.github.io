@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'images/uploads/**'
+  workflow_dispatch:   # <-- this adds the manual button
 
 jobs:
   update-gallery:
