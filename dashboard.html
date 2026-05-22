@@ -12,9 +12,14 @@ permalink: /dashboard/
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		#auth-section, #dashboard-section { max-width: 500px; margin: 2em auto; }
+		#auth-section, #dashboard-section { max-width: 700px; margin: 2em auto; }
 		#auth-section input { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
 		.error { color: #c00; margin-top: 0.5em; }
+		.tabs { display: flex; gap: 0.5em; margin-bottom: 1.5em; border-bottom: 2px solid #ddd; }
+		.tab { padding: 0.6em 1.2em; cursor: pointer; background: none; border: none; font-weight: bold; opacity: 0.6; }
+		.tab.active { opacity: 1; border-bottom: 3px solid #e44; }
+		.tab-pane { display: none; }
+		.tab-pane.active { display: block; }
 		.post-card { background: #f9f9f9; padding: 1.2em; margin-bottom: 1em; border-radius: 4px; }
 		.post-card h3 { margin-top: 0; }
 		.logout-btn { float: right; }
@@ -49,9 +54,28 @@ permalink: /dashboard/
 
 		<!-- DASHBOARD -->
 		<div id="dashboard-section" style="display:none;">
-			<h2>Private Articles <button id="logout-btn" class="button logout-btn">Logout</button></h2>
-			<div id="posts-container">
-				<p>Loading…</p>
+			<h2>Newsroom Dashboard <button id="logout-btn" class="button logout-btn">Logout</button></h2>
+
+			<!-- Tabs -->
+			<div class="tabs">
+				<button class="tab active" onclick="switchTab('announcements')">Announcements</button>
+				<button class="tab" onclick="switchTab('guidelines')">Guidelines</button>
+				<button class="tab" onclick="switchTab('directory')">Directory</button>
+			</div>
+
+			<!-- Announcements Pane -->
+			<div id="announcements-pane" class="tab-pane active">
+				<div id="announcements-container"><p>Loading…</p></div>
+			</div>
+
+			<!-- Guidelines Pane -->
+			<div id="guidelines-pane" class="tab-pane">
+				<div id="guidelines-container"><p>Loading…</p></div>
+			</div>
+
+			<!-- Directory Pane -->
+			<div id="directory-pane" class="tab-pane">
+				<div id="directory-container"><p>Loading…</p></div>
 			</div>
 		</div>
 	</section>
@@ -77,7 +101,7 @@ permalink: /dashboard/
 <script type="module">
 	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
 	import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
-	import { getFirestore, collection, query, where, getDocs, orderBy } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+	import { getFirestore, collection, query, where, orderBy, getDocs } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
 
 	const firebaseConfig = {
 		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
@@ -93,13 +117,14 @@ permalink: /dashboard/
 	const auth = getAuth(app);
 	const db = getFirestore(app);
 
+	// UI elements
 	const authSection = document.getElementById('auth-section');
 	const dashboardSection = document.getElementById('dashboard-section');
 	const loginForm = document.getElementById('login-form');
 	const loginError = document.getElementById('login-error');
 	const logoutBtn = document.getElementById('logout-btn');
-	const postsContainer = document.getElementById('posts-container');
 
+	// Login
 	loginForm.addEventListener('submit', async (e) => {
 		e.preventDefault();
 		const email = document.getElementById('login-email').value;
@@ -112,26 +137,29 @@ permalink: /dashboard/
 		}
 	});
 
+	// Logout
 	logoutBtn.addEventListener('click', async () => {
 		await signOut(auth);
 	});
 
+	// Auth state listener
 	onAuthStateChanged(auth, async (user) => {
 		if (user) {
 			authSection.style.display = 'none';
 			dashboardSection.style.display = 'block';
 
-			// Check if user's email is in the allowed list
+			// Check allowed list
 			const allowedRef = collection(db, 'allowed_journalists');
 			const q = query(allowedRef, where('email', '==', user.email));
 			const snapshot = await getDocs(q);
 
 			if (snapshot.empty) {
-				// Not approved
-				postsContainer.innerHTML = '<p class="error">Access denied. Your email is not yet approved. Contact the site admin.</p>';
+				document.querySelectorAll('.tab-pane').forEach(p => p.innerHTML = '<p class="error">Access denied. Your email is not yet approved.</p>');
 			} else {
-				// Approved – load private articles
-				loadPrivatePosts();
+				// Load all three tabs
+				loadAnnouncements();
+				loadGuidelines();
+				loadDirectory();
 			}
 		} else {
 			authSection.style.display = 'block';
@@ -139,29 +167,76 @@ permalink: /dashboard/
 		}
 	});
 
-	async function loadPrivatePosts() {
-		postsContainer.innerHTML = '<p>Loading…</p>';
+	// Tab switching
+	window.switchTab = function(tabName) {
+		document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+		document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+		document.getElementById(tabName + '-pane').classList.add('active');
+		document.querySelectorAll('.tab').forEach(t => {
+			if (t.textContent.toLowerCase().includes(tabName)) t.classList.add('active');
+		});
+	};
+
+	// Load Announcements
+	async function loadAnnouncements() {
+		const container = document.getElementById('announcements-container');
 		try {
-			const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+			const q = query(collection(db, 'announcements'), orderBy('date', 'desc'));
 			const snapshot = await getDocs(q);
 			if (snapshot.empty) {
-				postsContainer.innerHTML = '<p>No private articles yet.</p>';
+				container.innerHTML = '<p>No announcements yet.</p>';
 				return;
 			}
 			let html = '';
 			snapshot.forEach(doc => {
 				const data = doc.data();
-				html += `
-					<div class="post-card">
-						<h3>${data.title || 'Untitled'}</h3>
-						<p><small>${data.date || ''}</small></p>
-						<p>${data.body || ''}</p>
-					</div>
-				`;
+				html += `<div class="post-card"><h3>${data.title}</h3><p><small>${data.date}</small></p><p>${data.body}</p></div>`;
 			});
-			postsContainer.innerHTML = html;
+			container.innerHTML = html;
 		} catch (err) {
-			postsContainer.innerHTML = `<p class="error">Error loading posts: ${err.message}</p>`;
+			container.innerHTML = `<p class="error">Error: ${err.message}</p>`;
+		}
+	}
+
+	// Load Guidelines
+	async function loadGuidelines() {
+		const container = document.getElementById('guidelines-container');
+		try {
+			const q = query(collection(db, 'guidelines'), orderBy('category'));
+			const snapshot = await getDocs(q);
+			if (snapshot.empty) {
+				container.innerHTML = '<p>No guidelines yet.</p>';
+				return;
+			}
+			let html = '';
+			snapshot.forEach(doc => {
+				const data = doc.data();
+				html += `<div class="post-card"><h3>${data.title}</h3><p><em>${data.category}</em></p><p>${data.body}</p></div>`;
+			});
+			container.innerHTML = html;
+		} catch (err) {
+			container.innerHTML = `<p class="error">Error: ${err.message}</p>`;
+		}
+	}
+
+	// Load Directory
+	async function loadDirectory() {
+		const container = document.getElementById('directory-container');
+		try {
+			const q = query(collection(db, 'directory'), orderBy('name'));
+			const snapshot = await getDocs(q);
+			if (snapshot.empty) {
+				container.innerHTML = '<p>No contacts yet.</p>';
+				return;
+			}
+			let html = '';
+			snapshot.forEach(doc => {
+				const data = doc.data();
+				html += `<div class="post-card"><h3>${data.name}</h3><p><strong>${data.role}</strong></p><p>${data.bio || ''}</p><p>✉️ ${data.email} | 📞 ${data.phone}</p></div>`;
+			});
+			container.innerHTML = html;
+		} catch (err) {
+			container.innerHTML = `<p class="error">Error: ${err.message}</p>`;
 		}
 	}
 </script>
