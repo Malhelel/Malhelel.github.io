@@ -17,7 +17,7 @@
 	<header id="header">
 		<a href="index.html" class="logo">
 			{% if site.data.homepage.logo_image %}
-				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
 			{% endif %}
 			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
 		</a>
@@ -141,23 +141,27 @@
 		{{ site.data.homepage.menu_html }}
 	</nav>
 
+	<!-- Dynamic Mini‑Posts from _data/mini_posts.yml (shows 3 most recent) -->
 	<section>
 		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
 		<div class="mini-posts">
+			{% assign recent = site.data.mini_posts.posts | reverse %}
+			{% for post in recent limit:3 %}
 			<article>
-				<a href="/mini-posts/" class="image"><img src="{{ site.data.homepage.sidebar_mini_1_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_1_text }}</p>
+				<a href="/mini-posts/" class="image">
+					{% if post.images[0].image %}
+					<img src="{{ post.images[0].image }}" alt="{{ post.title }}" />
+					{% else %}
+					<img src="images/pic01.jpg" alt="" />
+					{% endif %}
+				</a>
+				<p>{{ post.title }}</p>
 			</article>
-			<article>
-				<a href="/mini-post/" class="image"><img src="{{ site.data.homepage.sidebar_mini_2_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_2_text }}</p>
-			</article>
-			<article>
-				<a href="/mini-post/" class="image"><img src="{{ site.data.homepage.sidebar_mini_3_image }}" alt="" /></a>
-				<p>{{ site.data.homepage.sidebar_mini_3_text }}</p>
-			</article>
+			{% endfor %}
 		</div>
-		<ul class="actions"><li><a href="/mini-posts/" class="button">More</a></li></ul>
+		<ul class="actions">
+			<li><a href="/mini-posts/" class="button">More</a></li>
+		</ul>
 	</section>
 
 	<section>
