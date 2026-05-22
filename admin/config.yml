@@ -89,6 +89,11 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "images"
+            label: "Images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
       - file: "_data/stories.yml"
         label: "Stories"
         name: "stories"
@@ -112,6 +117,114 @@ collections:
                   - { label: "Image", name: "image", widget: "image", required: false }
                   - { label: "Media Type", name: "type", widget: "select", options: ["image", "video"], default: "image" }
                   - { label: "Video URL", name: "video_url", widget: "string", required: false }
+      - file: "_data/events.yml"
+        label: "Events"
+        name: "events"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/local-stories.yml"
+        label: "Local Stories"
+        name: "local_stories"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/breaking-news.yml"
+        label: "Breaking News"
+        name: "breaking_news"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/politics.yml"
+        label: "Politics"
+        name: "politics"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/independent-journalist.yml"
+        label: "Independent Journalists"
+        name: "independent_journalist"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community-connections.yml"
+        label: "Community Connections"
+        name: "community_connections"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/content-removal.yml"
+        label: "Content Removal"
+        name: "content_removal"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/submit-events.yml"
+        label: "Submit Events"
+        name: "submit_events"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/policies.yml"
+        label: "Policies"
+        name: "policies"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/legal.yml"
+        label: "Legal"
+        name: "legal"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
