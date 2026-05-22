@@ -41,6 +41,31 @@
 		</span>
 	</section>
 
+	<!-- Latest Stories (dynamic, auto‑populated from your articles) -->
+	<section>
+		<header class="major">
+			<h2>{{ site.data.homepage.posts_section_title }}</h2>
+		</header>
+		<div class="posts">
+			{% for post in site.posts limit:6 %}
+			<article>
+				<a href="{{ post.url }}" class="image">
+					{% if post.image %}
+					<img src="{{ post.image }}" alt="{{ post.title }}" />
+					{% else %}
+					<img src="images/pic01.jpg" alt="" />
+					{% endif %}
+				</a>
+				<h3>{{ post.title }}</h3>
+				<p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+				<ul class="actions">
+					<li><a href="{{ post.url }}" class="button">More</a></li>
+				</ul>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
+
 	<!-- Our Mission -->
 	<section>
 		<header class="major">
@@ -74,51 +99,6 @@
 					<h3>{{ site.data.homepage.mission_4_title }}</h3>
 					<p>{{ site.data.homepage.mission_4_desc }}</p>
 				</div>
-			</article>
-		</div>
-	</section>
-
-	<!-- Latest Stories (manual, editable, NOW WITH REAL LINKS) -->
-	<section>
-		<header class="major">
-			<h2>{{ site.data.homepage.posts_section_title }}</h2>
-		</header>
-		<div class="posts">
-			<article>
-				<a href="{{ site.data.homepage.post_1_url }}" class="image"><img src="{{ site.data.homepage.post_1_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_1_title }}</h3>
-				<p>{{ site.data.homepage.post_1_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_1_url }}" class="button">More</a></li></ul>
-			</article>
-			<article>
-				<a href="{{ site.data.homepage.post_2_url }}" class="image"><img src="{{ site.data.homepage.post_2_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_2_title }}</h3>
-				<p>{{ site.data.homepage.post_2_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_2_url }}" class="button">More</a></li></ul>
-			</article>
-			<article>
-				<a href="{{ site.data.homepage.post_3_url }}" class="image"><img src="{{ site.data.homepage.post_3_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_3_title }}</h3>
-				<p>{{ site.data.homepage.post_3_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_3_url }}" class="button">More</a></li></ul>
-			</article>
-			<article>
-				<a href="{{ site.data.homepage.post_4_url }}" class="image"><img src="{{ site.data.homepage.post_4_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_4_title }}</h3>
-				<p>{{ site.data.homepage.post_4_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_4_url }}" class="button">More</a></li></ul>
-			</article>
-			<article>
-				<a href="{{ site.data.homepage.post_5_url }}" class="image"><img src="{{ site.data.homepage.post_5_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_5_title }}</h3>
-				<p>{{ site.data.homepage.post_5_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_5_url }}" class="button">More</a></li></ul>
-			</article>
-			<article>
-				<a href="{{ site.data.homepage.post_6_url }}" class="image"><img src="{{ site.data.homepage.post_6_image }}" alt="" /></a>
-				<h3>{{ site.data.homepage.post_6_title }}</h3>
-				<p>{{ site.data.homepage.post_6_excerpt }}</p>
-				<ul class="actions"><li><a href="{{ site.data.homepage.post_6_url }}" class="button">More</a></li></ul>
 			</article>
 		</div>
 	</section>
