@@ -6,21 +6,21 @@ permalink: /stories/
 <html>
 <head>
 	<base href="/">
-	<title>{{ site.data.stories.heading }} – IRCNA</title>
+	<title>Latest Stories – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 </head>
 <body class="is-preload">
 <div id="wrapper">
 <div id="main">
 <div class="inner">
 
-	<!-- Header with logo support -->
 	<header id="header">
 		<a href="index.html" class="logo">
 			{% if site.data.homepage.logo_image %}
-				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
 			{% endif %}
 			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
 		</a>
@@ -28,8 +28,49 @@ permalink: /stories/
 	</header>
 
 	<section>
-		<header class="major"><h1>{{ site.data.stories.heading }}</h1></header>
-		<p>{{ site.data.stories.intro }}</p>
+		<header class="major"><h1>Latest Stories</h1></header>
+		<p>Recent highlights from Local Stories, Events, and Mini Posts.</p>
+
+		<div class="posts">
+			<!-- Local Stories (first 3) -->
+			{% for item in site.data.local-stories.items limit:3 %}
+			<article>
+				{% if item.image %}
+				<a href="{{ item.link | default: '#' }}" class="image"><img src="{{ item.image }}" alt="{{ item.title }}" /></a>
+				{% endif %}
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.description }}</p>
+				{% if item.link %}
+				<ul class="actions"><li><a href="{{ item.link }}" class="button">More</a></li></ul>
+				{% endif %}
+			</article>
+			{% endfor %}
+
+			<!-- Events (first 3) -->
+			{% for item in site.data.events.items limit:3 %}
+			<article>
+				{% if item.image %}
+				<a href="{{ item.link | default: '#' }}" class="image"><img src="{{ item.image }}" alt="{{ item.title }}" /></a>
+				{% endif %}
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.description }}</p>
+				{% if item.link %}
+				<ul class="actions"><li><a href="{{ item.link }}" class="button">More</a></li></ul>
+				{% endif %}
+			</article>
+			{% endfor %}
+
+			<!-- Mini Posts (first 3) -->
+			{% for post in site.data.mini_posts.posts limit:3 %}
+			<article>
+				{% if post.images[0].image %}
+				<a href="#" class="image"><img src="{{ post.images[0].image }}" alt="{{ post.title }}" /></a>
+				{% endif %}
+				<h3>{{ post.title }}</h3>
+				<p>{{ post.description }}</p>
+			</article>
+			{% endfor %}
+		</div>
 	</section>
 
 </div>
@@ -37,8 +78,13 @@ permalink: /stories/
 
 <div id="sidebar">
 <div class="inner">
-	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" id="query" placeholder="Search" /></form></section>
-	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
 	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
 </div>
 </div>
