@@ -225,7 +225,7 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - file: "_data/about.yml"
+      - file: "_data/about.yml"
         label: "About"
         name: "about"
         fields:
