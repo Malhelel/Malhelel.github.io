@@ -1,0 +1,58 @@
+---
+title: Content Removal & Credential Inquiries
+permalink: /content-removal/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Content Removal – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header">
+		<a href="index.html" class="logo">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
+			{% endif %}
+			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<section>
+		<header class="major"><h1>{{ site.data.content-removal.heading }}</h1></header>
+		{{ site.data.content-removal.body | markdownify }}
+	</section>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
