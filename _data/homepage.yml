@@ -87,21 +87,21 @@ menu_html: |-
 
       <ul>
 
-        <li><a href="javascript:void(0)">Events</a></li>
+        <li><a href="/events/">Events</a></li>
 
-        <li><a href="javascript:void(0)">Local Stories</a></li>
+        <li><a href="/local-stories/">Local Stories</a></li>
 
-        <li><a href="javascript:void(0)">Breaking News</a></li>
+        <li><a href="/breaking-news/">Breaking News</a></li>
 
-        <li><a href="javascript:void(0)">Politics</a></li>
+        <li><a href="/politics/">Politics</a></li>
 
       </ul>
 
     </li>
 
-    <li><a href="javascript:void(0)">Independent Journalists</a></li>
+    <li><a href="/independent-journalist/">Independent Journalists</a></li>
 
-    <li><a href="javascript:void(0)">Community Connections and Networking</a></li>
+    <li><a href="/community-connections/">Community Connections and Networking</a></li>
 
     <li>
 
@@ -115,9 +115,9 @@ menu_html: |-
 
         <li><a href="/apply/">Apply to Join IRCNA (Members & Journalist)</a></li>
 
-        <li><a href="javascript:void(0)">Submit a Tip or Information on Upcoming Events</a></li>
+        <li><a href="/submit-events/">Submit a Tip or Information on Upcoming Events</a></li>
 
-        <li><a href="javascript:void(0)">Inquire or Request Removal/Credentials of Certain Content on IRCNA</a></li>
+        <li><a href="/content-removal/">Inquire or Request Removal/Credentials of Certain Content on IRCNA</a></li>
 
       </ul>
 
@@ -125,9 +125,9 @@ menu_html: |-
 
     <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
 
-    <li><a href="javascript:void(0)">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+    <li><a href="/policies/">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
 
-    <li><a href="javascript:void(0)">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
+    <li><a href="/legal/">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
 
   </ul>
 social_icons_html: |-
