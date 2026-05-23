@@ -29,7 +29,7 @@ permalink: /community-connections/
 
 	<section>
 		<header class="major"><h1>{{ site.data.community-connections.heading }}</h1></header>
-		<p>{{ site.data.community-connections.intro }}</p>
+		<p>{{ site.data.community-connections.intro | markdownify}}</p>
 		<div class="posts">
 			{% for item in site.data.community-connections.items %}
 			<article>
