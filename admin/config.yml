@@ -192,7 +192,7 @@ collections:
         name: "community_connections"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
