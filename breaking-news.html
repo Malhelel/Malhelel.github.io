@@ -29,7 +29,9 @@ permalink: /breaking-news/
 
 	<section>
 		<header class="major"><h1>{{ site.data.breaking-news.heading }}</h1></header>
-		<p>{{ site.data.breaking-news.intro }}</p>
+
+		{{ site.data.breaking-news.intro | markdownify }}
+
 		<div class="posts">
 			{% for item in site.data.breaking-news.items %}
 			<article>
