@@ -122,7 +122,7 @@ collections:
         name: "events"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -136,7 +136,7 @@ collections:
         name: "local_stories"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -150,7 +150,7 @@ collections:
         name: "breaking_news"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -164,7 +164,7 @@ collections:
         name: "politics"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -178,7 +178,7 @@ collections:
         name: "independent_journalist"
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Intro Text", name: "intro", widget: "markdown" }
           - name: "items"
             label: "Items"
             widget: "list"
