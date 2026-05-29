@@ -29,7 +29,9 @@ permalink: /politics/
 
 	<section>
 		<header class="major"><h1>{{ site.data.politics.heading }}</h1></header>
-		<p>{{ site.data.politics.intro }}</p>
+
+		{{ site.data.politics.intro | markdownify }}
+
 		<div class="posts">
 			{% for item in site.data.politics.items %}
 			<article>
