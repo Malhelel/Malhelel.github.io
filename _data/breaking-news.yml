@@ -1,7 +1,26 @@
-heading: "Breaking News"
-intro: "Fast‑moving developments as they happen."
+heading: Breaking News
+intro: Fast‑moving developments as they happen.
 items:
-  - title: "Sample Breaking"
-    image: ""
-    description: "Brief description."
-    link: ""
+  - title: ARMENIA'S REPUBLIC DAY | MAY 28, 2026
+    image: /images/uploads/BREAKING NEWS.png
+    description: |-
+      <h1>Armenia Marks Republic Day with Major Military Parade, Mixed Public Reaction</h1>
+
+      <h2>First large-scale parade in over a decade draws thousands to central Yerevan, as a street-level survey reveals strong support alongside deep unease.</h2>
+
+      <blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafafa; font-style: italic;">
+      <strong>Editorial Disclaimer:</strong> IRCNA is a nonpartisan platform. All opinions expressed in this summary are those of the individuals quoted and surveyed. IRCNA does not endorse any political view.
+      </blockquote>
+
+      <p><strong>YEREVAN, 28 May 2026</strong> — Armenia staged its first major Republic Day military parade in over a decade today, drawing thousands to Republic Square to watch columns of troops and newly acquired military hardware, including French-made Bastion armored vehicles and Indian Pinaka rocket launchers.</p>
+
+      <p>The event, which broke from years of more subdued ceremonies, was organized as a display of national self-reliance. But a street-level survey conducted by IRCNA immediately following the parade revealed a public divided.</p>
+
+      <p>Of 62 attendees who agreed to speak, 48 expressed support for the event, often describing it as a necessary show of strength. Fourteen opposed it, with many citing the government’s handling of Armenian prisoners in Azerbaijan and the continuing needs of displaced Artsakh families. Multiple attendees declined to speak at all, citing the tense political climate.</p>
+
+      <p>Quotes gathered at the scene ranged from those who called the parade “great for our future as an independent country” to those who felt it “should not have happened” while hostages remain in Azerbaijan and displaced families remain without adequate support.</p>
+
+      <p>Republic Day commemorates the establishment of the First Republic of Armenia in 1918. This year’s events unfolded against a backdrop of ongoing military modernization and deep public concern over national security and unresolved humanitarian issues.</p>
+
+      <p><em>IRCNA will publish a full, in-depth report with extended interviews and analysis shortly.</em></p>
+    link: /local-stories/
