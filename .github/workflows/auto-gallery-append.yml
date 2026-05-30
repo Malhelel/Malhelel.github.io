@@ -1,0 +1,56 @@
+name: Append new images to Gallery
+
+on:
+  push:
+    paths:
+      - 'images/uploads/**'
+
+permissions:
+  contents: write
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Append new images to gallery
+        run: |
+          # Ensure the gallery file exists with the correct header
+          if [ ! -f _data/gallery.yml ]; then
+            echo "heading: IRCNA Gallery" > _data/gallery.yml
+            echo "intro: Images from the field, events, and community submissions, organized by category." >> _data/gallery.yml
+            echo "items:" >> _data/gallery.yml
+          fi
+
+          # Get list of images already in gallery (extract image paths)
+          existing_images=$(grep -E "^\s+image:" _data/gallery.yml | sed 's/.*image: //' | tr -d '"')
+
+          # Process each newly added image file
+          for img in images/uploads/*.{jpg,jpeg,png,gif,webp}; do
+            [ -f "$img" ] || continue
+            # Check if this image is already in the gallery
+            if echo "$existing_images" | grep -qF "/$img"; then
+              continue
+            fi
+            # Append new item
+            cat >> _data/gallery.yml <<EOF
+          - category: "Uncategorized"
+            title: "$(basename "$img")"
+            image: /$img
+            description: ""
+        EOF
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/gallery.yml
+          if git diff --cached --quiet; then
+            echo "No new images to add."
+          else
+            git commit -m "Auto‑append new images to gallery"
+            git push
+          fi
