@@ -1,7 +1,7 @@
-heading: "Independent Journalists"
-intro: "Profiles and work of freelance reporters collaborating with IRCNA."
+heading: Independent Journalists
+intro: Profiles and work of freelance reporters collaborating with IRCNA.
 items:
-  - title: "Journalist Name"
-    image: ""
-    description: "Bio and focus areas."
-    link: ""
+  - title: Mikael Yamiosei
+    image: /images/uploads/me.png
+    description: Founder and Lead Journalist (25)
+    link: ''
