@@ -11,6 +11,20 @@ permalink: /image-gallery/
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		.gallery-category { margin-bottom: 3em; }
+		.gallery-category h2 { border-bottom: 2px solid #e44; padding-bottom: 0.5em; margin-bottom: 1.5em; }
+		.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5em; }
+		.gallery-item { background: #f9f9f9; border-radius: 8px; overflow: hidden; }
+		.gallery-item img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
+		.gallery-item h3 { margin: 0.8em 0.8em 0.2em; font-size: 1em; }
+		.gallery-item p { margin: 0.2em 0.8em 0.8em; font-size: 0.9em; color: #555; }
+		/* Lightbox overlay styles (reuse from mini‑posts if desired) */
+		.lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.92); z-index: 9999; text-align: center; }
+		.lightbox-overlay img { max-width: 90%; max-height: 90%; margin-top: 2%; }
+		.lightbox-overlay .close { position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; cursor: pointer; text-decoration: none; }
+	</style>
 </head>
 <body class="is-preload">
 <div id="wrapper">
@@ -30,15 +44,22 @@ permalink: /image-gallery/
 	<section>
 		<header class="major"><h1>{{ site.data.gallery.heading }}</h1></header>
 		<p>{{ site.data.gallery.intro }}</p>
-		<div class="posts">
-			{% for img in site.data.gallery.images %}
-			<article>
-				<a href="{{ img.image }}" class="image" target="_blank">
-					<img src="{{ img.image }}" alt="Gallery image" />
-				</a>
-			</article>
-			{% endfor %}
+
+		{% assign items = site.data.gallery.items | group_by: "category" %}
+		{% for group in items %}
+		<div class="gallery-category">
+			<h2>{{ group.name }}</h2>
+			<div class="gallery-grid">
+				{% for item in group.items %}
+				<div class="gallery-item">
+					<img src="{{ item.image }}" alt="{{ item.title }}" onclick="openLightbox('{{ item.image }}')" />
+					<h3>{{ item.title }}</h3>
+					<p>{{ item.description }}</p>
+				</div>
+				{% endfor %}
+			</div>
 		</div>
+		{% endfor %}
 	</section>
 
 </div>
@@ -58,10 +79,26 @@ permalink: /image-gallery/
 </div>
 </div>
 
+<!-- Lightbox overlay -->
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+	<span class="close" onclick="closeLightbox()">&times;</span>
+	<img id="lightbox-image" src="" alt="" />
+</div>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+	function openLightbox(url) {
+		document.getElementById('lightbox-image').src = url;
+		document.getElementById('lightbox-overlay').style.display = 'block';
+	}
+	function closeLightbox() {
+		document.getElementById('lightbox-overlay').style.display = 'none';
+		document.getElementById('lightbox-image').src = '';
+	}
+</script>
 </body>
 </html>
