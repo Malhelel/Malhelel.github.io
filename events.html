@@ -11,6 +11,17 @@ permalink: /events/
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		/* Lightbox overlay (reused from gallery) */
+		.lightbox-overlay { display: none; position: fixed; top: 0; left: 0;
+			width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 9999;
+			text-align: center; }
+		.lightbox-overlay img { max-width: 90%; max-height: 90%; margin-top: 2%; }
+		.lightbox-overlay .close { position: absolute; top: 20px; right: 40px;
+			color: white; font-size: 40px; cursor: pointer; text-decoration: none; }
+		/* Make event images clickable */
+		.event-image { cursor: pointer; }
+	</style>
 </head>
 <body class="is-preload">
 <div id="wrapper">
@@ -36,7 +47,7 @@ permalink: /events/
 			{% for item in site.data.events.items %}
 			<article>
 				{% if item.image %}
-				<a href="{{ item.link | default: '#' }}" class="image"><img src="{{ item.image }}" alt="{{ item.title }}" /></a>
+				<img src="{{ item.image }}" alt="{{ item.title }}" class="event-image" onclick="openLightbox('{{ item.image }}')" />
 				{% endif %}
 				<h3>{{ item.title }}</h3>
 				<p>{{ item.description }}</p>
@@ -65,10 +76,26 @@ permalink: /events/
 </div>
 </div>
 
+<!-- Lightbox overlay (single) -->
+<div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+	<span class="close" onclick="closeLightbox()">&times;</span>
+	<img id="lightbox-image" src="" alt="" />
+</div>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+	function openLightbox(url) {
+		document.getElementById('lightbox-image').src = url;
+		document.getElementById('lightbox-overlay').style.display = 'block';
+	}
+	function closeLightbox() {
+		document.getElementById('lightbox-overlay').style.display = 'none';
+		document.getElementById('lightbox-image').src = '';
+	}
+</script>
 </body>
 </html>
