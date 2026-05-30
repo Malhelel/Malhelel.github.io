@@ -3,13 +3,52 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<title>Independent Reporting and Community Networking in Armenia</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		/* Full‑screen upcoming popup overlay */
+		#upcoming-overlay {
+			display: none; /* hidden by default – shown by JS if enabled */
+			position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.92); z-index: 99999;
+			color: white; overflow-y: auto;
+		}
+		#upcoming-overlay .upcoming-content {
+			max-width: 700px; margin: 5% auto; padding: 2em;
+		}
+		#upcoming-overlay h2 {
+			font-size: 2em; margin-bottom: 1em; border-bottom: 2px solid #e44; padding-bottom: 0.3em;
+		}
+		#upcoming-overlay .close-btn {
+			position: absolute; top: 20px; right: 40px;
+			color: white; font-size: 40px; cursor: pointer; text-decoration: none;
+		}
+		#upcoming-overlay a { color: #e44; }
+		/* Don't show again checkbox */
+		#upcoming-overlay .dont-show {
+			margin-top: 2em; font-size: 0.9em; color: #ccc;
+		}
+	</style>
 </head>
 <body class="is-preload">
+
+<!-- UPCOMING POPUP (full screen) -->
+{% if site.data.upcoming.enabled %}
+<div id="upcoming-overlay">
+	<span class="close-btn" onclick="closeUpcoming()">&times;</span>
+	<div class="upcoming-content">
+		<h2>{{ site.data.upcoming.heading }}</h2>
+		{{ site.data.upcoming.body | markdownify }}
+		<div class="dont-show">
+			<label><input type="checkbox" id="dont-show-checkbox"> Don't show this again</label>
+		</div>
+	</div>
+</div>
+{% endif %}
+
 <div id="wrapper">
 <div id="main">
 <div class="inner">
@@ -162,6 +201,30 @@
 </div>
 </div>
 </div>
+
+<!-- Upcoming popup JavaScript -->
+{% if site.data.upcoming.enabled %}
+<script>
+	(function() {
+		var overlay = document.getElementById('upcoming-overlay');
+		var checkbox = document.getElementById('dont-show-checkbox');
+		// Check if user previously chose "Don't show again"
+		if (localStorage.getItem('ircna-upcoming-dismissed') === 'true') {
+			overlay.style.display = 'none';
+			return;
+		}
+		// Show the popup
+		overlay.style.display = 'block';
+
+		window.closeUpcoming = function() {
+			if (checkbox && checkbox.checked) {
+				localStorage.setItem('ircna-upcoming-dismissed', 'true');
+			}
+			overlay.style.display = 'none';
+		};
+	})();
+</script>
+{% endif %}
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
