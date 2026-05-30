@@ -205,3 +205,7 @@ items:
     title: "ircna-favicon.png"
     image: /images/uploads/ircna-favicon.png
     description: ""
+  - category: "Uncategorized"
+    title: "me.png"
+    image: /images/uploads/me.png
+    description: ""
