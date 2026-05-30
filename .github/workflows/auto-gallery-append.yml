@@ -34,13 +34,11 @@ jobs:
             if echo "$existing_images" | grep -qF "/$img"; then
               continue
             fi
-            # Append new item
-            cat >> _data/gallery.yml <<EOF
-          - category: "Uncategorized"
-            title: "$(basename "$img")"
-            image: /$img
-            description: ""
-        EOF
+            # Append new item using simple echo (no heredoc)
+            echo "  - category: \"Uncategorized\"" >> _data/gallery.yml
+            echo "    title: \"$(basename "$img")\"" >> _data/gallery.yml
+            echo "    image: /$img" >> _data/gallery.yml
+            echo "    description: \"\"" >> _data/gallery.yml
           done
 
       - name: Commit and push if changed
