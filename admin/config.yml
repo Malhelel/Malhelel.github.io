@@ -89,11 +89,14 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
-          - name: "images"
-            label: "Images"
+          - name: "items"
+            label: "Gallery Items"
             widget: "list"
             fields:
+              - { label: "Category", name: "category", widget: "select", options: ["Events", "Protests", "Daily Life", "Culture", "Politics", "Other"] }
+              - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
       - file: "_data/stories.yml"
         label: "Stories"
         name: "stories"
