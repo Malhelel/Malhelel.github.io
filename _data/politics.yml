@@ -1,5 +1,14 @@
 heading: Politics
-intro: Analysis and reporting on Armenian and regional politics.
+intro: |-
+  > <blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafafa; font-style: italic;">
+
+  <strong>IRCNA’s Stance on Political Reporting:</strong> IRCNA is a strictly nonpartisan, community-first platform. We do not report on party politics, political campaigns, or electoral contests. This decision reflects our core belief that attempting to cover every party, perspective, and political viewpoint would inevitably fall short of the fairness and equal platforming our journalism demands. It is impossible to appeal to all opinions, and we will not compromise our integrity by offering selective or unbalanced political coverage. 
+
+  <br><br>
+
+  Instead, IRCNA remains rooted in our own values: community, independence, and the people of Armenia. We choose not to seek out, solicit, or produce political journalism. Our reporting is focused on the lived experiences of locals, community-driven stories, and the issues that directly affect Armenian lives — without political spin or partisan framing. The community, Armenia, and locals come first. They have always been our top priority, and they will remain so.
+
+  </blockquote>
 items:
   - title: IRCNA POLITICS STATEMENT
     image: /images/uploads/BED0CA91-FC9A-43EA-8420-B1010B6E32BC.png
