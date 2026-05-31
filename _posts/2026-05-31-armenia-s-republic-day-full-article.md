@@ -15,7 +15,7 @@ layout: post
 
 ## Introduction: A Decade's Silence Broken on the Cobblestones
 
-![Parade scene](/image//uploads/jets.png)
+![Parade scene](/images/uploads/jets.png)
 
 Under an uncharacteristically sharp spring sun, the dense pink tuff architecture of Yerevan's Republic Square reverberated on Thursday, May 28, 2026, with a sound the capital had not hosted in over ten years: the mechanical roar of heavy armored columns and low-flying tactical fighter jets.
 
@@ -59,7 +59,7 @@ The hardware procession that followed the address served as physical confirmatio
 
 ### 1. Ground Infantry and Advanced Uniform Reforms
 
-![New uniforms](images/image3.png "New uniforms")
+![New uniforms](/images/uploads/army.png "New uniforms")
 
 The initial marching blocks consisted of cadets from the Vazgen Sargsyan Military Academy and the Armenak Khanperants Military Aviation Institute, followed by active-duty infantry, border guards, and specialized peacekeeping divisions. Observers immediately noted that the troops were outfitted in entirely redesigned combat gear, replacing older tactical load-bearing equipment with modular, high-protection ballistic vests and uniform patterns optimized for regional topographies.
 
@@ -80,7 +80,7 @@ The heavy vehicular column, commanded by Special Forces Colonel Poghos Petrosyan
 
 ### 4. Air Formations
 
-![Air formations](images/image4.jpg "Air formations")
+![Air formations](/images/uploads/Screenshot_31-5-2026_131612_www.canva.com.jpeg "Air formations")
 
 The event concluded with a coordinated flyover by the air force. Tactical Mi-17 transport and support helicopters led the aerial columns, followed closely by a synchronized wedge of Su-25 close-air-support jets and advanced Su-30SM multirole fighters tracing wide arcs over Republic Square, leaving streams of smoke against the sky.
 
@@ -90,7 +90,7 @@ Beyond the hardware, the most scrutinized element of the day was the comprehensi
 
 ### The Rejection of the 2001 Insignia
 
-In an exhaustive, formal explanatory breakdown broadcast by state media channels on the eve of the parade, the Ministry of Defense detailed the specific reasons why the 2001 insignia—approved during the administration of former President Robert Kocharyan—was officially decommissioned:
+In an exhaustive, formal explanatory breakdown broadcast by state media channels on the eve of the parade, the Ministry of Defense detailed the specific reasons why the 2001 insignia—approved during the administration of former President Robert Kocharyan—was officially decommissioned:![](/images/uploads/enhanced.jpg)
 
 - \*\*The Closed Beak of Passivity:\*\* The eagle in the 2001 coat of arms was illustrated with a tightly closed beak. In classical global heraldic law, a closed beak symbolizes a non-combatant, passive, or "lifeless" posture. The ministry emphasized that this imagery was completely unaligned with the vital energy, voice, and defensive spirit required of an active sovereign army.
 - \*\*The Fused, Limb-less Anatomy:\*\* The old eagle lacked a distinct torso, thighs, and defined muscular structure. Its head and wings were fused directly into a flat, indistinct cluster of feathers without visible talons, creating what the ministry openly described as "the visual impression of a dismembered, powerless, and vulnerable creature."
@@ -99,7 +99,7 @@ In an exhaustive, formal explanatory breakdown broadcast by state media channels
 
 ### The Symbolic Architecture of the 2026 Emblem
 
-![New emblem](images/image5.jpg "New emblem")
+![New emblem](/images/uploads/ARMYEMB.jpg "New emblem")
 
 The updated design completely overhauls these elements, moving the eagle into an assertive posture of total vigilance. The eagle's beak is now wide open, which the heraldic brief notes "symbolizes vitality, readiness, vigilance, and the fundamental right of speech and power."
 
