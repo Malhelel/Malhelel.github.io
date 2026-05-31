@@ -237,3 +237,7 @@ items:
     title: "barior.jpg"
     image: /images/uploads/barior.jpg
     description: ""
+  - category: "Uncategorized"
+    title: "enhanced.jpg"
+    image: /images/uploads/enhanced.jpg
+    description: ""
