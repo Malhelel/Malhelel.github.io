@@ -241,3 +241,7 @@ items:
     title: "enhanced.jpg"
     image: /images/uploads/enhanced.jpg
     description: ""
+  - category: "Uncategorized"
+    title: "winedaysupd.png"
+    image: /images/uploads/winedaysupd.png
+    description: ""
