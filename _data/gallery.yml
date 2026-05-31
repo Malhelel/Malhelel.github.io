@@ -233,3 +233,7 @@ items:
     title: "smokeboom.png"
     image: /images/uploads/smokeboom.png
     description: ""
+  - category: "Uncategorized"
+    title: "barior.jpg"
+    image: /images/uploads/barior.jpg
+    description: ""
