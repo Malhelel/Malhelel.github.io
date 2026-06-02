@@ -245,3 +245,7 @@ items:
     title: "winedaysupd.png"
     image: /images/uploads/winedaysupd.png
     description: ""
+  - category: "Uncategorized"
+    title: "winedayartic.png"
+    image: /images/uploads/winedayartic.png
+    description: ""
