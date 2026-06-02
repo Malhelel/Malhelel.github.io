@@ -12,15 +12,12 @@ permalink: /events/
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		/* Lightbox overlay (reused from gallery) */
-		.lightbox-overlay { display: none; position: fixed; top: 0; left: 0;
-			width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 9999;
-			text-align: center; }
+		.event-images { display: flex; flex-wrap: wrap; gap: 0.5em; margin-bottom: 1em; }
+		.event-images img { width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 4px; }
+		.lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.92); z-index: 9999; text-align: center; }
 		.lightbox-overlay img { max-width: 90%; max-height: 90%; margin-top: 2%; }
-		.lightbox-overlay .close { position: absolute; top: 20px; right: 40px;
-			color: white; font-size: 40px; cursor: pointer; text-decoration: none; }
-		/* Make event images clickable */
-		.event-image { cursor: pointer; }
+		.lightbox-overlay .close { position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; cursor: pointer; text-decoration: none; }
 	</style>
 </head>
 <body class="is-preload">
@@ -40,14 +37,17 @@ permalink: /events/
 
 	<section>
 		<header class="major"><h1>{{ site.data.events.heading }}</h1></header>
-
 		{{ site.data.events.intro | markdownify }}
 
 		<div class="posts">
 			{% for item in site.data.events.items %}
 			<article>
-				{% if item.image %}
-				<img src="{{ item.image }}" alt="{{ item.title }}" class="event-image" onclick="openLightbox('{{ item.image }}')" />
+				{% if item.images %}
+				<div class="event-images">
+					{% for img in item.images %}
+					<img src="{{ img }}" alt="{{ item.title }}" onclick="openLightbox('{{ img }}')" />
+					{% endfor %}
+				</div>
 				{% endif %}
 				<h3>{{ item.title }}</h3>
 				<p>{{ item.description }}</p>
@@ -76,7 +76,7 @@ permalink: /events/
 </div>
 </div>
 
-<!-- Lightbox overlay (single) -->
+<!-- Lightbox overlay -->
 <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
 	<span class="close" onclick="closeLightbox()">&times;</span>
 	<img id="lightbox-image" src="" alt="" />
