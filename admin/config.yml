@@ -131,9 +131,14 @@ collections:
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Date", name: "date", widget: "datetime", required: false }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string", required: false }
+              - name: "images"
+                label: "Images"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
       - file: "_data/local-stories.yml"
         label: "Local Stories"
         name: "local_stories"
