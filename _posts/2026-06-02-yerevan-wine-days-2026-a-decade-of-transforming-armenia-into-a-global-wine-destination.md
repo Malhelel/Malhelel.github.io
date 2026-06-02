@@ -1,5 +1,5 @@
 ---
-title: '" Yerevan Wine Days 2026: A Decade of Transforming Armenia into a Global Wine Destination"'
+title: '"Yerevan Wine Days 2026: A Decade of Transforming Armenia into a Global Wine Destination"'
 date: 2026-06-03T00:00:00
 image: /images/uploads/winedayartic.png
 layout: post
@@ -77,7 +77,7 @@ layout: post
 
 **| \*\*Nearest airport\*\* | Zvartnots International Airport (EVN) |**
 
-**| \*\*Official website\*\* | [yerewinedays.am](https://www.yerewinedays.am/en/) |**
+**| \*\*Official website\*\* |** [**yerewinedays.am**](https://www.yerewinedays.am/en/) **|**
 
 **\*Note: Armenia will hold parliamentary elections on June 7. Organizers have announced that the festival may conclude a few hours earlier on that day.\***
 
@@ -181,7 +181,7 @@ layout: post
 
 **This article is based on an \*\*exclusive interview with Mary Badalyan\*\* (co‑founder and CEO, EventToura) conducted on \*\*May 27, 2026\*\*, combined with open‑source research from the following verified sources:**
 
-**- \*\*Official Yerevan Wine Days website:\*\* [yerewinedays.am](https://www.yerewinedays.am/en/) (accessed May 2026)**
+**- \*\*Official Yerevan Wine Days website:\*\*** [**yerewinedays.am**](https://www.yerewinedays.am/en/) **(accessed May 2026)**
 
 **- \*\*Armenpress\*\* news agency: articles dated May 25, 2026 and May 29, 2025**
 
@@ -215,4 +215,4 @@ layout: post
 
 **---**
 
-**\*EVENTS is a publication of \*\*IRCNA\*\*. For more information, visit [malhelel.github.io](https://malhelel.github.io).\***
+**\*EVENTS is a publication of \*\*IRCNA\*\*. For more information, visit** [**malhelel.github.io**](https://malhelel.github.io)**.\***
