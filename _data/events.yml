@@ -1,9 +1,12 @@
-heading: "Events"
-intro: "Upcoming events, talks, and community gatherings covered by IRCNA."
+heading: Events
+intro: |-
+  <strong>HERE YOU CAN FIND:
+  Event interviews, Local Reviews, Festival information
+  Upcoming events, talks, and community gatherings covered by IRCNA.
 items:
-  - title: "Sample Event"
-    date: "2026-06-15"
-    description: "Event description goes here."
-    link: ""
+  - title: 'EXCLUSIVSE INTERVIEW | EVENTTOURA CO-FOUNDER: MARY BADALYAN'
+    date: 2026-06-01T09:03:00
+    description: 'Ahead of the 10th Annual Yerevan Wine Days Festival, IRCNA reached out to the organizers of the Yerevan wine days event to ask a few questions about what we can expect from this years events - and the response did not disappoint. Scroll through to hear what they have in store for this year. All questioned answered by Mary Badalyan, Co-founder if the Eventtoura: Event tourism Development Foundation. For any or all questions DM or email IRCNA. In depth preview article on what to except for this years Wine Days Festival, and how it compares to past ones, you can find the full-length article <a href="https://malhelel.github.io/2026/06/03/yerevan-wine-days-2026.html">here</a> . This post was curated by Mikael Yamiosei for IRCNA'
+    link: https://malhelel.github.io/2026/06/03/yerevan-wine-days-2026-a-decade-of-transforming-armenia-into-a-global-wine-destination.html
     images:
-      - /images/uploads/event overview.jpg
+      - image: /images/uploads/SnapInsta.to_710307471_17953337979168707_4581547593378447302_n.jpg
