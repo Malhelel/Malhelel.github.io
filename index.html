@@ -31,6 +31,18 @@
 		#upcoming-overlay .dont-show {
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
+		/* Stats box in sidebar */
+		#site-stats {
+			margin: 1.5em 0 1em 0;
+			padding: 0.8em;
+			background: rgba(255,255,255,0.05);
+			border-radius: 6px;
+			text-align: center;
+			font-size: 0.9em;
+		}
+		#site-stats p {
+			margin: 0.2em 0;
+		}
 	</style>
 </head>
 <body class="is-preload">
@@ -194,6 +206,12 @@
 		</ul>
 	</section>
 
+	<!-- SITE STATS -->
+	<div id="site-stats">
+		<p>👁️ Visitors: <strong id="visitor-count">...</strong></p>
+		<p>📬 Subscribers: <strong>{{ site.data.stats.subscribers }}</strong></p>
+	</div>
+
 	<footer id="footer">
 		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
 	</footer>
@@ -225,6 +243,22 @@
 	})();
 </script>
 {% endif %}
+
+<!-- CountAPI script (free, no‑signup visitor counter) -->
+<script>
+	(function() {
+		var key = 'ircna-homepage-visits';
+		var url = 'https://api.countapi.xyz/hit/ircna-homepage/visits';
+		fetch(url)
+			.then(function(response) { return response.json(); })
+			.then(function(data) {
+				document.getElementById('visitor-count').textContent = data.value;
+			})
+			.catch(function() {
+				document.getElementById('visitor-count').textContent = 'many';
+			});
+	})();
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
