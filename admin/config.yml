@@ -246,6 +246,11 @@ collections:
           - { label: "Enable Popup", name: "enabled", widget: "boolean", default: true }
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/stats.yml"
+        label: "Site Stats"
+        name: "stats"
+        fields:
+          - { label: "Number of Subscribers", name: "subscribers", widget: "number", default: 0 }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
