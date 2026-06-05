@@ -11,7 +11,7 @@
 	<style>
 		/* Full‑screen upcoming popup overlay */
 		#upcoming-overlay {
-			display: none; /* hidden by default – shown by JS if enabled */
+			display: none;
 			position: fixed; top: 0; left: 0; width: 100%; height: 100%;
 			background: rgba(0,0,0,0.92); z-index: 99999;
 			color: white; overflow-y: auto;
@@ -31,16 +31,16 @@
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
 
-		/* Header stats – clean, next to social icons */
+		/* Header stats – clean, professional, visible */
 		.header-stats {
 			display: flex;
-			gap: 2em;
+			gap: 1.5em;
 			align-items: center;
 			margin-left: auto;
-			color: #fff;
-			font-size: 0.75em;
+			font-size: 0.7em;
 			text-transform: uppercase;
-			letter-spacing: 0.8px;
+			letter-spacing: 0.6px;
+			color: #555;
 			white-space: nowrap;
 		}
 		.header-stats div {
@@ -49,15 +49,16 @@
 		}
 		.header-stats strong {
 			display: block;
-			font-size: 1.6em;
+			font-size: 1.5em;
 			font-weight: 600;
-			color: #e44;
+			color: #d44;
+			line-height: 1.1;
 		}
 	</style>
 </head>
 <body class="is-preload">
 
-<!-- UPCOMING POPUP (full screen) -->
+<!-- UPCOMING POPUP -->
 {% if site.data.upcoming.enabled %}
 <div id="upcoming-overlay">
 	<span class="close-btn" onclick="closeUpcoming()">&times;</span>
@@ -85,7 +86,7 @@
 		</a>
 		{{ site.data.homepage.social_icons_html }}
 
-		<!-- Stats block: placed after social icons -->
+		<!-- Stats – clean and visible -->
 		<div class="header-stats">
 			<div>
 				<strong id="visitor-count">...</strong>
@@ -115,7 +116,7 @@
 		</span>
 	</section>
 
-	<!-- Latest Stories (dynamic) -->
+	<!-- Latest Stories -->
 	<section>
 		<header class="major">
 			<h2>{{ site.data.homepage.posts_section_title }}</h2>
@@ -236,7 +237,7 @@
 </div>
 </div>
 
-<!-- Upcoming popup JavaScript -->
+<!-- Upcoming popup JS -->
 {% if site.data.upcoming.enabled %}
 <script>
 	(function() {
@@ -247,7 +248,6 @@
 			return;
 		}
 		overlay.style.display = 'block';
-
 		window.closeUpcoming = function() {
 			if (checkbox && checkbox.checked) {
 				localStorage.setItem('ircna-upcoming-dismissed', 'true');
@@ -258,17 +258,20 @@
 </script>
 {% endif %}
 
-<!-- CountAPI script (free, no‑signup visitor counter) -->
+<!-- Smooth visitor counter – keeps last value on error -->
 <script>
 	(function() {
+		var countEl = document.getElementById('visitor-count');
 		var url = 'https://api.countapi.xyz/hit/ircna-homepage/visits';
 		fetch(url)
-			.then(function(response) { return response.json(); })
+			.then(function(resp) { return resp.json(); })
 			.then(function(data) {
-				document.getElementById('visitor-count').textContent = data.value;
+				if (data && typeof data.value !== 'undefined') {
+					countEl.textContent = data.value;
+				}
 			})
 			.catch(function() {
-				document.getElementById('visitor-count').textContent = '---';
+				// Leave the current number or the initial "..." unchanged
 			});
 	})();
 </script>
