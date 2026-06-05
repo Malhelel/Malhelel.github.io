@@ -27,21 +27,31 @@
 			color: white; font-size: 40px; cursor: pointer; text-decoration: none;
 		}
 		#upcoming-overlay a { color: #e44; }
-		/* Don't show again checkbox */
 		#upcoming-overlay .dont-show {
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
-		/* Stats box in sidebar */
-		#site-stats {
-			margin: 1.5em 0 1em 0;
-			padding: 0.8em;
-			background: rgba(255,255,255,0.05);
-			border-radius: 6px;
-			text-align: center;
-			font-size: 0.9em;
+
+		/* Header stats – clean, next to social icons */
+		.header-stats {
+			display: flex;
+			gap: 2em;
+			align-items: center;
+			margin-left: auto;
+			color: #fff;
+			font-size: 0.75em;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+			white-space: nowrap;
 		}
-		#site-stats p {
-			margin: 0.2em 0;
+		.header-stats div {
+			text-align: center;
+			line-height: 1.2;
+		}
+		.header-stats strong {
+			display: block;
+			font-size: 1.6em;
+			font-weight: 600;
+			color: #e44;
 		}
 	</style>
 </head>
@@ -65,7 +75,7 @@
 <div id="main">
 <div class="inner">
 
-	<!-- Header with logo support -->
+	<!-- Header with logo, social icons, and stats -->
 	<header id="header">
 		<a href="index.html" class="logo">
 			{% if site.data.homepage.logo_image %}
@@ -74,6 +84,18 @@
 			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
 		</a>
 		{{ site.data.homepage.social_icons_html }}
+
+		<!-- Stats block: placed after social icons -->
+		<div class="header-stats">
+			<div>
+				<strong id="visitor-count">...</strong>
+				<span>Total Visits</span>
+			</div>
+			<div>
+				<strong>{{ site.data.stats.subscribers }}</strong>
+				<span>Subscribers</span>
+			</div>
+		</div>
 	</header>
 
 	<!-- Banner -->
@@ -206,12 +228,6 @@
 		</ul>
 	</section>
 
-	<!-- SITE STATS -->
-	<div id="site-stats">
-		<p>👁️ Visitors: <strong id="visitor-count">...</strong></p>
-		<p>📬 Subscribers: <strong>{{ site.data.stats.subscribers }}</strong></p>
-	</div>
-
 	<footer id="footer">
 		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
 	</footer>
@@ -226,12 +242,10 @@
 	(function() {
 		var overlay = document.getElementById('upcoming-overlay');
 		var checkbox = document.getElementById('dont-show-checkbox');
-		// Check if user previously chose "Don't show again"
 		if (localStorage.getItem('ircna-upcoming-dismissed') === 'true') {
 			overlay.style.display = 'none';
 			return;
 		}
-		// Show the popup
 		overlay.style.display = 'block';
 
 		window.closeUpcoming = function() {
@@ -247,7 +261,6 @@
 <!-- CountAPI script (free, no‑signup visitor counter) -->
 <script>
 	(function() {
-		var key = 'ircna-homepage-visits';
 		var url = 'https://api.countapi.xyz/hit/ircna-homepage/visits';
 		fetch(url)
 			.then(function(response) { return response.json(); })
@@ -255,7 +268,7 @@
 				document.getElementById('visitor-count').textContent = data.value;
 			})
 			.catch(function() {
-				document.getElementById('visitor-count').textContent = 'many';
+				document.getElementById('visitor-count').textContent = '---';
 			});
 	})();
 </script>
