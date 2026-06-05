@@ -55,14 +55,16 @@ permalink: /member-tools/
 			<h1>Member Tools <button id="logout-btn" class="button">Logout</button></h1>
 			<label for="generator-select">Choose AI image generator:</label>
 			<select id="generator-select" onchange="document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(this.value)">
-				<option value="https://perchance.org/text2image-generator">Perchance (unlimited, no filter)</option>
+				<option value="https://perchance.org/nsfw-image-generator">Perchance NSFW (full freedom)</option>
+				<option value="https://perchance.org/ai-image-generator">Perchance (unlimited, no filter)</option>
+				<option value="https://perchance.org/ai-text-to-image-generator">Perchance v2 (fast, no filter)</option>
 				<option value="https://hackaigc.com">HackAIGC</option>
 				<option value="https://pictoflux.com">PictoFlux</option>
 			</select>
 		</header>
 
 		<div id="iframe-container">
-			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://perchance.org/text2image-generator" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://perchance.org/nsfw-image-generator" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
 		<p style="font-size:0.9em; color:#666;">This is a live browser window. You can interact directly with the generator.</p>
 	</div>
