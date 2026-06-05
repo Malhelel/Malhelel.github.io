@@ -31,28 +31,29 @@
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
 
-		/* Header stats – clean, professional, visible */
-		.header-stats {
-			display: flex;
-			gap: 1.5em;
-			align-items: center;
-			margin-left: auto;
-			font-size: 0.7em;
-			text-transform: uppercase;
-			letter-spacing: 0.6px;
-			color: #555;
-			white-space: nowrap;
-		}
-		.header-stats div {
+		/* Sidebar stats – clean, professional */
+		#site-stats {
+			margin-bottom: 1.5em;
+			padding-bottom: 1em;
+			border-bottom: 1px solid rgba(255,255,255,0.12);
 			text-align: center;
-			line-height: 1.2;
 		}
-		.header-stats strong {
-			display: block;
-			font-size: 1.5em;
+		#site-stats .stat-row {
+			display: flex;
+			justify-content: center;
+			align-items: baseline;
+			gap: 0.3em;
+			margin-bottom: 0.3em;
+			font-size: 0.85em;
+			color: #aaa;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+		#site-stats .stat-row strong {
+			font-size: 1.3em;
+			color: #fff;
 			font-weight: 600;
-			color: #d44;
-			line-height: 1.1;
+			min-width: 2em;
 		}
 	</style>
 </head>
@@ -76,7 +77,7 @@
 <div id="main">
 <div class="inner">
 
-	<!-- Header with logo, social icons, and stats -->
+	<!-- Header (logo + social icons, NO stats here) -->
 	<header id="header">
 		<a href="index.html" class="logo">
 			{% if site.data.homepage.logo_image %}
@@ -85,18 +86,6 @@
 			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
 		</a>
 		{{ site.data.homepage.social_icons_html }}
-
-		<!-- Stats – clean and visible -->
-		<div class="header-stats">
-			<div>
-				<strong id="visitor-count">...</strong>
-				<span>Total Visits</span>
-			</div>
-			<div>
-				<strong>{{ site.data.stats.subscribers }}</strong>
-				<span>Subscribers</span>
-			</div>
-		</div>
 	</header>
 
 	<!-- Banner -->
@@ -185,6 +174,18 @@
 <div id="sidebar">
 <div class="inner">
 
+	<!-- STATS – placed first, above search -->
+	<div id="site-stats">
+		<div class="stat-row">
+			<strong id="visitor-count">...</strong>
+			<span>Total Visits</span>
+		</div>
+		<div class="stat-row">
+			<strong>{{ site.data.stats.subscribers }}</strong>
+			<span>Subscribers</span>
+		</div>
+	</div>
+
 	<section id="search" class="alt">
 		<form method="get" action="search.html">
 			<input type="text" name="q" id="query" placeholder="Search" />
@@ -258,21 +259,40 @@
 </script>
 {% endif %}
 
-<!-- Smooth visitor counter – keeps last value on error -->
+<!-- Robust visitor counter (retries once, keeps last number) -->
 <script>
 	(function() {
 		var countEl = document.getElementById('visitor-count');
-		var url = 'https://api.countapi.xyz/hit/ircna-homepage/visits';
-		fetch(url)
-			.then(function(resp) { return resp.json(); })
-			.then(function(data) {
-				if (data && typeof data.value !== 'undefined') {
-					countEl.textContent = data.value;
-				}
-			})
-			.catch(function() {
-				// Leave the current number or the initial "..." unchanged
-			});
+		var NAMESPACE = 'ircna-site';   // unique key
+		var KEY = 'homepage-visits';
+		var API = 'https://api.countapi.xyz/hit/' + NAMESPACE + '/' + KEY;
+
+		function fetchCount() {
+			fetch(API)
+				.then(function(resp) { return resp.json(); })
+				.then(function(data) {
+					if (data && typeof data.value !== 'undefined') {
+						countEl.textContent = data.value;
+					}
+				})
+				.catch(function() {
+					// If first attempt fails, try one more time after 2 seconds
+					setTimeout(function() {
+						fetch(API)
+							.then(function(resp) { return resp.json(); })
+							.then(function(data) {
+								if (data && typeof data.value !== 'undefined') {
+									countEl.textContent = data.value;
+								}
+							})
+							.catch(function() {
+								// If still failing, leave the current number unchanged (won't show "---")
+							});
+					}, 2000);
+				});
+		}
+
+		fetchCount();
 	})();
 </script>
 
