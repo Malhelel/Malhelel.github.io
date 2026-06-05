@@ -96,7 +96,7 @@ menu_html: |-
 
        <li><a href="/dashboard/"> Journalist Dashboard</a></li>
 
-       <li><a href="/image-generator/"> Member Tools</a></li>
+       <li><a href="/member-tools/"> Member Tools</a></li>
 
   </ul>
 
