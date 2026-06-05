@@ -250,7 +250,10 @@ collections:
         label: "Site Stats"
         name: "stats"
         fields:
-          - { label: "Number of Subscribers", name: "subscribers", widget: "number", default: 0 }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Visitors", name: "visitors", widget: "number", default: 0 }
+          - { label: "Subscribers", name: "subscribers", widget: "number", default: 0 }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
