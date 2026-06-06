@@ -1,0 +1,40 @@
+name: Auto-increment Visitor Count
+
+on:
+  schedule:
+    - cron: '0 */10 * * *'   # every 10 hours
+  workflow_dispatch:         # allows manual run
+
+permissions:
+  contents: write
+
+jobs:
+  update-visitors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update visitor count
+        run: |
+          FILE="_data/stats.yml"
+          # Extract current visitor value
+          CURRENT=$(grep -oP 'visitors:\s*\K\d+' "$FILE" || echo 0)
+          # Generate random number between 11 and 27
+          RAND=$(( RANDOM % 17 + 11 ))   # 27-11+1 = 17
+          NEW=$(( CURRENT + RAND ))
+          # Update the file (preserve other fields)
+          sed -i "s/^visitors: .*/visitors: $NEW/" "$FILE"
+          echo "Updated visitors from $CURRENT to $NEW (+$RAND)"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/stats.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-update visitors: +$RAND"
+            git push
+          fi
