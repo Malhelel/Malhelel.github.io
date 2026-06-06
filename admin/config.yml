@@ -254,6 +254,20 @@ collections:
           - { label: "Image (optional)", name: "image", widget: "image", required: false }
           - { label: "Visitors", name: "visitors", widget: "number", default: 0 }
           - { label: "Subscribers", name: "subscribers", widget: "number", default: 0 }
+      - file: "_data/newsletter.yml"
+        label: "Newsletter"
+        name: "newsletter"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Poster Image", name: "image", widget: "image" }
+          - { label: "Sign‑up Link", name: "link", widget: "string" }
+          - { label: "Image Alt Text", name: "alt_text", widget: "string" }
+      - file: "_data/subscribers.yml"
+        label: "Subscribers"
+        name: "subscribers"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Message", name: "message", widget: "text" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
