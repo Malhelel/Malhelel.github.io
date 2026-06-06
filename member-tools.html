@@ -40,7 +40,7 @@ permalink: /member-tools/
 	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Member Login</h2>
-		<p>Sign in to access IRCNA member tools, including on‑site AI image generators and other resources.</p>
+		<p>Sign in to access IRCNA member tools, including unrestricted image galleries and other resources.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -53,20 +53,20 @@ permalink: /member-tools/
 	<div id="generator-section" style="display:none;">
 		<header class="major">
 			<h1>Member Tools <button id="logout-btn" class="button">Logout</button></h1>
-			<label for="generator-select">Choose AI image generator:</label>
-			<select id="generator-select" onchange="document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(this.value)">
-				<option value="https://perchance.org/nsfw-image-generator">Perchance NSFW (full freedom)</option>
-				<option value="https://perchance.org/ai-image-generator">Perchance (unlimited, no filter)</option>
-				<option value="https://perchance.org/ai-text-to-image-generator">Perchance v2 (fast, no filter)</option>
-				<option value="https://hackaigc.com">HackAIGC</option>
-				<option value="https://pictoflux.com">PictoFlux</option>
+			<label for="gallery-select">Choose image gallery:</label>
+			<select id="gallery-select" onchange="document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(this.value)">
+				<option value="https://imgsrc.ru">imgsrc.ru</option>
+				<option value="https://scrolller.com">Scrolller</option>
+				<option value="https://commons.wikimedia.org">Wikimedia Commons</option>
+				<option value="https://www.flickr.com">Flickr</option>
+				<option value="https://thumbstack.com">ThumbStack</option>
 			</select>
 		</header>
 
 		<div id="iframe-container">
-			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://perchance.org/nsfw-image-generator" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://imgsrc.ru" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
-		<p style="font-size:0.9em; color:#666;">This is a live browser window. You can interact directly with the generator.</p>
+		<p style="font-size:0.9em; color:#666;">Browse images directly through the embedded window. If a gallery does not load correctly, try another site from the dropdown.</p>
 	</div>
 
 </div>
@@ -86,7 +86,7 @@ permalink: /member-tools/
 </div>
 </div>
 
-<!-- Firebase authentication -->
+<!-- Firebase authentication (unchanged) -->
 <script type="module">
 	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
 	import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
