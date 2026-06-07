@@ -341,3 +341,7 @@ items:
     title: "newsletter.png"
     image: /images/uploads/newsletter.png
     description: ""
+  - category: "Uncategorized"
+    title: "haitus.png"
+    image: /images/uploads/haitus.png
+    description: ""
