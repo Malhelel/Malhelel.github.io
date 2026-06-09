@@ -19,7 +19,9 @@ permalink: /member-tools/
 		#iframe-container { width: 100%; height: 85vh; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; margin: 1em 0; }
 		#iframe-container iframe { width: 100%; height: 100%; border: none; }
 		#logout-btn { float: right; margin-bottom: 1em; }
-		select { padding: 0.5em; }
+		.toolbar { display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap; }
+		.toolbar select { padding: 0.5em; }
+		.toolbar button { padding: 0.5em 1em; }
 	</style>
 </head>
 <body class="is-preload">
@@ -53,16 +55,19 @@ permalink: /member-tools/
 	<div id="generator-section" style="display:none;">
 		<header class="major">
 			<h1>Member Tools <button id="logout-btn" class="button">Logout</button></h1>
-			<label for="tool-select">Choose tool:</label>
-			<select id="tool-select" onchange="changeTool()">
-				<option value="https://unsplash.com">Unsplash – Free Stock Photos</option>
-				<option value="https://www.wikipedia.org">Wikipedia – Research</option>
-				<option value="https://www.pexels.com">Pexels – Free Stock Photos & Videos</option>
-			</select>
+			<div class="toolbar">
+				<label for="tool-select">Choose tool:</label>
+				<select id="tool-select">
+					<option value="https://www.wikipedia.org">Wikipedia – Research</option>
+					<option value="https://www.freeimages.com">FreeImages – Free Photos</option>
+					<option value="https://pixabay.com">Pixabay – Free Photos & Videos</option>
+				</select>
+				<button onclick="loadTool()">Load / Refresh</button>
+			</div>
 		</header>
 
 		<div id="iframe-container">
-			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://unsplash.com" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://www.wikipedia.org" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
 	</div>
 
@@ -143,9 +148,11 @@ permalink: /member-tools/
 			generatorSection.style.display = 'none';
 		}
 	});
+</script>
 
-	// Update iframe on dropdown change
-	function changeTool() {
+<script>
+	// Load the selected tool into the iframe
+	function loadTool() {
 		var select = document.getElementById('tool-select');
 		var url = select.value;
 		document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url);
