@@ -59,8 +59,7 @@ permalink: /member-tools/
 				<label for="tool-select">Choose tool:</label>
 				<select id="tool-select">
 					<option value="https://www.wikipedia.org">Wikipedia – Research</option>
-					<option value="https://postimages.org">PostImages – Image Gallery</option>
-					<option value="https://imgur.com">Imgur – Image Gallery</option>
+					<option value="https://www.modelsociety.com">Model Society – Image Gallery</option>
 				</select>
 				<button onclick="loadTool()">Load / Refresh</button>
 			</div>
@@ -154,7 +153,13 @@ permalink: /member-tools/
 	function loadTool() {
 		var select = document.getElementById('tool-select');
 		var url = select.value;
-		document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url);
+		var iframe = document.getElementById('proxy-iframe');
+		// Clear the iframe first to prevent getting stuck
+		iframe.src = 'about:blank';
+		// Set a small delay to ensure the browser clears it, then load new URL
+		setTimeout(function() {
+			iframe.src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url) + '&_=' + Date.now();
+		}, 100);
 	}
 </script>
 
