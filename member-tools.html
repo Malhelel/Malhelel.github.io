@@ -19,6 +19,7 @@ permalink: /member-tools/
 		#iframe-container { width: 100%; height: 85vh; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; margin: 1em 0; }
 		#iframe-container iframe { width: 100%; height: 100%; border: none; }
 		#logout-btn { float: right; margin-bottom: 1em; }
+		select { padding: 0.5em; }
 	</style>
 </head>
 <body class="is-preload">
@@ -39,7 +40,7 @@ permalink: /member-tools/
 	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Member Login</h2>
-		<p>Sign in to access IRCNA member tools, including the DeepSeek AI assistant.</p>
+		<p>Sign in to access IRCNA member tools, including embedded research and media galleries.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -48,17 +49,22 @@ permalink: /member-tools/
 		</form>
 	</div>
 
-	<!-- MEMBER TOOLS – DeepSeek AI embedded -->
+	<!-- MEMBER TOOLS (shown when logged in) -->
 	<div id="generator-section" style="display:none;">
 		<header class="major">
 			<h1>Member Tools <button id="logout-btn" class="button">Logout</button></h1>
-			<p>DeepSeek AI – your private assistant for research, writing, and analysis.</p>
+			<label for="tool-select">Choose tool:</label>
+			<select id="tool-select" onchange="changeTool()">
+				<option value="https://unsplash.com">Unsplash – Free Stock Photos</option>
+				<option value="https://www.wikipedia.org">Wikipedia – Research</option>
+				<option value="https://www.pexels.com">Pexels – Free Stock Photos & Videos</option>
+			</select>
 		</header>
 
 		<div id="iframe-container">
-			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://chat.deepseek.com" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://unsplash.com" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
-		<p style="font-size:0.9em; color:#666;">DeepSeek is embedded directly inside your dashboard. No external tabs needed.</p>
+		<p style="font-size:0.9em; color:#666;">If a page looks mis‑scaled, use your browser’s zoom (Ctrl +/-) to adjust. To reset to the default tool, select it again from the dropdown.</p>
 	</div>
 
 </div>
@@ -138,6 +144,13 @@ permalink: /member-tools/
 			generatorSection.style.display = 'none';
 		}
 	});
+
+	// Update iframe on dropdown change
+	function changeTool() {
+		var select = document.getElementById('tool-select');
+		var url = select.value;
+		document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url);
+	}
 </script>
 
 <script src="assets/js/jquery.min.js"></script>
