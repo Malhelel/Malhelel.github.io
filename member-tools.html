@@ -19,7 +19,6 @@ permalink: /member-tools/
 		#iframe-container { width: 100%; height: 85vh; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; margin: 1em 0; }
 		#iframe-container iframe { width: 100%; height: 100%; border: none; }
 		#logout-btn { float: right; margin-bottom: 1em; }
-		select { padding: 0.5em; }
 	</style>
 </head>
 <body class="is-preload">
@@ -40,7 +39,7 @@ permalink: /member-tools/
 	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Member Login</h2>
-		<p>Sign in to access IRCNA member tools, including unrestricted image galleries and other resources.</p>
+		<p>Sign in to access IRCNA member tools, including the DeepSeek AI assistant.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -49,24 +48,17 @@ permalink: /member-tools/
 		</form>
 	</div>
 
-	<!-- MEMBER TOOLS (shown when logged in) -->
+	<!-- MEMBER TOOLS – DeepSeek AI embedded -->
 	<div id="generator-section" style="display:none;">
 		<header class="major">
 			<h1>Member Tools <button id="logout-btn" class="button">Logout</button></h1>
-			<label for="gallery-select">Choose image gallery:</label>
-			<select id="gallery-select" onchange="document.getElementById('proxy-iframe').src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(this.value)">
-				<option value="https://imgsrc.ru">imgsrc.ru</option>
-				<option value="https://scrolller.com">Scrolller</option>
-				<option value="https://commons.wikimedia.org">Wikimedia Commons</option>
-				<option value="https://www.flickr.com">Flickr</option>
-				<option value="https://thumbstack.com">ThumbStack</option>
-			</select>
+			<p>DeepSeek AI – your private assistant for research, writing, and analysis.</p>
 		</header>
 
 		<div id="iframe-container">
-			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://imgsrc.ru" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://chat.deepseek.com" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
-		<p style="font-size:0.9em; color:#666;">Browse images directly through the embedded window. If a gallery does not load correctly, try another site from the dropdown.</p>
+		<p style="font-size:0.9em; color:#666;">DeepSeek is embedded directly inside your dashboard. No external tabs needed.</p>
 	</div>
 
 </div>
