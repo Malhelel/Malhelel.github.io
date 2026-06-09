@@ -42,7 +42,7 @@ permalink: /member-tools/
 	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Member Login</h2>
-		<p>Sign in to access IRCNA member tools, including embedded research and media galleries.</p>
+		<p>Sign in to access IRCNA member tools, including embedded research and image galleries.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -59,8 +59,8 @@ permalink: /member-tools/
 				<label for="tool-select">Choose tool:</label>
 				<select id="tool-select">
 					<option value="https://www.wikipedia.org">Wikipedia – Research</option>
-					<option value="https://www.freeimages.com">FreeImages – Free Photos</option>
-					<option value="https://pixabay.com">Pixabay – Free Photos & Videos</option>
+					<option value="https://postimages.org">PostImages – Image Gallery</option>
+					<option value="https://imgur.com">Imgur – Image Gallery</option>
 				</select>
 				<button onclick="loadTool()">Load / Refresh</button>
 			</div>
@@ -151,7 +151,6 @@ permalink: /member-tools/
 </script>
 
 <script>
-	// Load the selected tool into the iframe
 	function loadTool() {
 		var select = document.getElementById('tool-select');
 		var url = select.value;
