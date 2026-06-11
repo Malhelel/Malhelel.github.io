@@ -116,6 +116,8 @@ collections:
               - name: "images"
                 label: "Media Items"
                 widget: "list"
+                collapsed: true
+                summary: "{{filename}}"
                 fields:
                   - { label: "Image", name: "image", widget: "image", required: false }
                   - { label: "Media Type", name: "type", widget: "select", options: ["image", "video"], default: "image" }
@@ -137,6 +139,8 @@ collections:
               - name: "images"
                 label: "Images"
                 widget: "list"
+                collapsed: true
+                summary: "{{filename}}"
                 fields:
                   - { label: "Image", name: "image", widget: "image" }
       - file: "_data/local-stories.yml"
@@ -292,5 +296,8 @@ collections:
       - { label: "Title", name: "title", widget: "string", pattern: ['^".*"$', "Title must be enclosed in double quotes, e.g. \"My Title: Story\""] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image (optional)", name: "image", widget: "image", required: false }
+      - { label: "Background Colour", name: "background_color", widget: "string", required: false, hint: "e.g. #f5f5f5 or lightblue" }
+      - { label: "Text Colour", name: "text_color", widget: "string", required: false, hint: "e.g. #333333 or darkred" }
+      - { label: "Custom CSS", name: "custom_css", widget: "text", required: false, hint: "Any additional CSS for this article" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
