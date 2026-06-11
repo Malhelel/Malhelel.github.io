@@ -30,15 +30,7 @@
 <div id="main">
 <div class="inner">
 
-	<header id="header">
-		<a href="index.html" class="logo">
-			{% if site.data.homepage.logo_image %}
-				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
-			{% endif %}
-			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
-		</a>
-		{{ site.data.homepage.social_icons_html }}
-	</header>
+	{% include header.html %}
 
 	<article>
 		<header class="major">
@@ -109,8 +101,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 	AOS.init({
-		duration: 600,   // animation speed (ms)
-		once: true       // only animate once per page load
+		duration: 600,
+		once: true
 	});
 </script>
 
