@@ -14,23 +14,17 @@ permalink: /journalist-map/
 	<!-- Leaflet CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 	<style>
-		/* Force map wrapper to have a definite height */
+		/* Ensure the map container is visible even if tiles fail */
 		.map-wrapper {
 			width: 100%;
-			height: 600px !important;    /* fixed height for testing */
-			position: relative;
 			margin: 1em 0;
 			border-radius: 8px;
 			overflow: hidden;
-			background: #e0e0e0;        /* light grey so it's visible */
-			z-index: 1;
+			background: #e0e0e0;
 		}
 		#map {
-			width: 100% !important;
-			height: 100% !important;
 			background: #fff;
 		}
-		/* Pop‑up styling (same as before) */
 		.leaflet-popup-content-wrapper {
 			background: #1e1e1e;
 			color: #ddd;
@@ -69,7 +63,10 @@ permalink: /journalist-map/
 		</header>
 
 		<div class="map-wrapper">
-			<div id="map"></div>
+			<div id="map" style="height: 600px;"></div>
+		</div>
+		<div id="map-error" style="display:none; padding: 2em; background: #ffebee; border: 1px solid #c00; margin-top: 1em;">
+			<strong>Map could not load.</strong> Please contact the site admin.
 		</div>
 	</section>
 
@@ -95,56 +92,68 @@ permalink: /journalist-map/
 <script>
 	(function() {
 		window.addEventListener('load', function() {
-			// Create the map inside the isolated wrapper
-			var map = L.map('map', { zoomControl: true }).setView([40.25, 45.0], 8);
+			try {
+				var container = document.getElementById('map');
+				if (!container) throw new Error('Map container not found');
 
-			// Standard OpenStreetMap tiles – the most reliable layer
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-				maxZoom: 19
-			}).addTo(map);
-
-			// Custom marker icon (using your favicon – you can change later)
-			var customIcon = L.icon({
-				iconUrl: '/images/uploads/ircna-favicon.png',
-				iconSize: [32, 32],
-				iconAnchor: [16, 32],
-				popupAnchor: [0, -32]
-			});
-
-			// Inject journalist data from YAML
-			var journalists = [
-				{% for j in site.data.journalists.journalists %}
-				{
-					name: "{{ j.name | escape }}",
-					role: "{{ j.role | escape }}",
-					photo: "{{ j.photo | escape }}",
-					bio: "{{ j.bio | escape }}",
-					city: "{{ j.city | escape }}",
-					lat: {{ j.lat }},
-					lng: {{ j.lng }}
-				}{% unless forloop.last %},{% endunless %}
-				{% endfor %}
-			];
-
-			// Place markers with pop‑ups
-			journalists.forEach(function(j) {
-				if (j.lat && j.lng) {   // only add if coordinates exist
-					var marker = L.marker([j.lat, j.lng], { icon: customIcon }).addTo(map);
-					var popupHtml = '<div>';
-					if (j.photo && j.photo !== '') {
-						popupHtml += '<img src="' + j.photo + '" alt="' + j.name + '" />';
-					}
-					popupHtml += '<h3>' + j.name + '</h3>';
-					popupHtml += '<p><strong>' + j.role + '</strong></p>';
-					popupHtml += '<p>' + j.bio + '</p>';
-					popupHtml += '</div>';
-					marker.bindPopup(popupHtml);
+				// Ensure container has height (inline style already set)
+				if (container.offsetHeight === 0) {
+					container.style.height = '600px';
 				}
-			});
 
-			// Force a resize after everything is rendered
-			setTimeout(function() { map.invalidateSize(); }, 100);
+				var map = L.map('map', { zoomControl: true }).setView([40.25, 45.0], 8);
+
+				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+					maxZoom: 19
+				}).addTo(map);
+
+				// Custom marker icon
+				var customIcon = L.icon({
+					iconUrl: '/images/uploads/ircna-favicon.png',
+					iconSize: [32, 32],
+					iconAnchor: [16, 32],
+					popupAnchor: [0, -32]
+				});
+
+				// Journalist data – manually escaped to avoid JS syntax errors
+				var journalists = [
+					{% for j in site.data.journalists.journalists %}
+					{
+						name: {{ j.name | jsonify }},
+						role: {{ j.role | jsonify }},
+						photo: {{ j.photo | jsonify }},
+						bio: {{ j.bio | jsonify }},
+						city: {{ j.city | jsonify }},
+						lat: {{ j.lat }},
+						lng: {{ j.lng }}
+					}{% unless forloop.last %},{% endunless %}
+					{% endfor %}
+				];
+
+				// Add markers
+				journalists.forEach(function(j) {
+					if (j.lat && j.lng) {
+						var marker = L.marker([j.lat, j.lng], { icon: customIcon }).addTo(map);
+						var popupHtml = '<div>';
+						if (j.photo && j.photo !== '') {
+							popupHtml += '<img src="' + j.photo + '" alt="' + j.name + '" />';
+						}
+						popupHtml += '<h3>' + j.name + '</h3>';
+						popupHtml += '<p><strong>' + j.role + '</strong></p>';
+						popupHtml += '<p>' + j.bio + '</p>';
+						popupHtml += '</div>';
+						marker.bindPopup(popupHtml);
+					}
+				});
+
+				// Force resize after rendering
+				setTimeout(function() { map.invalidateSize(); }, 100);
+			} catch (e) {
+				document.getElementById('map').style.display = 'none';
+				document.getElementById('map-error').style.display = 'block';
+				console.error('Map error:', e);
+			}
 		});
 	})();
 </script>
