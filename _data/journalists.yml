@@ -1,97 +1,97 @@
 journalists:
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Gyumri"
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-1-column-1.png
+    bio: Coming soon.
+    city: Gyumri
     lat: 40.7929
     lng: 43.8465
-    anchor: "tbd-gyumri"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Vanadzor"
+    anchor: tbd-gyumri
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-1-column-2.png
+    bio: Coming soon.
+    city: Vanadzor
     lat: 40.8074
-    lng: 44.4970
-    anchor: "tbd-vanadzor"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Tavush"
-    lat: 40.9000
-    lng: 45.3000
-    anchor: "tbd-tavush"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Ashtarak"
+    lng: 44.497
+    anchor: tbd-vanadzor
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-1-column-3.png
+    bio: Coming soon.
+    city: Tavush
+    lat: 40.9
+    lng: 45.3
+    anchor: tbd-tavush
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-2-column-1.png
+    bio: Coming soon.
+    city: Ashtarak
     lat: 40.2929
     lng: 44.3625
-    anchor: "tbd-ashtarak"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Kotayk"
-    lat: 40.3000
-    lng: 44.6500
-    anchor: "tbd-kotayk"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Sevan"
-    lat: 40.5550
-    lng: 45.0000
-    anchor: "tbd-sevan"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Armavir"
-    lat: 40.1500
+    anchor: tbd-ashtarak
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-2-column-2.png
+    bio: Coming soon.
+    city: Kotayk
+    lat: 40.3
+    lng: 44.65
+    anchor: tbd-kotayk
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-2-column-3.png
+    bio: Coming soon.
+    city: Sevan
+    lat: 40.555
+    lng: 45
+    anchor: tbd-sevan
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-3-column-1.png
+    bio: Coming soon.
+    city: Armavir
+    lat: 40.15
     lng: 44.0333
-    anchor: "tbd-armavir"
-  - name: "Mikael Yamiosei"
-    role: "Founder & Journalist"
-    photo: "/images/uploads/mikael.jpg"
-    bio: "Founder of IRCNA. Covers politics, breaking events, festivals. Based in Yerevan."
-    city: "Yerevan"
+    anchor: tbd-armavir
+  - name: Mikael Yamiosei
+    role: Founder & Journalist
+    photo: /images/uploads/row-3-column-2.png
+    bio: Founder of IRCNA. Covers politics, breaking events, festivals. Based in Yerevan.
+    city: Yerevan
     lat: 40.1792
     lng: 44.4991
-    anchor: "mikael-yamiosei"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Gavar"
+    anchor: mikael-yamiosei
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-3-column-3.png
+    bio: Coming soon.
+    city: Gavar
     lat: 40.3594
     lng: 45.1269
-    anchor: "tbd-gavar"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Artashat"
-    lat: 39.9500
-    lng: 44.5500
-    anchor: "tbd-artashat"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Vayots Dzor"
-    lat: 39.7000
-    lng: 45.3000
-    anchor: "tbd-vayots-dzor"
-  - name: "TBD"
-    role: "Journalist"
-    photo: "/images/uploads/placeholder.jpg"
-    bio: "Coming soon."
-    city: "Syunik"
-    lat: 39.2500
-    lng: 46.2500
-    anchor: "tbd-syunik"
+    anchor: tbd-gavar
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-4-column-1.png
+    bio: Coming soon.
+    city: Artashat
+    lat: 39.95
+    lng: 44.55
+    anchor: tbd-artashat
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-4-column-2.png
+    bio: Coming soon.
+    city: Vayots Dzor
+    lat: 39.7
+    lng: 45.3
+    anchor: tbd-vayots-dzor
+  - name: TBD
+    role: Journalist
+    photo: /images/uploads/row-4-column-3.png
+    bio: Coming soon.
+    city: Syunik
+    lat: 39.25
+    lng: 46.25
+    anchor: tbd-syunik
