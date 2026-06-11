@@ -12,38 +12,20 @@ permalink: /journalist-map/
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		/* Override any theme spacing to make the grid seamless */
-		.journalist-grid {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 0 !important;
+		/* Make the map image fill its container but keep the original coordinates valid
+		   CAUTION: This only works if the image is displayed at its natural size.
+		   For responsiveness, you'll need a JS solution like image-map-resizer,
+		   but for now the map will work at a fixed width. */
+		.journalist-image-wrapper {
+			max-width: 100%;
 			margin: 2em 0;
-			padding: 0 !important;
-			line-height: 0;           /* collapse any text‑line spacing */
 		}
-		.journalist-card {
-			cursor: pointer;
-			aspect-ratio: 1 / 1;
-			overflow: hidden;
-			margin: 0 !important;
-			padding: 0 !important;
-			line-height: 0;
-		}
-		.journalist-card img {
-			display: block;          /* removes inline‑element gap */
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			border-radius: 0;
-			margin: 0;
-			padding: 0;
-		}
-		.journalist-card h3,
-		.journalist-card p {
-			display: none;
+		.journalist-image-wrapper img {
+			display: block;
+			width: 100%;             /* scales the image down if needed, but coordinates won't scale */
 		}
 
-		/* Modal overlay (unchanged) */
+		/* Modal (unchanged) */
 		.modal-overlay {
 			display: none;
 			position: fixed;
@@ -101,12 +83,6 @@ permalink: /journalist-map/
 			border: none;
 		}
 		.modal-close:hover { color: #e44; }
-
-		@media screen and (max-width: 736px) {
-			.journalist-grid {
-				grid-template-columns: repeat(2, 1fr);
-			}
-		}
 	</style>
 </head>
 <body class="is-preload">
@@ -129,19 +105,17 @@ permalink: /journalist-map/
 	<section>
 		<header class="major">
 			<h1>Our Journalists</h1>
-			<p>Click a photo to learn more about the journalist.</p>
+			<p>Click a region on the map to learn about the journalist based there.</p>
 		</header>
 
-		<div class="journalist-grid">
-			{% for j in site.data.journalists.journalists %}
-			<div class="journalist-card" onclick="openModal('{{ j.anchor }}')">
-				{% if j.photo and j.photo != '' %}
-				<img src="{{ j.photo }}" alt="{{ j.name }}" />
-				{% else %}
-				<img src="images/pic01.jpg" alt="Placeholder" />
-				{% endif %}
-			</div>
-			{% endfor %}
+		<div class="journalist-image-wrapper">
+			<img src="/images/uploads/armenia-map.jpg" alt="Map of Armenia" usemap="#journalistmap" />
+			<map name="journalistmap">
+				<!-- PLACEHOLDER COORDINATES: you must update them using an online tool (see instructions below) -->
+				{% for j in site.data.journalists.journalists %}
+				<area shape="rect" coords="0,0,50,50" alt="{{ j.city }}" onclick="openModal('{{ j.anchor }}'); return false;" />
+				{% endfor %}
+			</map>
 		</div>
 	</section>
 
@@ -190,14 +164,12 @@ permalink: /journalist-map/
 	function openModal(anchor) {
 		var ij = independentJournalists[anchor];
 		if (ij) {
-			// Show independent journalist data
 			document.getElementById('modal-photo').src = (ij.photo && ij.photo !== '') ? ij.photo : 'images/pic01.jpg';
 			document.getElementById('modal-name').textContent = ij.name;
 			document.getElementById('modal-role').textContent = ij.role;
 			document.getElementById('modal-bio').textContent = ij.bio;
 			document.getElementById('modal-city').textContent = ij.city || '';
 		} else {
-			// Fallback if anchor not found
 			document.getElementById('modal-photo').src = 'images/pic01.jpg';
 			document.getElementById('modal-name').textContent = 'Journalist';
 			document.getElementById('modal-role').textContent = '';
