@@ -18,11 +18,13 @@ permalink: /independent-journalist/
 <div class="inner">
 
 	<header id="header">
-		<a href="index.html" class="logo">
+		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
 			{% if site.data.homepage.logo_image %}
-				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; vertical-align:middle; margin-right:10px;" />
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink: 0;" />
 			{% endif %}
-			<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
 		</a>
 		{{ site.data.homepage.social_icons_html }}
 	</header>
@@ -34,7 +36,7 @@ permalink: /independent-journalist/
 
 		<div class="posts">
 			{% for item in site.data.independent-journalist.items %}
-			<article>
+			<article id="{{ item.anchor }}">
 				{% if item.image %}
 				<a href="{{ item.link | default: '#' }}" class="image"><img src="{{ item.image }}" alt="{{ item.title }}" /></a>
 				{% endif %}
