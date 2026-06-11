@@ -186,6 +186,14 @@
 
 	<!-- STATS – maroon, no emoji, directly below search -->
 	<div id="site-stats">
+		{% if site.data.stats.heading %}
+		<h3 style="color: maroon; text-transform: uppercase; text-align: center; margin-bottom: 0.5em; font-size: 0.85em;">{{ site.data.stats.heading }}</h3>
+		{% endif %}
+		{% if site.data.stats.image %}
+		<div style="text-align: center; margin-bottom: 0.8em;">
+			<img src="{{ site.data.stats.image }}" alt="Stats image" style="max-width: 100%; height: auto; border-radius: 4px;" />
+		</div>
+		{% endif %}
 		<div class="stat-row">
 			<strong>{{ site.data.stats.visitors }}</strong>
 			<span>Total Visits</span>
