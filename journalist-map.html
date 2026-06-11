@@ -14,20 +14,21 @@ permalink: /journalist-map/
 	<!-- Leaflet CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 	<style>
-		/* Isolate the map container from theme overrides */
+		/* Force map wrapper to have a definite height */
 		.map-wrapper {
 			width: 100%;
-			height: 80vh;
+			height: 600px !important;    /* fixed height for testing */
 			position: relative;
 			margin: 1em 0;
 			border-radius: 8px;
 			overflow: hidden;
+			background: #e0e0e0;        /* light grey so it's visible */
 			z-index: 1;
 		}
 		#map {
 			width: 100% !important;
 			height: 100% !important;
-			background: #fff;   /* light fallback */
+			background: #fff;
 		}
 		/* Pop‑up styling (same as before) */
 		.leaflet-popup-content-wrapper {
@@ -93,7 +94,6 @@ permalink: /journalist-map/
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 	(function() {
-		// Wait until the page is fully loaded and the map container is ready
 		window.addEventListener('load', function() {
 			// Create the map inside the isolated wrapper
 			var map = L.map('map', { zoomControl: true }).setView([40.25, 45.0], 8);
@@ -143,7 +143,7 @@ permalink: /journalist-map/
 				}
 			});
 
-			// Force a resize to ensure tiles render correctly after everything is set
+			// Force a resize after everything is rendered
 			setTimeout(function() { map.invalidateSize(); }, 100);
 		});
 	})();
