@@ -6,39 +6,116 @@ permalink: /journalist-map/
 <html lang="en">
 <head>
 	<base href="/">
-	<title>IRCNA Journalists – Map</title>
+	<title>IRCNA Journalists</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png" />
-	<!-- Leaflet CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		/* Ensure the map container is visible even if tiles fail */
-		.map-wrapper {
-			width: 100%;
-			margin: 1em 0;
-			border-radius: 8px;
-			overflow: hidden;
-			background: #e0e0e0;
+		.journalist-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5em;
+			margin: 2em 0;
 		}
-		#map {
+		.journalist-card {
+			text-align: center;
+			cursor: pointer;
+			background: #f9f9f9;
+			border-radius: 8px;
+			padding: 1em;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+		.journalist-card:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		.journalist-card img {
+			width: 120px;
+			height: 120px;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-bottom: 0.6em;
+			border: 3px solid #e44;
+		}
+		.journalist-card h3 {
+			margin: 0.3em 0 0.1em;
+			font-size: 1em;
+		}
+		.journalist-card p {
+			margin: 0;
+			font-size: 0.85em;
+			color: #888;
+		}
+
+		/* Modal overlay */
+		.modal-overlay {
+			display: none;
+			position: fixed;
+			top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.85);
+			z-index: 99999;
+			justify-content: center;
+			align-items: center;
+		}
+		.modal-overlay.active {
+			display: flex;
+		}
+		.modal-content {
 			background: #fff;
+			border-radius: 12px;
+			padding: 2em;
+			max-width: 500px;
+			width: 90%;
+			text-align: center;
+			position: relative;
 		}
-		.leaflet-popup-content-wrapper {
-			background: #1e1e1e;
-			color: #ddd;
-			border: 1px solid #444;
-			border-radius: 8px;
+		.modal-content img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-bottom: 1em;
+			border: 3px solid #e44;
 		}
-		.leaflet-popup-content { padding: 1em; line-height: 1.4; }
-		.leaflet-popup-content h3 { color: #e44; margin: 0 0 0.3em; }
-		.leaflet-popup-content img {
-			width: 60px; height: 60px; object-fit: cover;
-			border-radius: 50%; float: left; margin-right: 1em; margin-bottom: 0.5em;
+		.modal-content h2 {
+			margin: 0 0 0.2em;
+			color: #3d4449;
 		}
-		.leaflet-popup-close-button { color: #e44 !important; }
-		.leaflet-control-zoom a { background: #2a2a2a; color: #ddd; border-color: #555; }
+		.modal-content .role {
+			color: #e44;
+			font-weight: 600;
+			margin-bottom: 0.8em;
+		}
+		.modal-content .bio {
+			color: #555;
+			line-height: 1.5;
+		}
+		.modal-content .city {
+			color: #999;
+			font-size: 0.9em;
+			margin-top: 1em;
+		}
+		.modal-close {
+			position: absolute;
+			top: 10px; right: 20px;
+			font-size: 28px;
+			cursor: pointer;
+			color: #aaa;
+			background: none;
+			border: none;
+		}
+		.modal-close:hover { color: #e44; }
+
+		@media screen and (max-width: 736px) {
+			.journalist-grid {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1em;
+			}
+			.journalist-card img {
+				width: 80px; height: 80px;
+			}
+		}
 	</style>
 </head>
 <body class="is-preload">
@@ -59,14 +136,21 @@ permalink: /journalist-map/
 	<section>
 		<header class="major">
 			<h1>Our Journalists</h1>
-			<p>Click a marker to learn about the IRCNA journalists working across Armenia.</p>
+			<p>Click any journalist to learn more about them.</p>
 		</header>
 
-		<div class="map-wrapper">
-			<div id="map" style="height: 600px;"></div>
-		</div>
-		<div id="map-error" style="display:none; padding: 2em; background: #ffebee; border: 1px solid #c00; margin-top: 1em;">
-			<strong>Map could not load.</strong> Please contact the site admin.
+		<div class="journalist-grid">
+			{% for j in site.data.journalists.journalists %}
+			<div class="journalist-card" onclick="openModal({{ forloop.index0 }})">
+				{% if j.photo and j.photo != '' %}
+				<img src="{{ j.photo }}" alt="{{ j.name }}" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Placeholder" />
+				{% endif %}
+				<h3>{{ j.name }}</h3>
+				<p>{{ j.city }}</p>
+			</div>
+			{% endfor %}
 		</div>
 	</section>
 
@@ -87,75 +171,55 @@ permalink: /journalist-map/
 </div>
 </div>
 
-<!-- Leaflet JavaScript -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Modal overlay -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+	<div class="modal-content" id="modal-content" onclick="event.stopPropagation()">
+		<button class="modal-close" onclick="closeModal()">&times;</button>
+		<img id="modal-photo" src="" alt="" />
+		<h2 id="modal-name"></h2>
+		<p class="role" id="modal-role"></p>
+		<p class="bio" id="modal-bio"></p>
+		<p class="city" id="modal-city"></p>
+	</div>
+</div>
+
 <script>
-	(function() {
-		window.addEventListener('load', function() {
-			try {
-				var container = document.getElementById('map');
-				if (!container) throw new Error('Map container not found');
+	var journalists = [
+		{% for j in site.data.journalists.journalists %}
+		{
+			name: {{ j.name | jsonify }},
+			role: {{ j.role | jsonify }},
+			photo: {{ j.photo | jsonify }},
+			bio: {{ j.bio | jsonify }},
+			city: {{ j.city | jsonify }}
+		}{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+	];
 
-				// Ensure container has height (inline style already set)
-				if (container.offsetHeight === 0) {
-					container.style.height = '600px';
-				}
+	function openModal(index) {
+		var j = journalists[index];
+		document.getElementById('modal-photo').src = (j.photo && j.photo !== '') ? j.photo : 'images/pic01.jpg';
+		document.getElementById('modal-name').textContent = j.name;
+		document.getElementById('modal-role').textContent = j.role;
+		document.getElementById('modal-bio').textContent = j.bio;
+		document.getElementById('modal-city').textContent = j.city;
+		document.getElementById('modal-overlay').classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
 
-				var map = L.map('map', { zoomControl: true }).setView([40.25, 45.0], 8);
+	function closeModal(event) {
+		if (event && event.target !== document.getElementById('modal-overlay')) return;
+		document.getElementById('modal-overlay').classList.remove('active');
+		document.body.style.overflow = '';
+	}
 
-				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-					attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-					maxZoom: 19
-				}).addTo(map);
-
-				// Custom marker icon
-				var customIcon = L.icon({
-					iconUrl: '/images/uploads/ircna-favicon.png',
-					iconSize: [32, 32],
-					iconAnchor: [16, 32],
-					popupAnchor: [0, -32]
-				});
-
-				// Journalist data – manually escaped to avoid JS syntax errors
-				var journalists = [
-					{% for j in site.data.journalists.journalists %}
-					{
-						name: {{ j.name | jsonify }},
-						role: {{ j.role | jsonify }},
-						photo: {{ j.photo | jsonify }},
-						bio: {{ j.bio | jsonify }},
-						city: {{ j.city | jsonify }},
-						lat: {{ j.lat }},
-						lng: {{ j.lng }}
-					}{% unless forloop.last %},{% endunless %}
-					{% endfor %}
-				];
-
-				// Add markers
-				journalists.forEach(function(j) {
-					if (j.lat && j.lng) {
-						var marker = L.marker([j.lat, j.lng], { icon: customIcon }).addTo(map);
-						var popupHtml = '<div>';
-						if (j.photo && j.photo !== '') {
-							popupHtml += '<img src="' + j.photo + '" alt="' + j.name + '" />';
-						}
-						popupHtml += '<h3>' + j.name + '</h3>';
-						popupHtml += '<p><strong>' + j.role + '</strong></p>';
-						popupHtml += '<p>' + j.bio + '</p>';
-						popupHtml += '</div>';
-						marker.bindPopup(popupHtml);
-					}
-				});
-
-				// Force resize after rendering
-				setTimeout(function() { map.invalidateSize(); }, 100);
-			} catch (e) {
-				document.getElementById('map').style.display = 'none';
-				document.getElementById('map-error').style.display = 'block';
-				console.error('Map error:', e);
-			}
-		});
-	})();
+	// Close modal with Escape key
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			document.getElementById('modal-overlay').classList.remove('active');
+			document.body.style.overflow = '';
+		}
+	});
 </script>
 
 <script src="assets/js/jquery.min.js"></script>
