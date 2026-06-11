@@ -3,60 +3,47 @@ title: IRCNA Journalists
 permalink: /journalist-map/
 ---
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 	<base href="/">
 	<title>IRCNA Journalists – Map</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png" />
+	<!-- Leaflet CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 	<style>
-		#map {
-			width: 100% !important;
-			height: 80vh !important;
-			border-radius: 8px;
+		/* Isolate the map container from theme overrides */
+		.map-wrapper {
+			width: 100%;
+			height: 80vh;
+			position: relative;
 			margin: 1em 0;
+			border-radius: 8px;
+			overflow: hidden;
 			z-index: 1;
 		}
+		#map {
+			width: 100% !important;
+			height: 100% !important;
+			background: #fff;   /* light fallback */
+		}
+		/* Pop‑up styling (same as before) */
 		.leaflet-popup-content-wrapper {
-			border-radius: 8px;
-			padding: 0;
 			background: #1e1e1e;
 			color: #ddd;
 			border: 1px solid #444;
+			border-radius: 8px;
 		}
-		.leaflet-popup-content {
-			margin: 0;
-			padding: 1em;
-			font-size: 0.9em;
-			line-height: 1.4;
-		}
-		.leaflet-popup-content h3 {
-			margin: 0 0 0.3em;
-			color: #e44;
-		}
+		.leaflet-popup-content { padding: 1em; line-height: 1.4; }
+		.leaflet-popup-content h3 { color: #e44; margin: 0 0 0.3em; }
 		.leaflet-popup-content img {
-			width: 60px;
-			height: 60px;
-			object-fit: cover;
-			border-radius: 50%;
-			float: left;
-			margin-right: 1em;
-			margin-bottom: 0.5em;
+			width: 60px; height: 60px; object-fit: cover;
+			border-radius: 50%; float: left; margin-right: 1em; margin-bottom: 0.5em;
 		}
-		.leaflet-popup-content p {
-			margin: 0.2em 0;
-		}
-		.leaflet-popup-close-button {
-			color: #e44 !important;
-		}
-		.leaflet-control-zoom a {
-			background: #2a2a2a;
-			color: #ddd;
-			border-color: #555;
-		}
+		.leaflet-popup-close-button { color: #e44 !important; }
+		.leaflet-control-zoom a { background: #2a2a2a; color: #ddd; border-color: #555; }
 	</style>
 </head>
 <body class="is-preload">
@@ -80,7 +67,9 @@ permalink: /journalist-map/
 			<p>Click a marker to learn about the IRCNA journalists working across Armenia.</p>
 		</header>
 
-		<div id="map"></div>
+		<div class="map-wrapper">
+			<div id="map"></div>
+		</div>
 	</section>
 
 </div>
@@ -100,19 +89,22 @@ permalink: /journalist-map/
 </div>
 </div>
 
+<!-- Leaflet JavaScript -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 	(function() {
+		// Wait until the page is fully loaded and the map container is ready
 		window.addEventListener('load', function() {
-			var map = L.map('map').setView([40.25, 45.0], 8);
+			// Create the map inside the isolated wrapper
+			var map = L.map('map', { zoomControl: true }).setView([40.25, 45.0], 8);
 
-			// Standard OSM tiles – reliable, no fallback needed
+			// Standard OpenStreetMap tiles – the most reliable layer
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 				maxZoom: 19
 			}).addTo(map);
 
-			// Custom marker icon
+			// Custom marker icon (using your favicon – you can change later)
 			var customIcon = L.icon({
 				iconUrl: '/images/uploads/ircna-favicon.png',
 				iconSize: [32, 32],
@@ -120,6 +112,7 @@ permalink: /journalist-map/
 				popupAnchor: [0, -32]
 			});
 
+			// Inject journalist data from YAML
 			var journalists = [
 				{% for j in site.data.journalists.journalists %}
 				{
@@ -134,18 +127,24 @@ permalink: /journalist-map/
 				{% endfor %}
 			];
 
+			// Place markers with pop‑ups
 			journalists.forEach(function(j) {
-				var marker = L.marker([j.lat, j.lng], { icon: customIcon }).addTo(map);
-				var popupHtml = '<div style="overflow:auto;">';
-				if (j.photo && j.photo !== '') {
-					popupHtml += '<img src="' + j.photo + '" alt="' + j.name + '" />';
+				if (j.lat && j.lng) {   // only add if coordinates exist
+					var marker = L.marker([j.lat, j.lng], { icon: customIcon }).addTo(map);
+					var popupHtml = '<div>';
+					if (j.photo && j.photo !== '') {
+						popupHtml += '<img src="' + j.photo + '" alt="' + j.name + '" />';
+					}
+					popupHtml += '<h3>' + j.name + '</h3>';
+					popupHtml += '<p><strong>' + j.role + '</strong></p>';
+					popupHtml += '<p>' + j.bio + '</p>';
+					popupHtml += '</div>';
+					marker.bindPopup(popupHtml);
 				}
-				popupHtml += '<h3>' + j.name + '</h3>';
-				popupHtml += '<p><strong>' + j.role + '</strong></p>';
-				popupHtml += '<p>' + j.bio + '</p>';
-				popupHtml += '</div>';
-				marker.bindPopup(popupHtml);
 			});
+
+			// Force a resize to ensure tiles render correctly after everything is set
+			setTimeout(function() { map.invalidateSize(); }, 100);
 		});
 	})();
 </script>
