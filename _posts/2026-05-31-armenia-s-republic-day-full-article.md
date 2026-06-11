@@ -4,19 +4,7 @@ date: 2026-05-29T23:33:00
 image: /images/uploads/barior.jpg
 background_color: ''
 text_color: ''
-custom_css: |-
-  .article-content img {
-    opacity: 0;
-    animation: fadeIn 0.8s forwards;
-    animation-play-state: paused;
-  }
-  .article-content img.aos-init {
-    animation-play-state: running;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+custom_css: ''
 layout: post
 ---
 
