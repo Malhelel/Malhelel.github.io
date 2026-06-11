@@ -199,6 +199,7 @@ collections:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string", required: false }
+              - { label: "Anchor", name: "anchor", widget: "string", required: false, hint: "Unique ID for linking (e.g., mikael-yamiosei)" }
       - file: "_data/community-connections.yml"
         label: "Community Connections"
         name: "community_connections"
@@ -287,6 +288,7 @@ collections:
               - { label: "City", name: "city", widget: "string" }
               - { label: "Latitude", name: "lat", widget: "number", value_type: "float" }
               - { label: "Longitude", name: "lng", widget: "number", value_type: "float" }
+              - { label: "Anchor", name: "anchor", widget: "string", required: false, hint: "Unique ID for linking (e.g., mikael-yamiosei)" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
