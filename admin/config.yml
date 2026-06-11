@@ -277,6 +277,7 @@ collections:
         label: "Journalists Map"
         name: "journalists_map"
         fields:
+          - { label: "Map Image", name: "map_image", widget: "image", required: false, hint: "Single clickable map image" }
           - name: "journalists"
             label: "Journalists"
             widget: "list"
