@@ -3,8 +3,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="google-site-verification" content="2KIbjTmWophGFl79l7g8GNpgHozHQhpdJDBBqqqIxNE" />
 	<title>Independent Reporting and Community Networking in Armenia</title>
-	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
@@ -30,37 +31,23 @@
 		#upcoming-overlay .dont-show {
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
-
-		/* Sidebar stats – maroon text, below search */
+		/* Stats box in sidebar */
 		#site-stats {
-			margin: 1.5em 0 1.5em 0;
-			padding: 0.8em 0;
-			border-top: 1px solid rgba(255,255,255,0.12);
-			border-bottom: 1px solid rgba(255,255,255,0.12);
+			margin: 1.5em 0 1em 0;
+			padding: 0.8em;
+			background: rgba(255,255,255,0.05);
+			border-radius: 6px;
 			text-align: center;
+			font-size: 0.9em;
 		}
-		#site-stats .stat-row {
-			display: flex;
-			justify-content: center;
-			align-items: baseline;
-			gap: 0.3em;
-			margin-bottom: 0.3em;
-			font-size: 0.85em;
-			color: maroon;               /* label color */
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-		}
-		#site-stats .stat-row strong {
-			font-size: 1.3em;
-			color: #b22222;              /* number color – firebrick / deeper maroon */
-			font-weight: 600;
-			min-width: 2em;
+		#site-stats p {
+			margin: 0.2em 0;
 		}
 	</style>
 </head>
 <body class="is-preload">
 
-<!-- UPCOMING POPUP -->
+<!-- UPCOMING POPUP (full screen) -->
 {% if site.data.upcoming.enabled %}
 <div id="upcoming-overlay">
 	<span class="close-btn" onclick="closeUpcoming()">&times;</span>
@@ -78,7 +65,7 @@
 <div id="main">
 <div class="inner">
 
-	<!-- Header (logo + social icons) -->
+	<!-- Header with logo support -->
 	<header id="header">
 		<a href="index.html" class="logo">
 			{% if site.data.homepage.logo_image %}
@@ -106,7 +93,7 @@
 		</span>
 	</section>
 
-	<!-- Latest Stories -->
+	<!-- Latest Stories (dynamic) -->
 	<section>
 		<header class="major">
 			<h2>{{ site.data.homepage.posts_section_title }}</h2>
@@ -181,26 +168,6 @@
 		</form>
 	</section>
 
-	<!-- STATS – editable heading, image, visitors, subscribers -->
-	<div id="site-stats">
-		{% if site.data.stats.heading %}
-		<h3 style="color: maroon; text-transform: uppercase; text-align: center; margin-bottom: 0.5em; font-size: 0.85em;">{{ site.data.stats.heading }}</h3>
-		{% endif %}
-		{% if site.data.stats.image %}
-		<div style="text-align: center; margin-bottom: 0.8em;">
-			<img src="{{ site.data.stats.image }}" alt="Stats image" style="max-width: 100%; height: auto; border-radius: 4px;" />
-		</div>
-		{% endif %}
-		<div class="stat-row">
-			<strong>{{ site.data.stats.visitors }}</strong>
-			<span>Total Visits</span>
-		</div>
-		<div class="stat-row">
-			<strong>{{ site.data.stats.subscribers }}</strong>
-			<span>Subscribers</span>
-		</div>
-	</div>
-
 	<nav id="menu">
 		<header class="major"><h2>Menu</h2></header>
 		{{ site.data.homepage.menu_html }}
@@ -239,6 +206,12 @@
 		</ul>
 	</section>
 
+	<!-- SITE STATS -->
+	<div id="site-stats">
+		<p>👁️ Visitors: <strong>{{ site.data.stats.visitors }}</strong></p>
+		<p>📬 Subscribers: <strong>{{ site.data.stats.subscribers }}</strong></p>
+	</div>
+
 	<footer id="footer">
 		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
 	</footer>
@@ -247,7 +220,7 @@
 </div>
 </div>
 
-<!-- Upcoming popup JS -->
+<!-- Upcoming popup JavaScript -->
 {% if site.data.upcoming.enabled %}
 <script>
 	(function() {
