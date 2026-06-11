@@ -15,40 +15,27 @@ permalink: /journalist-map/
 		.journalist-grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 1.5em;
+			gap: 2px;                 /* hairline gap – adjust as desired */
 			margin: 2em 0;
 		}
 		.journalist-card {
-			text-align: center;
 			cursor: pointer;
-			background: #f9f9f9;
-			border-radius: 8px;
-			padding: 1em;
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
-		}
-		.journalist-card:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			aspect-ratio: 1 / 1;     /* forces square shape */
+			overflow: hidden;
 		}
 		.journalist-card img {
-			width: 120px;
-			height: 120px;
-			object-fit: cover;
-			border-radius: 50%;
-			margin-bottom: 0.6em;
-			border: 3px solid #e44;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;       /* fills the square without distortion */
+			display: block;
+			border-radius: 0;        /* sharp corners */
 		}
-		.journalist-card h3 {
-			margin: 0.3em 0 0.1em;
-			font-size: 1em;
-		}
+		.journalist-card h3,
 		.journalist-card p {
-			margin: 0;
-			font-size: 0.85em;
-			color: #888;
+			display: none;           /* hide name/city on the card – popup still works */
 		}
 
-		/* Modal overlay */
+		/* Modal overlay (unchanged) */
 		.modal-overlay {
 			display: none;
 			position: fixed;
@@ -110,10 +97,7 @@ permalink: /journalist-map/
 		@media screen and (max-width: 736px) {
 			.journalist-grid {
 				grid-template-columns: repeat(2, 1fr);
-				gap: 1em;
-			}
-			.journalist-card img {
-				width: 80px; height: 80px;
+				gap: 1px;
 			}
 		}
 	</style>
@@ -136,7 +120,7 @@ permalink: /journalist-map/
 	<section>
 		<header class="major">
 			<h1>Our Journalists</h1>
-			<p>Click any journalist to learn more about them.</p>
+			<p>Click a photo to learn more about the journalist.</p>
 		</header>
 
 		<div class="journalist-grid">
@@ -147,8 +131,6 @@ permalink: /journalist-map/
 				{% else %}
 				<img src="images/pic01.jpg" alt="Placeholder" />
 				{% endif %}
-				<h3>{{ j.name }}</h3>
-				<p>{{ j.city }}</p>
 			</div>
 			{% endfor %}
 		</div>
@@ -213,7 +195,6 @@ permalink: /journalist-map/
 		document.body.style.overflow = '';
 	}
 
-	// Close modal with Escape key
 	document.addEventListener('keydown', function(e) {
 		if (e.key === 'Escape') {
 			document.getElementById('modal-overlay').classList.remove('active');
