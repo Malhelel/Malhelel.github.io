@@ -76,3 +76,10 @@ journalists:
     city: "Ashtarak"
     lat: 40.2929
     lng: 44.3625
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Gavar"
+    lat: 40.3594
+    lng: 45.1269
