@@ -42,7 +42,7 @@ permalink: /member-tools/
 	<!-- LOGIN WALL -->
 	<div id="auth-section">
 		<h2>Member Login</h2>
-		<p>Sign in to access IRCNA member tools, including embedded research and image galleries.</p>
+		<p>Sign in to access IRCNA member tools, including research and contact monitoring.</p>
 		<form id="login-form">
 			<input type="email" id="login-email" placeholder="Email" required />
 			<input type="password" id="login-password" placeholder="Password" required />
@@ -59,7 +59,7 @@ permalink: /member-tools/
 				<label for="tool-select">Choose tool:</label>
 				<select id="tool-select">
 					<option value="https://www.wikipedia.org">Wikipedia – Research</option>
-					<option value="https://www.modelsociety.com">Model Society – Image Gallery</option>
+					<option value="https://tally.so">Tally Dashboard – Contact Monitoring</option>
 				</select>
 				<button onclick="loadTool()">Load / Refresh</button>
 			</div>
@@ -68,6 +68,7 @@ permalink: /member-tools/
 		<div id="iframe-container">
 			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://www.wikipedia.org" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
+		<p style="font-size:0.9em; color:#666;">Both tools load inside this window. Tally Dashboard lets you monitor contact requests directly.</p>
 	</div>
 
 </div>
@@ -147,16 +148,12 @@ permalink: /member-tools/
 			generatorSection.style.display = 'none';
 		}
 	});
-</script>
 
-<script>
 	function loadTool() {
 		var select = document.getElementById('tool-select');
 		var url = select.value;
 		var iframe = document.getElementById('proxy-iframe');
-		// Clear the iframe first to prevent getting stuck
 		iframe.src = 'about:blank';
-		// Set a small delay to ensure the browser clears it, then load new URL
 		setTimeout(function() {
 			iframe.src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url) + '&_=' + Date.now();
 		}, 100);
