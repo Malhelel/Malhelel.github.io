@@ -7,6 +7,23 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- AOS (Animate on Scroll) CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	{% if page.background_color %}
+	<style>
+		body { background-color: {{ page.background_color }}; }
+	</style>
+	{% endif %}
+	{% if page.text_color %}
+	<style>
+		.article-content { color: {{ page.text_color }}; }
+	</style>
+	{% endif %}
+	{% if page.custom_css %}
+	<style>
+		{{ page.custom_css }}
+	</style>
+	{% endif %}
 </head>
 <body class="is-preload">
 <div id="wrapper">
@@ -28,7 +45,9 @@
 			<h1>{{ page.title }}</h1>
 			<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
 		</header>
-		{{ content }}
+		<div class="article-content">
+			{{ content }}
+		</div>
 	</article>
 
 </div>
@@ -85,6 +104,15 @@
 </div>
 </div>
 </div>
+
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+		duration: 600,   // animation speed (ms)
+		once: true       // only animate once per page load
+	});
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
