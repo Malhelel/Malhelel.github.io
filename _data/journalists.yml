@@ -1,0 +1,78 @@
+journalists:
+  - name: "Mikael Yamiosei"
+    role: "Founder & Journalist"
+    photo: "/images/uploads/mikael.jpg"
+    bio: "Founder of IRCNA. Covers politics, breaking events, festivals. Based in Yerevan."
+    city: "Yerevan"
+    lat: 40.1792
+    lng: 44.4991
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Gyumri"
+    lat: 40.7929
+    lng: 43.8465
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Sevan"
+    lat: 40.5550
+    lng: 45.0000
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Vanadzor"
+    lat: 40.8074
+    lng: 44.4970
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Kotayk"
+    lat: 40.3000
+    lng: 44.6500
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Tavush"
+    lat: 40.9000
+    lng: 45.3000
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Syunik"
+    lat: 39.2500
+    lng: 46.2500
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Artashat"
+    lat: 39.9500
+    lng: 44.5500
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Armavir"
+    lat: 40.1500
+    lng: 44.0333
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Vayots Dzor"
+    lat: 39.7000
+    lng: 45.3000
+  - name: "TBD"
+    role: "Journalist"
+    photo: "/images/uploads/placeholder.jpg"
+    bio: "Coming soon."
+    city: "Ashtarak"
+    lat: 40.2929
+    lng: 44.3625
