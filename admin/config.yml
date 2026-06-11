@@ -281,8 +281,8 @@ collections:
               - { label: "Photo", name: "photo", widget: "image", required: false }
               - { label: "Bio", name: "bio", widget: "text" }
               - { label: "City", name: "city", widget: "string" }
-              - { label: "Latitude", name: "lat", widget: "number", valueType: "float" }
-              - { label: "Longitude", name: "lng", widget: "number", valueType: "float" }
+              - { label: "Latitude", name: "lat", widget: "number", value_type: "float" }
+              - { label: "Longitude", name: "lng", widget: "number", value_type: "float" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
