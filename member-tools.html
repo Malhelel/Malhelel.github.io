@@ -59,7 +59,7 @@ permalink: /member-tools/
 				<label for="tool-select">Choose tool:</label>
 				<select id="tool-select">
 					<option value="https://www.wikipedia.org">Wikipedia – Research</option>
-					<option value="https://tally.so">Tally Dashboard – Contact Monitoring</option>
+					<option value="https://tally.so">Tally Dashboard – Contact Monitoring (opens in new tab)</option>
 				</select>
 				<button onclick="loadTool()">Load / Refresh</button>
 			</div>
@@ -68,7 +68,7 @@ permalink: /member-tools/
 		<div id="iframe-container">
 			<iframe id="proxy-iframe" src="https://iframe-proxy.mikael-yamiosei.workers.dev/?url=https://www.wikipedia.org" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
 		</div>
-		<p style="font-size:0.9em; color:#666;">Both tools load inside this window. Tally Dashboard lets you monitor contact requests directly.</p>
+		<p style="font-size:0.9em; color:#666;">Wikipedia loads inside this window. Tally opens in a new tab due to technical restrictions (its navigation is blocked inside the iframe).</p>
 	</div>
 
 </div>
@@ -150,16 +150,21 @@ permalink: /member-tools/
 	});
 </script>
 
-<!-- Load‑tool function (global scope, accessible from onclick) -->
+<!-- Global loadTool function -->
 <script>
 	function loadTool() {
 		var select = document.getElementById('tool-select');
 		var url = select.value;
-		var iframe = document.getElementById('proxy-iframe');
-		iframe.src = 'about:blank';
-		setTimeout(function() {
-			iframe.src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url) + '&_=' + Date.now();
-		}, 100);
+		if (url === 'https://tally.so') {
+			// Tally cannot be embedded; open in new tab
+			window.open(url, '_blank');
+		} else {
+			var iframe = document.getElementById('proxy-iframe');
+			iframe.src = 'about:blank';
+			setTimeout(function() {
+				iframe.src = 'https://iframe-proxy.mikael-yamiosei.workers.dev/?url=' + encodeURIComponent(url) + '&_=' + Date.now();
+			}, 100);
+		}
 	}
 </script>
 
