@@ -31,17 +31,31 @@
 		#upcoming-overlay .dont-show {
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
-		/* Stats box in sidebar */
+
+		/* Sidebar stats – maroon, clean, below search */
 		#site-stats {
-			margin: 1.5em 0 1em 0;
-			padding: 0.8em;
-			background: rgba(255,255,255,0.05);
-			border-radius: 6px;
+			margin: 1.5em 0 1.5em 0;
+			padding: 0.8em 0;
+			border-top: 1px solid rgba(255,255,255,0.12);
+			border-bottom: 1px solid rgba(255,255,255,0.12);
 			text-align: center;
-			font-size: 0.9em;
 		}
-		#site-stats p {
-			margin: 0.2em 0;
+		#site-stats .stat-row {
+			display: flex;
+			justify-content: center;
+			align-items: baseline;
+			gap: 0.3em;
+			margin-bottom: 0.3em;
+			font-size: 0.85em;
+			color: maroon;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+		#site-stats .stat-row strong {
+			font-size: 1.3em;
+			color: #b22222;
+			font-weight: 600;
+			min-width: 2em;
 		}
 	</style>
 </head>
@@ -65,7 +79,18 @@
 <div id="main">
 <div class="inner">
 
-	{% include header.html %}
+	<!-- Header (clean flexbox logo + slogan) -->
+	<header id="header">
+		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink: 0;" />
+			{% endif %}
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
 
 	<!-- Banner -->
 	<section id="banner">
@@ -159,6 +184,18 @@
 		</form>
 	</section>
 
+	<!-- STATS – maroon, no emoji, directly below search -->
+	<div id="site-stats">
+		<div class="stat-row">
+			<strong>{{ site.data.stats.visitors }}</strong>
+			<span>Total Visits</span>
+		</div>
+		<div class="stat-row">
+			<strong>{{ site.data.stats.subscribers }}</strong>
+			<span>Subscribers</span>
+		</div>
+	</div>
+
 	<nav id="menu">
 		<header class="major"><h2>Menu</h2></header>
 		{{ site.data.homepage.menu_html }}
@@ -196,12 +233,6 @@
 			<li class="icon solid fa-home">{{ site.data.homepage.contact_address_line1 }}<br />{{ site.data.homepage.contact_address_line2 }}</li>
 		</ul>
 	</section>
-
-	<!-- SITE STATS -->
-	<div id="site-stats">
-		<p>👁️ Visitors: <strong>{{ site.data.stats.visitors }}</strong></p>
-		<p>📬 Subscribers: <strong>{{ site.data.stats.subscribers }}</strong></p>
-	</div>
 
 	<footer id="footer">
 		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
