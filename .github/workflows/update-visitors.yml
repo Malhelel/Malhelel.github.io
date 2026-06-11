@@ -2,8 +2,8 @@ name: Auto-increment Visitor Count
 
 on:
   schedule:
-    - cron: '0 */10 * * *'   # every 10 hours
-  workflow_dispatch:          # allows manual run
+    - cron: '0 */10 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,19 +15,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Pull latest changes
+      - name: Pull latest changes (force)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull origin main --rebase
+          git fetch origin main
+          git reset --hard origin/main
 
       - name: Update visitor count
         run: |
           FILE="_data/stats.yml"
           CURRENT=$(grep -oP 'visitors:\s*\K\d+' "$FILE" || echo 0)
-          RAND=$(( RANDOM % 17 + 11 ))   # 11–27
+          RAND=$(( RANDOM % 17 + 11 ))
           NEW=$(( CURRENT + RAND ))
           sed -i "s/^visitors: .*/visitors: $NEW/" "$FILE"
+          echo "RAND=$RAND" >> $GITHUB_ENV
           echo "Updated visitors from $CURRENT to $NEW (+$RAND)"
 
       - name: Commit and push
@@ -36,6 +38,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Auto-update visitors: +$RAND"
-            git push
+            git commit -m "Auto-update visitors: +${{ env.RAND }}"
+            git push origin main --force
           fi
