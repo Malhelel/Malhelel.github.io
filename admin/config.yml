@@ -268,6 +268,21 @@ collections:
         fields:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Message", name: "message", widget: "text" }
+      - file: "_data/journalists.yml"
+        label: "Journalists Map"
+        name: "journalists_map"
+        fields:
+          - name: "journalists"
+            label: "Journalists"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Latitude", name: "lat", widget: "number", valueType: "float" }
+              - { label: "Longitude", name: "lng", widget: "number", valueType: "float" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
