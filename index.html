@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		/* Full‑screen upcoming popup overlay */
+		/* Upcoming popup */
 		#upcoming-overlay {
 			display: none;
 			position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -31,8 +31,7 @@
 		#upcoming-overlay .dont-show {
 			margin-top: 2em; font-size: 0.9em; color: #ccc;
 		}
-
-		/* Sidebar stats – maroon, clean, below search */
+		/* Stats */
 		#site-stats {
 			margin: 1.5em 0 1.5em 0;
 			padding: 0.8em 0;
@@ -57,11 +56,84 @@
 			font-weight: 600;
 			min-width: 2em;
 		}
+		/* Featurette Preview Section */
+		.featurette-preview {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5em;
+			margin-bottom: 3em;
+		}
+		.fp-card {
+			position: relative;
+			border-radius: 8px;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
+			height: 350px;
+			cursor: pointer;
+			color: #fff;
+			text-decoration: none;
+			display: flex;
+			align-items: flex-end;
+		}
+		.fp-card::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+			z-index: 1;
+		}
+		.fp-content {
+			position: relative;
+			z-index: 2;
+			padding: 1.5em;
+		}
+		.fp-content h3 {
+			font-size: 1.3em;
+			margin: 0 0 0.3em;
+			color: #fff;
+		}
+		.fp-content .sub {
+			font-size: 0.8em;
+			text-transform: uppercase;
+			color: #e44;
+			margin-bottom: 0.5em;
+		}
+		.fp-images {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 3;
+			width: 120px;
+			height: 80px;
+		}
+		.fp-images img {
+			position: absolute;
+			border: 2px solid white;
+			border-radius: 4px;
+			width: 80px;
+			height: 55px;
+			object-fit: cover;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+		}
+		.fp-images img:nth-child(1) { top: 0; left: 0; z-index: 1; }
+		.fp-images img:nth-child(2) { top: 10px; left: 20px; z-index: 2; }
+		.fp-images img:nth-child(3) { top: 20px; left: 40px; z-index: 3; }
+		@media screen and (max-width: 980px) {
+			.featurette-preview {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.featurette-preview {
+				grid-template-columns: 1fr;
+			}
+		}
 	</style>
 </head>
 <body class="is-preload">
 
-<!-- UPCOMING POPUP (full screen) -->
+<!-- UPCOMING POPUP -->
 {% if site.data.upcoming.enabled %}
 <div id="upcoming-overlay">
 	<span class="close-btn" onclick="closeUpcoming()">&times;</span>
@@ -79,7 +151,6 @@
 <div id="main">
 <div class="inner">
 
-	<!-- Header (clean flexbox logo + slogan) -->
 	<header id="header">
 		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
 			{% if site.data.homepage.logo_image %}
@@ -91,6 +162,32 @@
 		</a>
 		{{ site.data.homepage.social_icons_html }}
 	</header>
+
+	<!-- Featurette Preview (top of page) -->
+	{% assign featurettes = site.data.featurette.items | reverse %}
+	{% if featurettes.size > 0 %}
+	<section>
+		<header class="major">
+			<h2>Featurette</h2>
+			<p>Stories that deserve a closer look.</p>
+		</header>
+		<div class="featurette-preview">
+			{% for item in featurettes limit:3 %}
+			<a href="{{ item.link | default: '/featurette/' }}" class="fp-card" style="background-image: url('{{ item.background_image }}');">
+				<div class="fp-images">
+					{% if item.img1 %}<img src="{{ item.img1 }}" alt="" />{% endif %}
+					{% if item.img2 %}<img src="{{ item.img2 }}" alt="" />{% endif %}
+					{% if item.img3 %}<img src="{{ item.img3 }}" alt="" />{% endif %}
+				</div>
+				<div class="fp-content">
+					<div class="sub">{{ item.subtitle }}</div>
+					<h3>{{ item.title }}</h3>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+	</section>
+	{% endif %}
 
 	<!-- Banner -->
 	<section id="banner">
@@ -109,7 +206,7 @@
 		</span>
 	</section>
 
-	<!-- Latest Stories (dynamic) -->
+	<!-- Latest Stories -->
 	<section>
 		<header class="major">
 			<h2>{{ site.data.homepage.posts_section_title }}</h2>
@@ -184,7 +281,7 @@
 		</form>
 	</section>
 
-	<!-- STATS – maroon, no emoji, directly below search -->
+	<!-- Stats -->
 	<div id="site-stats">
 		{% if site.data.stats.heading %}
 		<h3 style="color: maroon; text-transform: uppercase; text-align: center; margin-bottom: 0.5em; font-size: 0.85em;">{{ site.data.stats.heading }}</h3>
@@ -209,7 +306,6 @@
 		{{ site.data.homepage.menu_html }}
 	</nav>
 
-	<!-- Dynamic Mini‑Posts -->
 	<section>
 		<header class="major"><h2>{{ site.data.homepage.sidebar_about_title }}</h2></header>
 		<div class="mini-posts">
@@ -250,7 +346,6 @@
 </div>
 </div>
 
-<!-- Upcoming popup JavaScript -->
 {% if site.data.upcoming.enabled %}
 <script>
 	(function() {
