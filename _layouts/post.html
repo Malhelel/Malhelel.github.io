@@ -26,11 +26,24 @@
 	{% endif %}
 </head>
 <body class="is-preload">
+
+{% include topnav.html %}
+
 <div id="wrapper">
 <div id="main">
 <div class="inner">
 
-	{% include header.html %}
+	<header id="header">
+		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink: 0;" />
+			{% endif %}
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
 
 	<article>
 		<header class="major">
