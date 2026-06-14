@@ -1,8 +1,19 @@
 <nav id="topnav">
+  <div class="topnav-logo">
+    <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:#fff;">
+      {% if site.data.homepage.logo_image %}
+        <img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:28px; margin-right:0.5em;" />
+      {% endif %}
+      <span class="topnav-slogan">{{ site.data.homepage.sidebar_slogan }} in Armenia</span>
+    </a>
+  </div>
   <ul class="topnav-menu">
     {% for link in site.data.topnav.links %}
     <li><a href="{{ link.url }}">{{ link.label }}</a></li>
     {% endfor %}
   </ul>
+  <div class="topnav-social">
+    {{ site.data.homepage.social_icons_html }}
+  </div>
 </nav>
 
