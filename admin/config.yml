@@ -290,6 +290,23 @@ collections:
               - { label: "Latitude", name: "lat", widget: "number", value_type: "float" }
               - { label: "Longitude", name: "lng", widget: "number", value_type: "float" }
               - { label: "Anchor", name: "anchor", widget: "string", required: false, hint: "Unique ID for linking (e.g., mikael-yamiosei)" }
+      - file: "_data/featurette.yml"
+        label: "Featurette"
+        name: "featurette"
+        fields:
+          - name: "items"
+            label: "Featurette Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Background Image", name: "background_image", widget: "image" }
+              - { label: "Overlap Image 1", name: "img1", widget: "image" }
+              - { label: "Overlap Image 2", name: "img2", widget: "image" }
+              - { label: "Overlap Image 3", name: "img3", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", hint: "Where clicking takes you" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
