@@ -12,6 +12,12 @@ layout: post
 
 <strong>By Mikael Yamiosei | IRCNA</strong>
 
+<a href="/images/uploads/recapphoto.png" target="_blank">
+
+  <img src="/images/uploads/recapphoto.png" alt="Click to enlarge" />
+
+</a>
+
 <strong>YEREVAN</strong> — At 6:30 p.m. on June 5, the first of three evenings of open‑air celebration began not with a toast but with a procession. Approximately one hundred winemakers, some in traditional dress, others in simple shirts, walked down Tumanyan Street into the heart of the festival zone. It was the first ceremonial winemakers’ parade in the event’s decade‑long history — a deliberate signal that the 10th anniversary of Yerevan Wine Days would be different.
 
 The parade was the opening move in a three‑day takeover of central Yerevan’s Saryan, Tumanyan and Moskovyan streets, which had been announced days earlier by the Yerevan City Hall. From Friday evening through Sunday night, those roads became a pedestrian‑only republic of wine, food, music and business. Entry was free. By the time the last DJ packed up on the night of June 7, the festival had drawn approximately 180,000 visitors and generated an estimated $2.5 million in direct sales from about 250 participating businesses, according to figures EventToura shared with reporters.
@@ -25,6 +31,12 @@ What began in 2017 with 25 winemakers on a section of Saryan Street has grown in
 ## Day One — Friday, June 5: The Parade and the First Pour
 
 The festival’s official opening was the winemakers’ parade. EventToura co‑founder Mary Badalyan had announced it weeks earlier as a moment of pride. “On June 5 at 6:30 p.m., I invite everyone to Tumanyan Street in Yerevan, where 100 winemakers will enter the festival area in a grand parade,” she said at a press conference. The winemakers walked in rows, carrying not only their individual brands but the villages and regions they came from — a visual statement that Armenian winemaking is not a collection of isolated labels but a national landscape of wine‑producing territories.
+
+<a href="/images/uploads/IMG_3553.jpeg" target="_blank">
+
+  <img src="/images/uploads/IMG_3553.jpeg" alt="Click to enlarge" />
+
+</a>
 
 After the parade, the streets filled quickly. By 7:30 p.m., Saryan Street was a slow river of people holding glasses. The “Wine Enjoyment Package” (AMD 14,000) — a 10th‑anniversary branded glass, 12 tasting coupons, a neck pouch, a raffle ticket, an information booklet, and a cloth sleeve — sold steadily. The first evening’s musical programme included live bands on two stages, with genres ranging from Armenian folk‑rock to pop. DJs began playing later, as the light faded, and the atmosphere remained warm and welcoming.
 
