@@ -133,6 +133,8 @@
 </head>
 <body class="is-preload">
 
+{% include topnav.html %}
+
 <!-- UPCOMING POPUP -->
 {% if site.data.upcoming.enabled %}
 <div id="upcoming-overlay">
@@ -163,7 +165,7 @@
 		{{ site.data.homepage.social_icons_html }}
 	</header>
 
-	<!-- Featurette Preview (top of page) -->
+	<!-- Featurette Preview -->
 	{% assign featurettes = site.data.featurette.items | reverse %}
 	{% if featurettes.size > 0 %}
 	<section>
