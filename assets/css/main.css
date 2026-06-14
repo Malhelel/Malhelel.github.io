@@ -2298,40 +2298,68 @@ img {
     max-width: none !important;
     height: revert !important;
 }
-/* Top Navigation Bar */
+
+/* ---------- Top Navigation Bar (replaces old header) ---------- */
 #topnav {
   background-color: #b22222;
-  width: 100%;
-  padding: 0.5em 0;
-  text-align: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4em 1.5em;
+  font-family: Georgia, serif;
   z-index: 10001;
+  min-height: 50px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+}
+.topnav-logo {
+  display: flex;
+  align-items: center;
+}
+.topnav-logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.topnav-slogan {
+  font-weight: bold;
+  white-space: nowrap;
 }
 .topnav-menu {
   list-style: none;
-  margin: 0 auto;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 0.8em;
-  flex-wrap: wrap;
-}
-.topnav-menu li {
-  display: inline-block;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
 }
 .topnav-menu li a {
-  display: inline-block;
-  background-color: #000;
   color: #fff;
-  padding: 0.6em 1.6em;
-  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  font-family: "Roboto Slab", serif;
-  font-size: 0.9em;
-  letter-spacing: 0.05em;
-  transition: background 0.2s ease;
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
 }
 .topnav-menu li a:hover {
-  background-color: #333;
+  opacity: 0.7;
+}
+.topnav-social {
+  display: flex;
+  align-items: center;
+}
+.topnav-social .icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.8em;
+}
+.topnav-social .icons li a {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+/* Adjust content padding now that the old header is gone */
+#main > .inner {
+  padding-top: 2em !important;
 }
