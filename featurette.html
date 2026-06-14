@@ -1,0 +1,173 @@
+---
+title: Featurette
+permalink: /featurette/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Featurette – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		.featurette-item {
+			position: relative;
+			margin-bottom: 3em;
+			border-radius: 12px;
+			overflow: hidden;
+			cursor: pointer;
+			background-size: cover;
+			background-position: center;
+			min-height: 400px;
+			display: flex;
+			align-items: flex-end;
+		}
+		.featurette-item::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: rgba(0,0,0,0.35);
+			z-index: 1;
+		}
+		.featurette-overlay {
+			position: relative;
+			z-index: 2;
+			color: #fff;
+			padding: 2em;
+			width: 100%;
+		}
+		.featurette-overlay h2 {
+			font-size: 2.5em;
+			margin: 0 0 0.2em;
+			color: #fff;
+		}
+		.featurette-overlay .subtitle {
+			font-size: 1.2em;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 0.5em;
+			color: #e44;
+		}
+		.featurette-overlay p {
+			font-size: 1em;
+			max-width: 600px;
+			line-height: 1.5;
+			color: #ddd;
+		}
+		/* Overlapping images */
+		.featurette-images {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 3;
+			width: 300px;
+			height: 200px;
+			pointer-events: none;
+		}
+		.featurette-images img {
+			position: absolute;
+			border: 3px solid white;
+			border-radius: 6px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+			width: 150px;
+			height: 100px;
+			object-fit: cover;
+		}
+		.featurette-images img:nth-child(1) {
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.featurette-images img:nth-child(2) {
+			top: 20px;
+			left: 40px;
+			z-index: 2;
+		}
+		.featurette-images img:nth-child(3) {
+			top: 40px;
+			left: 80px;
+			z-index: 3;
+		}
+		@media screen and (max-width: 736px) {
+			.featurette-images {
+				width: 200px;
+				height: 150px;
+			}
+			.featurette-images img {
+				width: 100px;
+				height: 66px;
+			}
+			.featurette-item {
+				min-height: 300px;
+			}
+			.featurette-overlay h2 {
+				font-size: 1.8em;
+			}
+		}
+	</style>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header">
+		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink: 0;" />
+			{% endif %}
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<section>
+		<header class="major">
+			<h1>Featurette</h1>
+			<p>Stories that deserve a closer look.</p>
+		</header>
+
+		{% for item in site.data.featurette.items %}
+		<a href="{{ item.link | default: '/featurette/' }}" class="featurette-item" style="background-image: url('{{ item.background_image }}');">
+			<div class="featurette-images">
+				{% if item.img1 %}<img src="{{ item.img1 }}" alt="" />{% endif %}
+				{% if item.img2 %}<img src="{{ item.img2 }}" alt="" />{% endif %}
+				{% if item.img3 %}<img src="{{ item.img3 }}" alt="" />{% endif %}
+			</div>
+			<div class="featurette-overlay">
+				<div class="subtitle">{{ item.subtitle }}</div>
+				<h2>{{ item.heading }}</h2>
+				<p>{{ item.description }}</p>
+			</div>
+		</a>
+		{% endfor %}
+	</section>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
