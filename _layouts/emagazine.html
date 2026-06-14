@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<title>{{ page.title }} – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- AOS (Animate on Scroll) -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	<style>
+		/* magazine‑specific overrides */
+		#emagazine-wrapper {
+			max-width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		/* Remove sidebar and make content fill screen */
+		#main {
+			width: 100% !important;
+		}
+		#main > .inner {
+			padding: 0 !important;
+			max-width: 100%;
+		}
+		/* Hide the sidebar when on emagazine pages */
+		#sidebar {
+			display: none !important;
+		}
+		/* Emagazine header */
+		.emagazine-header {
+			padding: 4em 2em 2em;
+			text-align: center;
+			background: inherit; /* uses the page background colour */
+		}
+		.emagazine-header h1 {
+			font-size: 3.5em;
+			margin-bottom: 0.3em;
+			color: #3d4449;
+		}
+		.emagazine-meta {
+			font-size: 1em;
+			color: #7f888f;
+			font-family: "Roboto Slab", serif;
+			text-transform: uppercase;
+			letter-spacing: 0.075em;
+		}
+		/* Image stream */
+		.emagazine-content {
+			margin: 0;
+			padding: 0;
+			line-height: 0; /* removes tiny gaps between inline images */
+		}
+		.emagazine-content img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	{% if page.background_color %}
+	<style>
+		body { background-color: {{ page.background_color }}; }
+	</style>
+	{% endif %}
+</head>
+<body class="is-preload">
+
+{% include topnav.html %}
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<!-- minimal header with just logo (optional) -->
+	<header id="header" style="border-bottom: none; padding: 2em 2em 0;">
+		<a href="index.html" class="logo" style="display: flex; align-items: flex-start; gap: 0.6em;">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink: 0;" />
+			{% endif %}
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
+		</a>
+		{{ site.data.homepage.social_icons_html }}
+	</header>
+
+	<!-- Emagazine article -->
+	<article id="emagazine-wrapper">
+		<header class="emagazine-header">
+			<h1>{{ page.title }}</h1>
+			<div class="emagazine-meta">
+				{% if page.author %}<span>By {{ page.author }}</span>{% endif %}
+				{% if page.date %}<span> · {{ page.date | date: "%B %d, %Y" }}</span>{% endif %}
+			</div>
+		</header>
+
+		<div class="emagazine-content">
+			{{ content }}
+		</div>
+	</article>
+
+</div>
+</div>
+</div>
+
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+		duration: 600,
+		once: true
+	});
+	// Add fade-up animation to every image inside the magazine content
+	document.addEventListener('DOMContentLoaded', function() {
+		var images = document.querySelectorAll('.emagazine-content img');
+		images.forEach(function(img) {
+			img.setAttribute('data-aos', 'fade-up');
+		});
+	});
+</script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
