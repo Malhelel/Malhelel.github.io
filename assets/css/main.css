@@ -2300,7 +2300,7 @@ img {
 }
 /* Top Navigation Bar */
 #topnav {
-  background-color: #b22222;   /* firebrick red */
+  background-color: #b22222;
   width: 100%;
   padding: 0.5em 0;
   text-align: center;
@@ -2321,8 +2321,8 @@ img {
 }
 .topnav-menu li a {
   display: inline-block;
-  background-color: #000;      /* black box */
-  color: #fff;                 /* white text */
+  background-color: #000;
+  color: #fff;
   padding: 0.6em 1.6em;
   border-radius: 6px;
   text-decoration: none;
@@ -2333,5 +2333,5 @@ img {
   transition: background 0.2s ease;
 }
 .topnav-menu li a:hover {
-  background-color: #333;      /* slightly lighter on hover */
+  background-color: #333;
 }
