@@ -307,6 +307,16 @@ collections:
               - { label: "Overlap Image 3", name: "img3", widget: "image" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string", hint: "Where clicking takes you" }
+      - file: "_data/topnav.yml"
+        label: "Top Navigation"
+        name: "topnav"
+        fields:
+          - name: "links"
+            label: "Menu Links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
   - name: "posts"
     label: "Articles"
     folder: "_posts"
