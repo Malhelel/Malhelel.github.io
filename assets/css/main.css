@@ -2369,3 +2369,18 @@ img {
         padding-top: 1em;        /* smaller padding when fixed */
     }
 }
+/* ----- Sidebar offset to clear the sticky topnav ----- */
+#sidebar > .inner {
+    padding-top: 4em !important;            /* pushes sidebar content below the nav */
+}
+
+/* On mobile the sidebar is fixed – give it a top edge */
+@media screen and (max-width: 1280px) {
+    #sidebar {
+        top: 40px !important;               /* height of the topnav */
+        height: calc(100% - 40px) !important;
+    }
+    #sidebar > .inner {
+        padding-top: 1.5em !important;      /* smaller when fixed */
+    }
+}
