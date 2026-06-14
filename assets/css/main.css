@@ -2069,11 +2069,10 @@ button,
         top: 1em;
         width: 5em; } }
 
-/* Header (old, now only used for structure if referenced by other pages; top nav replaces it) */
+/* Header – completely hidden because topnav now handles it */
 #header {
-  display: none; /* completely hidden because the topnav now handles everything */
+  display: none !important;
 }
-/* Keep the old #header CSS out of the way */
 
 /* Banner */
 #banner {
@@ -2273,33 +2272,35 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.2em 1.5em;               /* tightened */
+  padding: 0.2em 1.5em;
   font-family: Georgia, serif;
   z-index: 10001;
-  min-height: 40px;                    /* smaller */
+  min-height: 40px;
   flex-wrap: wrap;
   position: sticky;
   top: 0;
   transition: all 0.3s ease;
 }
-/* Scrolled state */
+/* Scrolled state – force smaller height */
 #topnav.scrolled {
-  padding: 0.1em 1.5em;
-  min-height: 32px;
-  background-color: #9a1a1a;          /* slightly darker red when scrolled */
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 1.5em;
+  background-color: #9a1a1a;
+  overflow: hidden;
 }
 #topnav.scrolled .topnav-slogan {
-  font-size: 0.8em;                    /* shrink slogan */
+  font-size: 0.7em;
 }
 #topnav.scrolled .topnav-menu li a {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 #topnav.scrolled .topnav-logo img {
-  height: 18px;                        /* shrink logo */
+  height: 16px !important;
 }
-/* Default logo size */
+/* Default logo size (force smaller) */
 .topnav-logo img {
-  height: 20px;                        /* smaller, about 3:1 ratio with slogan text */
+  height: 20px !important;
   transition: height 0.3s ease;
 }
 .topnav-logo {
@@ -2309,7 +2310,7 @@ img {
 .topnav-logo a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.85em;                   /* slogan font reduced slightly */
+  font-size: 0.85em;
 }
 .topnav-slogan {
   font-weight: bold;
@@ -2319,7 +2320,7 @@ img {
 .topnav-menu {
   list-style: none;
   display: flex;
-  gap: 1em;                            /* reduced gap */
+  gap: 1em;
   margin: 0;
   padding: 0;
 }
@@ -2349,7 +2350,7 @@ img {
   font-size: 1em;
 }
 
-/* Adjust main content padding to account for sticky topnav (now that old #header is hidden) */
+/* Adjust main content padding now that old header is hidden */
 #main > .inner {
-  padding-top: 1em !important;         /* further reduced */
+  padding-top: 1em !important;
 }
