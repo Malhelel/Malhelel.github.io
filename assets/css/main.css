@@ -2298,3 +2298,40 @@ img {
     max-width: none !important;
     height: revert !important;
 }
+/* Top Navigation Bar */
+#topnav {
+  background-color: #b22222;   /* firebrick red */
+  width: 100%;
+  padding: 0.5em 0;
+  text-align: center;
+  position: relative;
+  z-index: 10001;
+}
+.topnav-menu {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+}
+.topnav-menu li {
+  display: inline-block;
+}
+.topnav-menu li a {
+  display: inline-block;
+  background-color: #000;      /* black box */
+  color: #fff;                 /* white text */
+  padding: 0.6em 1.6em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease;
+}
+.topnav-menu li a:hover {
+  background-color: #333;      /* slightly lighter on hover */
+}
