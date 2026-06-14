@@ -356,6 +356,18 @@
 </script>
 {% endif %}
 
+<!-- Shrink topnav on scroll -->
+<script>
+	window.addEventListener('scroll', function() {
+		var topnav = document.getElementById('topnav');
+		if (window.scrollY > 50) {
+			topnav.classList.add('scrolled');
+		} else {
+			topnav.classList.remove('scrolled');
+		}
+	});
+</script>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
