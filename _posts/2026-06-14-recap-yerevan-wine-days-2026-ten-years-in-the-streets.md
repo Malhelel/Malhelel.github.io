@@ -1,7 +1,7 @@
 ---
 title: '"RECAP | Yerevan Wine Days 2026: Ten Years in the Streets"'
 date: 2026-06-15T06:00
-image: ''
+image: /images/uploads/wda18.jpg
 background_color: ''
 text_color: ''
 custom_css: ''
@@ -20,7 +20,7 @@ The parade was the opening move in a three‑day takeover of central Yerevan’s
 
 What began in 2017 with 25 winemakers on a section of Saryan Street has grown into one of the region’s largest public‑facing wine events. Over the decade, the geography of participants has expanded significantly, with visitors coming from Scandinavia, England, and Australia. The festival’s milestone year brought more than 100 Armenian wineries and over 1,000 wine varieties to the capital, making it a concentrated platform for brand visibility, consumer engagement, and destination‑driven demand.
 
----
+***
 
 ## Day One — Friday, June 5: The Parade and the First Pour
 
@@ -28,7 +28,7 @@ The festival’s official opening was the winemakers’ parade. EventToura co‑
 
 After the parade, the streets filled quickly. By 7:30 p.m., Saryan Street was a slow river of people holding glasses. The “Wine Enjoyment Package” (AMD 14,000) — a 10th‑anniversary branded glass, 12 tasting coupons, a neck pouch, a raffle ticket, an information booklet, and a cloth sleeve — sold steadily. The first evening’s musical programme included live bands on two stages, with genres ranging from Armenian folk‑rock to pop. DJs began playing later, as the light faded, and the atmosphere remained warm and welcoming.
 
----
+***
 
 ## Day Two — Saturday, June 6: The Peak and the Downpour
 
@@ -38,7 +38,7 @@ The second day of the Wine and Gastronomic Business Talks featured a series of m
 
 Then the rain came. A heavy downpour began in the middle of the afternoon and continued for about two hours. The festival’s open‑air areas emptied quickly; visitors huddled under awnings, shop overhangs, and the tent where the Wine Talks were taking place. Inside the tent, the audience realized they were not going anywhere. The speaker, seeing the soaked crowd, ended her presentation with a practical joke: “Now that we’ve all gathered and you cannot leave…” The audience laughed. The rain eventually stopped, but the memory of that captive, communal moment became one of the festival’s unexpected highlights. Outside, the music had paused during the worst of the storm but resumed once the skies cleared.
 
----
+***
 
 ## Day Three — Sunday, June 7: The Finale and the Elections
 
@@ -48,7 +48,7 @@ Sunday’s programme included the last full round of tastings, a reduced music s
 
 That evening, the festival wound down. DJs played until late. The last glasses were poured. The clean‑up crews began moving in as the crowd dispersed.
 
----
+***
 
 ## The Business of the Feast
 
@@ -58,7 +58,7 @@ Gosh Sargsyan, head of the Yerevan City Hall Department of Culture and Tourism, 
 
 The festival is the work of EventToura, a private event tourism agency founded by Mary Badalyan and Nune Manukyan. It receives no state funding for its core operations; the municipal support is promotional and logistical, not structural. This private‑sector backbone has allowed the festival to outlast funding shifts and remain agile — a point of pride for the organisers.
 
----
+***
 
 ## What Made 2026 Different
 
@@ -72,7 +72,7 @@ Third, the juxtaposition with the elections. That the festival ran peacefully al
 
 However, the milestone year also raised familiar questions. The physical footprint — Saryan, Tumanyan and Moskovyan streets — has not changed since the early years. Some areas became so congested that movement was difficult. “Is it time for a conceptual overhaul? Should the festival expand its geographical footprint?” one post‑festival analysis asked. Organisers acknowledged the limitation and announced plans to ask the municipality to consider moving the festival to Republic Square in 2027, allowing for an EXPO zone and expanded B2B formats.
 
----
+***
 
 ## The Numbers and the Legacy
 
@@ -84,26 +84,18 @@ Mary Badalyan, reflecting further, offered a closing statement: “Yerevan Wine 
 
 The 10th anniversary is over. The streets are back to traffic. But the parade, the late‑night DJ sets, the thousand wines, and the rain that locked a hundred people in a room with a woman describing a dream for Gyumri — all of it has left a mark. Yerevan Wine Days is no longer a local curiosity. It is a fixture, waterlogged and all.
 
----
+***
 
 ## Sources
 
 - Armenia Press — “Yerevan Wine Days 2026 to feature three‑day celebrations and expanded cultural program” (May 25, 2026)
-
 - Wine Business — “One of the World’s Premier Wine Destinations Opens Its Doors for the 10th Anniversary of Yerevan Wine Days” (June 8, 2026)
-
 - Style.news.am — “Yerevan Wine Days 2026: A Toast to Ten Years and a Look into the Future” (June 8, 2026)
-
 - Sovetreklama — “Фестиваль Yerevan Wine Days как визитная карточка страны” (June 9, 2026)
-
 - Sputnik Armenia — “Фестиваль ‘Винные дни’ в Ереване: всем весело и совсем немного ‘пьяно’” (June 5, 2026)
-
 - News Armenia — “В Ереване 4-8 июня перекроют ряд улиц из‑за винного фестиваля” (June 4, 2026)
-
 - Yerevan Wine Days press materials (March 17, 2026) — participant numbers, package pricing, sustainability practices
-
 - Yerevan Wine Days 2026 Festival — EventBrite listing (accessed June 2026)
-
 - Wikipedia — Yerevan Wine Days (accessed June 2026) — historical attendance and economic impact data
 
 \*IRCNA is an independent, non‑profit news platform based in Yerevan. All reporting, opinions and articles are solely the work of Mikael Yamiosei and IRCNA. No part of this coverage was sponsored or approved by EventToura or any festival partner.\*
