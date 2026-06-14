@@ -2354,3 +2354,18 @@ img {
 #main > .inner {
   padding-top: 1em !important;
 }
+/* Push sidebar content below the sticky topnav */
+#sidebar > .inner {
+    padding-top: 4em;            /* desktop / tablet */
+}
+
+/* On mobile, the sidebar is fixed – give it a top offset */
+@media screen and (max-width: 1280px) {
+    #sidebar {
+        top: 40px;               /* height of topnav */
+        height: calc(100% - 40px);
+    }
+    #sidebar > .inner {
+        padding-top: 1em;        /* smaller padding when fixed */
+    }
+}
