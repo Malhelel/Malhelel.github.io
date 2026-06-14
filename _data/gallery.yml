@@ -405,3 +405,7 @@ items:
     title: "recapphoto.png"
     image: /images/uploads/recapphoto.png
     description: ""
+  - category: "Uncategorized"
+    title: "IMG_3553.jpeg"
+    image: /images/uploads/IMG_3553.jpeg
+    description: ""
