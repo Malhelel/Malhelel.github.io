@@ -2069,43 +2069,11 @@ button,
         top: 1em;
         width: 5em; } }
 
-/* Header */
+/* Header (old, now only used for structure if referenced by other pages; top nav replaces it) */
 #header {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  border-bottom: solid 5px #f56a6a;
-  padding: 6em 0 1em 0;
-  position: relative; }
-  #header > * {
-    -moz-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin-bottom: 0; }
-  #header .logo {
-    border-bottom: 0;
-    color: inherit;
-    font-family: "Roboto Slab", serif;
-    font-size: 1.125em; }
-  #header .icons {
-    text-align: right; }
-  @media screen and (max-width: 1680px) {
-    #header {
-      padding-top: 5em; } }
-  @media screen and (max-width: 736px) {
-    #header {
-      padding-top: 6.5em; }
-      #header .logo {
-        font-size: 1.25em;
-        margin: 0; }
-      #header .icons {
-        height: 5em;
-        line-height: 5em;
-        position: absolute;
-        right: -0.5em;
-        top: 0; } }
+  display: none; /* completely hidden because the topnav now handles everything */
+}
+/* Keep the old #header CSS out of the way */
 
 /* Banner */
 #banner {
@@ -2299,19 +2267,40 @@ img {
     height: revert !important;
 }
 
-/* ---------- Top Navigation Bar (replaces old header) ---------- */
+/* ---------- Top Navigation Bar (compact, shrinks on scroll) ---------- */
 #topnav {
   background-color: #b22222;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4em 1.5em;
+  padding: 0.2em 1.5em;               /* tightened */
   font-family: Georgia, serif;
   z-index: 10001;
-  min-height: 50px;
+  min-height: 40px;                    /* smaller */
   flex-wrap: wrap;
   position: sticky;
   top: 0;
+  transition: all 0.3s ease;
+}
+/* Scrolled state */
+#topnav.scrolled {
+  padding: 0.1em 1.5em;
+  min-height: 32px;
+  background-color: #9a1a1a;          /* slightly darker red when scrolled */
+}
+#topnav.scrolled .topnav-slogan {
+  font-size: 0.8em;                    /* shrink slogan */
+}
+#topnav.scrolled .topnav-menu li a {
+  font-size: 0.8em;
+}
+#topnav.scrolled .topnav-logo img {
+  height: 18px;                        /* shrink logo */
+}
+/* Default logo size */
+.topnav-logo img {
+  height: 20px;                        /* smaller, about 3:1 ratio with slogan text */
+  transition: height 0.3s ease;
 }
 .topnav-logo {
   display: flex;
@@ -2320,25 +2309,26 @@ img {
 .topnav-logo a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.85em;                   /* slogan font reduced slightly */
 }
 .topnav-slogan {
   font-weight: bold;
   white-space: nowrap;
+  transition: font-size 0.3s ease;
 }
 .topnav-menu {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  gap: 1em;                            /* reduced gap */
   margin: 0;
   padding: 0;
 }
 .topnav-menu li a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.95em;
+  font-size: 0.9em;
   letter-spacing: 0.04em;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, font-size 0.3s ease;
 }
 .topnav-menu li a:hover {
   opacity: 0.7;
@@ -2352,14 +2342,14 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0.8em;
+  gap: 0.5em;
 }
 .topnav-social .icons li a {
   color: #fff;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
-/* Adjust content padding now that the old header is gone */
+/* Adjust main content padding to account for sticky topnav (now that old #header is hidden) */
 #main > .inner {
-  padding-top: 2em !important;
+  padding-top: 1em !important;         /* further reduced */
 }
