@@ -28,11 +28,19 @@ layout: post
 
 <hr>
 
+<!-- REVISION NOTICE -->
+
+<blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #faffa; font-style: italic;">
+
+<strong>Revision Notice – June 15, 2026:</strong> This article has been updated to correct several factual inaccuracies following feedback from Alexandrea Winery. Specifically: (1) the 2025 Reserve blend is mostly Khndoghni, not Cabernet Sauvignon; (2) the future winery will not be gravity‑fed but will use equipment designed to simulate gravity‑flow techniques; (3) a transcribed word “curve” has been corrected to “cuvée”; (4) the description of Jeff Ritchey’s experience has been clarified to avoid ambiguity. IRCNA thanks Jeff Ritchey and the Alexandrea team for holding us accountable.
+
+</blockquote>
+
 <p><strong>YEREVAN —</strong> For three days in early June, Saryan Street became a river of people. Corks popped. Music thrummed. Nearly two hundred thousand visitors moved from stall to stall, tasting wines from more than one hundred Armenian producers. The 10th anniversary of Yerevan Wine Days was, by any measure, a celebration.</p>
 
 <p>But the most important part of the festival was not on the crowded asphalt. It was in a tent, under a shade, with folding chairs and a small stage.</p>
 
-<p>That tent held the Wine and Gastronomic Business Talks – a series of free, hour‑long presentations where winemakers disclosed soil pH, chefs explained wine pairings, and infrastructure builders described a €2.5 million project to rebuild a market in Gyumri. I found the Talks because Jeff Ritchey, a 31‑year California winemaker, invited me to his presentation twenty minutes after I met him at his stall. He said it was the best way to answer my questions. He was right.</p>
+<p>That tent held the Wine and Gastronomic Business Talks – a series of free, hour‑long presentations where winemakers disclosed soil pH, chefs explained wine pairings, and infrastructure builders described a €2.5 million project to rebuild a market in Gyumri. I found the Talks because Jeff Ritchey, a 31‑year veteran winemaker from California, invited me to his presentation twenty minutes after I met him at his stall. He said it was the best way to answer my questions. He was right.</p>
 
 <p>What I discovered over the next three days became the spine of this feature. Yerevan Wine Days is not just a street party. It is a case study in private resilience. EventToura, the private organisation behind the festival, receives no state funding. After USAID closed its support in 2025, the gastronomic component of the festival was cut to the bone. Marianna Vardanyan, the project manager, planned the 2026 Talks in one month, with limited financial aid, because she believed that wine and gastronomy belong together.</p>
 
@@ -52,7 +60,7 @@ layout: post
 
 <summary><strong>TLDR</strong></summary>
 
-<p>The Proshyan vineyard sits at 1,315 metres above sea level. Its soil is volcanic gravel extending more than 70 centimetres deep – so dense that workers needed Japanese rock‑cutting machinery to plant vines by hand. Alexandrea Winery, founded in 2017 by Armenian‑American entrepreneur Adam Kablanian, brought in Jeff Ritchey, a 31‑year California veteran, to turn that brutal terrain into wine.</p>
+<p>The Proshyan vineyard sits at 1,315 metres above sea level. Its soil is volcanic gravel extending more than 70 centimetres deep – so dense that workers needed Japanese rock‑cutting machinery to plant vines by hand. Alexandrea Winery, founded in 2017 by Armenian‑American entrepreneur Adam Kablanian, brought in Jeff Ritchey, a 31‑year veteran winemaker from California, to turn that brutal terrain into wine.</p>
 
 <p>Over five years, Ritchey and his team conducted elevation studies on Chardonnay, discovering that the mid‑slope blocks produced the best balance – a Goldilocks zone they now use as their benchmark. They also planted three blocks of Pinot Noir. Plots 11, 12, and 13 – each with radically different sun exposure and soil composition – became the skeleton, flesh, and humidness of Armenia’s first commercial Pinot Noir.</p>
 
@@ -127,6 +135,7 @@ layout: post
 </table>
 
 <p>During the presentation, Karen Gabrielyan emphasized the importance of altitude selection. "You cannot plant in 2,000 or 2,500 meters of altitude — it will not grow," he said. Proshyan's elevation, slightly above 1,300 meters, provides "the best bioclimatic conditions to grow and to gain the best quality possible."</p>
+
 <img src="/images/uploads/IMG_3627.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>The sun exposure across both Proshyan and Nor Yedesia is southwest — a critical factor. "It gives one of the best sunny days" during the vegetative year, Karen explained, creating perfect conditions for Pinot Noir. Alexandrea is the first winery in Armenia to produce wine from Pinot Noir.</p>
@@ -188,6 +197,7 @@ layout: post
 <p>"I'm still learning that vineyard," Ritchey said. "It's been five years, and I'm still learning every year. One of the things with winemaking that's challenging is you get one chance a year. When you decide to pick, that's it. You can't take the cluster back to the vine and ask for more time."</p>
 
 <h3>VII. The Balance Philosophy: Listening to the Wine</h3>
+
 <img src="/images/uploads/IMG_3613.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>Throughout the presentation, Ritchey returned to a single concept: balance. When an audience member asked whether each wine has a different set of balance criteria, he offered his most extended meditation on the subject.</p>
@@ -198,7 +208,7 @@ layout: post
 
 <p>The result, when balance is achieved, is almost subliminal. "When the tannins, the fruit, the alcohol, the sugars, the flavors are all balanced, you actually feel the wine. You taste it and go, 'This is really good,' but you don't really know why because everything's balanced and you kind of just feel it. Then when you smell it a little more, taste it a little more, you realize there's so much complexity in it."</p>
 
-<p>He offered a concrete example: Alexandrea's upcoming reserve blend (mostly Cabernet Sauvignon with Malbec and Petit Verdot). "It has so much intensity, it's amazing. So I can put new oak on it — even though it has 50% new oak on it right now, it doesn't taste like it because the concentration just lifts it up. It's in balance."</p>
+<p>He offered a concrete example: Alexandrea's upcoming reserve blend (mostly Khndoghni with Malbec and Petit Verdot). "It has so much intensity, it's amazing. So I can put new oak on it — even though it has 50% new oak on it right now, it doesn't taste like it because the concentration just lifts it up. It's in balance."</p>
 
 <h3>VIII. The Challenges of a Frontier Wine Economy</h3>
 
@@ -214,15 +224,15 @@ layout: post
 
 <p>The calendar is the enemy. "Once we reach October here, you never know what the weather's going to do. In California, I've picked the week before Thanksgiving. Here, we're usually starting at the end of August and hoping to be done by mid-October. You never know what mother nature's going to throw at you. It could be hot in October. It could be snowing in October. You have to pay attention — especially during harvest, because if you see a rainstorm coming in, you might have to pick your grapes early. You don't want them to rot on the vine."</p>
 
-<h3>IX. The Future: Gravity Winery, 2028 Icon, and the Reserve Blend</h3>
+<h3>IX. The Future: Estate Winery, 2028 Icon, and the Reserve Blend</h3>
 
-<p>Despite the headwinds, Alexandrea is expanding. Ritchey disclosed that the winery is in the design phase of a gravity-fed estate winery to be built on the Proshyan hill, overlooking the Pinot Noir vineyards with a direct sightline to Mount Ararat.</p>
+<p>Despite the headwinds, Alexandrea is expanding. Ritchey disclosed that the winery is in the design phase of a new estate winery on the Proshyan hill, overlooking the Pinot Noir vineyards with a direct sightline to Mount Ararat. While the facility will not be gravity-fed, it will use equipment designed to simulate gravity-flow techniques, ensuring the gentlest possible handling of the grapes.</p>
 
 <p>"We're right in the middle of designing the winery," he said. "It's going to go right here, up on a hill. It overlooks the Pinot Noir vineyard right to Mount Ararat. It's stunning. It's going to be amazing."</p>
 
 <p>He acknowledged the uncertainty of Armenian construction timelines with a wry laugh. "I've helped design and build three wineries in California, so I know the process. But I don't know the exact process for construction in Armenia." The audience laughed with him. The winery will include an event center, wedding facilities, and a restaurant.</p>
 
-<p>On the wine front, Alexandrea has eight current labels and four additional blends coming from the Nor Yedesia vineyard: a Malbec (on its own), a Sireni, a Bordeaux blend, and a reserve blend (mostly Cabernet Sauvignon with Malbec and Petit Verdot). "We were tasting it last night," Ritchey said. "It's going to be amazing. But one of the challenges of being a winemaker is you have to wait. It's going to be in barrel for one more year, then we put it in bottle, then we have to let it age for another six months. In a year and a half, look for our curve."</p>
+<p>On the wine front, Alexandrea has eight current labels and four additional blends coming from the Nor Yedesia vineyard: a Malbec (on its own), a Sireni, a Bordeaux blend, and a reserve blend (mostly Khndoghni with Malbec and Petit Verdot). "We were tasting it last night," Ritchey said. "It's going to be amazing. But one of the challenges of being a winemaker is you have to wait. It's going to be in barrel for one more year, then we put it in bottle, then we have to let it age for another six months. In a year and a half, look for our cuvée."</p>
 
 <p>A flagship icon wine is slated for release in 2028.</p>
 
@@ -231,6 +241,7 @@ layout: post
 <p>Alexandrea was not the only winery presenting at the Wine and Gastronomic Business Talks, but it was the most technically forthcoming. Two others provided on-the-record information.</p>
 
 <p><strong>Owines</strong>, represented by Ara SH, focuses exclusively on Red Areni from the southern Vayots Dzor region (Aghvanadzor). Ara SH, an IT worker by trade, described winemaking as his "getaway" — an escape into nature. The winery practices sustainable agriculture with minimal, "only as needed" chemicals, resulting in a deliberate medium yield. Preservation of the environment, he said, is paramount.</p>
+
 <img src="/images/uploads/11.png" alt="Description" data-aos="fade-up" />
 
 <p>Owines produces two wines from the same grape: O Wine (young, bold, 14% ABV) and O Reserve (aged, sweeter, oakier). Both are aged for 12 months in oak barrels. A visual signature: when you swirl O Wine, an "O"-shaped ring forms along the interior walls of the glass. "Everything about O Wine starts with O," Ara SH said. "It's a full circle from our traditions to modern life."</p>
@@ -242,6 +253,7 @@ layout: post
 </blockquote>
 
 <p><strong>Sargsyan Wines by Ararat Wine Factory</strong> operates at a different scale entirely. Founded in 1906, it is the largest cognac, wine, and vodka factory in Armenia, with more than 120 years of uninterrupted operation. In 2025, the company rebranded from Ararat Wine Factory to Sargsyan Wines, describing the change as "a return to origins, a family-driven vision shaped by dedication, continuity, and respect for heritage."</p>
+
 <img src="/images/uploads/16.png" alt="Description" data-aos="fade-up" />
 
 <p>Unlike Alexandrea's detailed disclosures, Sargsyan provided no technical data on vineyards, altitudes, or aging protocols. Their participation appeared focused on brand continuity rather than operational transparency.</p>
@@ -256,7 +268,7 @@ layout: post
 
 <p>The wine poured on Saryan Street during the 10th anniversary of Yerevan Wine Days is not simply the product of volcanic soil and California expertise. It is the liquid evidence of a private sector learning to build, scale, and survive without state funding.</p>
 
-<p>Alexandrea Winery broke 70 centimeters of volcanic stone by hand, imported Japanese machinery, installed anti-hail nets, and spent five years fermenting Chardonnay at different elevations to find the middle slope. They produced Armenia's first commercial Pinot Noir, structured across three plots as skeleton, flesh, and humidness. They brought a 31-year California winemaker to the Caucasus and trusted him to listen to what the vines said.</p>
+<p>Alexandrea Winery broke 70 centimeters of volcanic stone by hand, imported Japanese machinery, installed anti-hail nets, and spent five years fermenting Chardonnay at different elevations to find the middle slope. They produced Armenia's first commercial Pinot Noir, structured across three plots as skeleton, flesh, and humidness. They brought a 31-year veteran winemaker from California to the Caucasus and trusted him to listen to what the vines said.</p>
 
 <p>The challenges remain — supply chains that run through Italian customs, October snowfalls that can destroy a harvest, a construction timeline no one can predict. But the wine in the glass, at least from Alexandrea, suggests the gamble is paying off.</p>
 
@@ -289,6 +301,7 @@ layout: post
 <!-- Pillar Two -->
 
 <h2>Pillar Two: Olé Yerevan – A Spanish Chef’s Wine Pairings and the Armenian Grape Leaf</h2>
+
 <img src="/images/uploads/12.png" alt="Description" data-aos="fade-up" />
 
 <details>
@@ -326,6 +339,7 @@ layout: post
 <p><strong>By Mikael Yamiosei | IRCNA</strong></p>
 
 <hr>
+
 <img src="/images/uploads/IMG_5109.JPG" alt="Description" data-aos="fade-up" />
 
 <p><strong>YEREVAN —</strong> The voice was Spanish. The translator, Elizabeth B., stood immediately to his right, converting his words into English in real time. The audience sat on folding chairs on Saryan Street, part of the Wine and Gastronomic Business Talks at the 10th anniversary of Yerevan Wine Days.</p>
@@ -447,6 +461,7 @@ layout: post
 <!-- Pillar Three -->
 
 <h2>Pillar Three: TUMO Gyumri – A €2.5 Million Bet on Urban Recovery</h2>
+
 <img src="/images/uploads/IMG_5035.JPG" alt="Description" data-aos="fade-up" />
 
 <details>
@@ -620,6 +635,7 @@ layout: post
 <!-- Capstone Article -->
 
 <h2>Why the Wine and Gastronomic Business Talks Matter</h2>
+
 <img src="/images/uploads/DreamShots_PH3 (970) (1).jpg" alt="Description" data-aos="fade-up" />
 
 <details>
@@ -808,7 +824,7 @@ IRCNA is not affiliated nor sponsored by EventToura. All reporting, opinions, an
 
 <p>Mary Badalyan, President and Co‑founder of EventToura, offered this closing statement:</p>
 
-<strong> 
+<strong>
 
 <em>“Yerevan Wine Days’ 10th anniversary was dedicated to the people who have built this festival with us – locals, visitors, and partners who return year after year and turn it into a living tradition. Wine is the anchor, but the true meaning is wider: visitors enter the country through culture, people, and place. We’re proud that the Wine &amp; Gastronomic Business Talks continued to create a real bridge between the community and the industry, and we’ll keep expanding that platform in the years ahead.”</em>
 
@@ -818,7 +834,7 @@ IRCNA is not affiliated nor sponsored by EventToura. All reporting, opinions, an
 
 <!-- Expanded Editorial Blockquote (before Sources) -->
 
-<blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #faffa; font-style: italic;">
+<blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafafa; font-style: italic;">
 
 <strong>Editorial Independence &amp; IRCNA Values:</strong> IRCNA is an independent, nonpartisan, nonprofit news platform. We do not receive state funding, nor are we affiliated with or sponsored by EventToura, Yerevan Wine Days, or any of the entities featured in this report. All reporting, opinions, and editorial decisions are solely those of IRCNA’s founder and journalist, Mikael Yamiosei. The views expressed by individuals quoted in this article are their own and do not reflect the position of IRCNA. IRCNA does not engage in political reporting, endorsements, or partisan commentary; our commitment is to community‑first journalism, accuracy, transparency, and the principle that our platform belongs to the people of Armenia — not to any political party, commercial interest, or external agenda. If you believe any content falls short of these standards, please contact us for correction or review.
 
