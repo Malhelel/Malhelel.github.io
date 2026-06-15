@@ -3,3 +3,7 @@ description: Independent Reporting and Community Networking in Armenia
 baseurl: ""
 url: "https://malhelel.github.io"
 future: true
+collections:
+  emagazines:
+    output: true
+    permalink: /:collection/:path/
