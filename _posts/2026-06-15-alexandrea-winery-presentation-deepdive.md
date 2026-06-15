@@ -1,14 +1,14 @@
 ---
 title: '"Alexandrea Winery | Presentation DeepDive"'
-date: 2026-06-15T06:39
-image: ''
+date: 2026-06-15T16:33
+image: /images/uploads/IMG_3553.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
 layout: post
 ---
 
-<strong>Full Article: The Marriage between Wine and Gastronomy | Modern Traditional Balance – Alexandrea Winery</strong></summary>
+<summary><strong>Full Article: The Marriage between Wine and Gastronomy | Modern Traditional Balance – Alexandrea Winery</strong></summary>
 
 <h2>The Marriage between Wine and Gastronomy | Modern Traditional Balance</h2>
 
@@ -63,6 +63,7 @@ layout: post
 </table>
 
 <p>During the presentation, Karen Gabrielyan emphasized the importance of altitude selection. "You cannot plant in 2,000 or 2,500 meters of altitude — it will not grow," he said. Proshyan's elevation, slightly above 1,300 meters, provides "the best bioclimatic conditions to grow and to gain the best quality possible."</p>
+
 <img src="/images/uploads/IMG_3627.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>The sun exposure across both Proshyan and Nor Yedesia is southwest — a critical factor. "It gives one of the best sunny days" during the vegetative year, Karen explained, creating perfect conditions for Pinot Noir. Alexandrea is the first winery in Armenia to produce wine from Pinot Noir.</p>
@@ -124,6 +125,7 @@ layout: post
 <p>"I'm still learning that vineyard," Ritchey said. "It's been five years, and I'm still learning every year. One of the things with winemaking that's challenging is you get one chance a year. When you decide to pick, that's it. You can't take the cluster back to the vine and ask for more time."</p>
 
 <h3>VII. The Balance Philosophy: Listening to the Wine</h3>
+
 <img src="/images/uploads/IMG_3613.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>Throughout the presentation, Ritchey returned to a single concept: balance. When an audience member asked whether each wine has a different set of balance criteria, he offered his most extended meditation on the subject.</p>
@@ -134,7 +136,7 @@ layout: post
 
 <p>The result, when balance is achieved, is almost subliminal. "When the tannins, the fruit, the alcohol, the sugars, the flavors are all balanced, you actually feel the wine. You taste it and go, 'This is really good,' but you don't really know why because everything's balanced and you kind of just feel it. Then when you smell it a little more, taste it a little more, you realize there's so much complexity in it."</p>
 
-<p>He offered a concrete example: Alexandrea's upcoming reserve blend (mostly Cabernet Sauvignon with Malbec and Petit Verdot). "It has so much intensity, it's amazing. So I can put new oak on it — even though it has 50% new oak on it right now, it doesn't taste like it because the concentration just lifts it up. It's in balance."</p>
+<p>He offered a concrete example: Alexandrea's upcoming reserve blend (mostly Khndoghni with Malbec and Petit Verdot). "It has so much intensity, it's amazing. So I can put new oak on it — even though it has 50% new oak on it right now, it doesn't taste like it because the concentration just lifts it up. It's in balance."</p>
 
 <h3>VIII. The Challenges of a Frontier Wine Economy</h3>
 
@@ -150,15 +152,15 @@ layout: post
 
 <p>The calendar is the enemy. "Once we reach October here, you never know what the weather's going to do. In California, I've picked the week before Thanksgiving. Here, we're usually starting at the end of August and hoping to be done by mid-October. You never know what mother nature's going to throw at you. It could be hot in October. It could be snowing in October. You have to pay attention — especially during harvest, because if you see a rainstorm coming in, you might have to pick your grapes early. You don't want them to rot on the vine."</p>
 
-<h3>IX. The Future: Gravity Winery, 2028 Icon, and the Reserve Blend</h3>
+<h3>IX. The Future: Estate Winery, 2028 Icon, and the Reserve Blend</h3>
 
-<p>Despite the headwinds, Alexandrea is expanding. Ritchey disclosed that the winery is in the design phase of a gravity-fed estate winery to be built on the Proshyan hill, overlooking the Pinot Noir vineyards with a direct sightline to Mount Ararat.</p>
+<p>Despite the headwinds, Alexandrea is expanding. Ritchey disclosed that the winery is in the design phase of a new estate winery on the Proshyan hill, overlooking the Pinot Noir vineyards with a direct sightline to Mount Ararat. While the facility will not be gravity-fed, it will use equipment designed to simulate gravity-flow techniques, ensuring the gentlest possible handling of the grapes.</p>
 
 <p>"We're right in the middle of designing the winery," he said. "It's going to go right here, up on a hill. It overlooks the Pinot Noir vineyard right to Mount Ararat. It's stunning. It's going to be amazing."</p>
 
 <p>He acknowledged the uncertainty of Armenian construction timelines with a wry laugh. "I've helped design and build three wineries in California, so I know the process. But I don't know the exact process for construction in Armenia." The audience laughed with him. The winery will include an event center, wedding facilities, and a restaurant.</p>
 
-<p>On the wine front, Alexandrea has eight current labels and four additional blends coming from the Nor Yedesia vineyard: a Malbec (on its own), a Sireni, a Bordeaux blend, and a reserve blend (mostly Cabernet Sauvignon with Malbec and Petit Verdot). "We were tasting it last night," Ritchey said. "It's going to be amazing. But one of the challenges of being a winemaker is you have to wait. It's going to be in barrel for one more year, then we put it in bottle, then we have to let it age for another six months. In a year and a half, look for our curve."</p>
+<p>On the wine front, Alexandrea has eight current labels and four additional blends coming from the Nor Yedesia vineyard: a Malbec (on its own), a Sireni, a Bordeaux blend, and a reserve blend (mostly Khndoghni with Malbec and Petit Verdot). "We were tasting it last night," Ritchey said. "It's going to be amazing. But one of the challenges of being a winemaker is you have to wait. It's going to be in barrel for one more year, then we put it in bottle, then we have to let it age for another six months. In a year and a half, look for our cuvée."</p>
 
 <p>A flagship icon wine is slated for release in 2028.</p>
 
@@ -167,6 +169,7 @@ layout: post
 <p>Alexandrea was not the only winery presenting at the Wine and Gastronomic Business Talks, but it was the most technically forthcoming. Two others provided on-the-record information.</p>
 
 <p><strong>Owines</strong>, represented by Ara SH, focuses exclusively on Red Areni from the southern Vayots Dzor region (Aghvanadzor). Ara SH, an IT worker by trade, described winemaking as his "getaway" — an escape into nature. The winery practices sustainable agriculture with minimal, "only as needed" chemicals, resulting in a deliberate medium yield. Preservation of the environment, he said, is paramount.</p>
+
 <img src="/images/uploads/11.png" alt="Description" data-aos="fade-up" />
 
 <p>Owines produces two wines from the same grape: O Wine (young, bold, 14% ABV) and O Reserve (aged, sweeter, oakier). Both are aged for 12 months in oak barrels. A visual signature: when you swirl O Wine, an "O"-shaped ring forms along the interior walls of the glass. "Everything about O Wine starts with O," Ara SH said. "It's a full circle from our traditions to modern life."</p>
@@ -178,6 +181,7 @@ layout: post
 </blockquote>
 
 <p><strong>Sargsyan Wines by Ararat Wine Factory</strong> operates at a different scale entirely. Founded in 1906, it is the largest cognac, wine, and vodka factory in Armenia, with more than 120 years of uninterrupted operation. In 2025, the company rebranded from Ararat Wine Factory to Sargsyan Wines, describing the change as "a return to origins, a family-driven vision shaped by dedication, continuity, and respect for heritage."</p>
+
 <img src="/images/uploads/16.png" alt="Description" data-aos="fade-up" />
 
 <p>Unlike Alexandrea's detailed disclosures, Sargsyan provided no technical data on vineyards, altitudes, or aging protocols. Their participation appeared focused on brand continuity rather than operational transparency.</p>
@@ -192,7 +196,7 @@ layout: post
 
 <p>The wine poured on Saryan Street during the 10th anniversary of Yerevan Wine Days is not simply the product of volcanic soil and California expertise. It is the liquid evidence of a private sector learning to build, scale, and survive without state funding.</p>
 
-<p>Alexandrea Winery broke 70 centimeters of volcanic stone by hand, imported Japanese machinery, installed anti-hail nets, and spent five years fermenting Chardonnay at different elevations to find the middle slope. They produced Armenia's first commercial Pinot Noir, structured across three plots as skeleton, flesh, and humidness. They brought a 31-year California winemaker to the Caucasus and trusted him to listen to what the vines said.</p>
+<p>Alexandrea Winery broke 70 centimeters of volcanic stone by hand, imported Japanese machinery, installed anti-hail nets, and spent five years fermenting Chardonnay at different elevations to find the middle slope. They produced Armenia's first commercial Pinot Noir, structured across three plots as skeleton, flesh, and humidness. They brought a 31-year veteran winemaker from California to the Caucasus and trusted him to listen to what the vines said.</p>
 
 <p>The challenges remain — supply chains that run through Italian customs, October snowfalls that can destroy a harvest, a construction timeline no one can predict. But the wine in the glass, at least from Alexandrea, suggests the gamble is paying off.</p>
 
