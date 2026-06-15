@@ -46,7 +46,7 @@ layout: post
 
 <h2>Pillar One: Alexandrea Winery – Breaking Volcanic Stone at 1,315 Metres</h2>
 
-![Photo Provided by Eventtoura](/images/uploads/IMG_4958.JPG)
+<img src="/images/uploads/IMG_4961.jpeg" alt="Description" data-aos="fade-up" />
 
 <details>
 
@@ -86,7 +86,7 @@ layout: post
 
 <p><strong>YEREVAN —</strong> The soil in Proshyan does not give way easily. It extends more than seventy centimeters deep — a dense, unbroken layer of volcanic stone and sharp gravel that resisted every tool brought against it. When Alexandrea Winery acquired the land in 2017, the question was not whether grapes would grow. The question was whether the earth could be broken at all.</p>
 
-![photo provided by eventtoura](/images/uploads/IMG_4961.JPG)
+<img src="/images/uploads/IMG_3626.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>The answer required Japanese rock-cutting machinery, manual labor, and a five-year experiment in high-altitude viticulture that would eventually produce Armenia's first commercial Pinot Noir and a Riesling sharp enough to stand beside its German inspirations.</p>
 
@@ -95,6 +95,7 @@ layout: post
 <p>This is the story of that briefing, told through floor transcripts, correspondence, and firsthand tasting notes. It is the first of three pillars examining how private investment, not state funding, is stabilizing Armenia's emergence as a wine and gastronomic hub.</p>
 
 <h3>I. The Winemaker's Journey: From California to the Caucasus</h3>
+
 
 <p>Jeff Ritchey has been making wine professionally for 31 years, most of that time in California's long, mild valleys. On June 5, 2026 — the opening day of the festival — he marked his ninth year to the day since his first visit to Armenia.</p>
 
@@ -127,6 +128,7 @@ layout: post
 </table>
 
 <p>During the presentation, Karen Gabrielyan emphasized the importance of altitude selection. "You cannot plant in 2,000 or 2,500 meters of altitude — it will not grow," he said. Proshyan's elevation, slightly above 1,300 meters, provides "the best bioclimatic conditions to grow and to gain the best quality possible."</p>
+<img src="/images/uploads/IMG_3627.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>The sun exposure across both Proshyan and Nor Yedesia is southwest — a critical factor. "It gives one of the best sunny days" during the vegetative year, Karen explained, creating perfect conditions for Pinot Noir. Alexandrea is the first winery in Armenia to produce wine from Pinot Noir.</p>
 
@@ -172,7 +174,7 @@ layout: post
 
 <p>The Pinot Noir was aged for ten months in barrel, with 25% new French oak. "You get some of the vanilla, some of the spice, all that pure fruit, some of the earthiness they call forest floor or sous-bois," Ritchey said. "For the first vintage off a vineyard, it's pretty remarkable. You've probably heard that when vineyards are planted, it takes seven or eight years before they start to normalize. The first, second, third crops aren't necessarily the greatest. But this is the first crop off the volumes, and it's remarkable. We're really excited about the potential for Pinot Noir."</p>
 
-<p>During the presentation, this reporter tasted the 2024 Pinot Noir. Swirling the glass released a sweet aroma of grapes and floral tones. The acidity was subtle and pleasant — on a subjective scale of 1 to 5 (with 5 being bitterly acidic), it measured a 2. Floral and grape tones lingered on the tongue, finishing with an earthy, forest-floor aftertaste.</p>
+<p>During the presentation, I tasted the 2024 Pinot Noir. Swirling the glass released a sweet aroma of grapes and floral tones. The acidity was subtle and pleasant — on a subjective scale of 1 to 5 (with 5 being bitterly acidic), it measured a 2. Floral and grape tones lingered on the tongue, finishing with an earthy, forest-floor aftertaste.</p>
 
 <h3>VI. The Riesling: Germany in Armenian Soil</h3>
 
@@ -182,11 +184,12 @@ layout: post
 
 <p>Ritchey described the wine's profile: "You get a lot of stone fruit, citrus, lime, even a little tropical, hints of the petroleum that you can get with Riesling from Germany. There's good acidity, good structure. It pairs very well with food."</p>
 
-<p>This reporter's tasting notes, recorded on-site: the Riesling was quite balanced — sharp with a sudden acidic but floral taste to begin with. As it lingered on the palate, subtle hints of citric and floral flavors coated the tongue, leaving a pleasant aftertaste. Swirling the glass released sour and floral scents, alongside the classic nascent petroleum signature of aged German Rieslings.</p>
+<p>My tasting notes, recorded on-site: the Riesling was quite balanced — sharp with a sudden acidic but floral taste to begin with. As it lingered on the palate, subtle hints of citric and floral flavors coated the tongue, leaving a pleasant aftertaste. Swirling the glass released sour and floral scents, alongside the classic nascent petroleum signature of aged German Rieslings.</p>
 
 <p>"I'm still learning that vineyard," Ritchey said. "It's been five years, and I'm still learning every year. One of the things with winemaking that's challenging is you get one chance a year. When you decide to pick, that's it. You can't take the cluster back to the vine and ask for more time."</p>
 
 <h3>VII. The Balance Philosophy: Listening to the Wine</h3>
+<img src="/images/uploads/IMG_3613.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>Throughout the presentation, Ritchey returned to a single concept: balance. When an audience member asked whether each wine has a different set of balance criteria, he offered his most extended meditation on the subject.</p>
 
@@ -229,6 +232,7 @@ layout: post
 <p>Alexandrea was not the only winery presenting at the Wine and Gastronomic Business Talks, but it was the most technically forthcoming. Two others provided on-the-record information.</p>
 
 <p><strong>Owines</strong>, represented by Ara SH, focuses exclusively on Red Areni from the southern Vayots Dzor region (Aghvanadzor). Ara SH, an IT worker by trade, described winemaking as his "getaway" — an escape into nature. The winery practices sustainable agriculture with minimal, "only as needed" chemicals, resulting in a deliberate medium yield. Preservation of the environment, he said, is paramount.</p>
+<img src="/images/uploads/11.png" alt="Description" data-aos="fade-up" />
 
 <p>Owines produces two wines from the same grape: O Wine (young, bold, 14% ABV) and O Reserve (aged, sweeter, oakier). Both are aged for 12 months in oak barrels. A visual signature: when you swirl O Wine, an "O"-shaped ring forms along the interior walls of the glass. "Everything about O Wine starts with O," Ara SH said. "It's a full circle from our traditions to modern life."</p>
 
@@ -239,6 +243,7 @@ layout: post
 </blockquote>
 
 <p><strong>Sargsyan Wines by Ararat Wine Factory</strong> operates at a different scale entirely. Founded in 1906, it is the largest cognac, wine, and vodka factory in Armenia, with more than 120 years of uninterrupted operation. In 2025, the company rebranded from Ararat Wine Factory to Sargsyan Wines, describing the change as "a return to origins, a family-driven vision shaped by dedication, continuity, and respect for heritage."</p>
+<img src="/images/uploads/16.png" alt="Description" data-aos="fade-up" />
 
 <p>Unlike Alexandrea's detailed disclosures, Sargsyan provided no technical data on vineyards, altitudes, or aging protocols. Their participation appeared focused on brand continuity rather than operational transparency.</p>
 
