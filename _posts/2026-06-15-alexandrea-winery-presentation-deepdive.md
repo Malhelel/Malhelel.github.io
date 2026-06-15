@@ -8,6 +8,13 @@ custom_css: ''
 layout: post
 ---
 
+<blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #faffa; font-style: italic;">
+
+<strong>Revision Notice – June 15, 2026:</strong> This Article has been corrected following feedback from Alexandrea Winery. The 2025 Reserve blend is mostly Khndoghni (not Cabernet Sauvignon); the future winery will simulate gravity‑flow techniques; a transcribed word “curve” has been corrected to “cuvée”; and Jeff Ritchey’s experience is clarified as a 31‑year veteran winemaker from California. IRCNA thanks Jeff Ritchey and the Alexandrea team for holding us accountable.
+
+</blockquote>
+
+<img src="/images/uploads/IMG_3553.jpeg" alt="Description" data-aos="fade-up" />
 <summary><strong>Full Article: The Marriage between Wine and Gastronomy | Modern Traditional Balance – Alexandrea Winery</strong></summary>
 
 <h2>The Marriage between Wine and Gastronomy | Modern Traditional Balance</h2>
