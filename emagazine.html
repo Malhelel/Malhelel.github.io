@@ -1,0 +1,121 @@
+---
+title: Emagazines
+permalink: /emagazines/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Emagazines – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		.emagazine-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.emagazine-list li {
+			margin-bottom: 1.5em;
+			padding-bottom: 1.5em;
+			border-bottom: 1px solid rgba(210,215,217,0.5);
+		}
+		.emagazine-list li:last-child {
+			border-bottom: none;
+		}
+		.emagazine-list h3 {
+			margin: 0 0 0.2em;
+		}
+		.emagazine-list h3 a {
+			color: #3d4449;
+			text-decoration: none;
+			border-bottom: none;
+		}
+		.emagazine-list h3 a:hover {
+			color: #f56a6a;
+		}
+		.emagazine-list .meta {
+			font-size: 0.85em;
+			color: #7f888f;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+{% include topnav.html %}
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header id="header" style="display:block !important;">
+		<!-- Minimal header for this page only – just the logo and slogan -->
+		<a href="index.html" class="logo" style="display:flex; align-items:flex-start; gap:0.6em; color:#3d4449;">
+			{% if site.data.homepage.logo_image %}
+				<img src="{{ site.data.homepage.logo_image }}" alt="IRCNA logo" style="height:40px; flex-shrink:0;" />
+			{% endif %}
+			<span>
+				<strong>{{ site.data.homepage.sidebar_slogan }}</strong> in Armenia
+			</span>
+		</a>
+	</header>
+
+	<section>
+		<header class="major">
+			<h1>Emagazines</h1>
+			<p>Long‑form, visually immersive stories from IRCNA.</p>
+		</header>
+
+		{% assign magazines = site.emagazines | sort: 'date' | reverse %}
+		{% if magazines.size > 0 %}
+		<ul class="emagazine-list">
+			{% for mag in magazines %}
+			<li>
+				<h3><a href="{{ mag.url }}">{{ mag.title }}</a></h3>
+				<p class="meta">
+					{% if mag.author %}By {{ mag.author }} · {% endif %}
+					<time datetime="{{ mag.date | date: '%Y-%m-%d' }}">{{ mag.date | date: "%B %d, %Y" }}</time>
+				</p>
+				<p>{{ mag.description | default: "" }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+		{% else %}
+		<p>No emagazines published yet. Check back soon!</p>
+		{% endif %}
+	</section>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
