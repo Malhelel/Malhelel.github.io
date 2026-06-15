@@ -46,7 +46,7 @@ layout: post
 
 <h2>Pillar One: Alexandrea Winery – Breaking Volcanic Stone at 1,315 Metres</h2>
 
-<img src="/images/uploads/IMG_4961.jpeg" alt="Description" data-aos="fade-up" />
+<img src="/images/uploads/IMG_4961.JPG" alt="Description" data-aos="fade-up" />
 
 <details>
 
@@ -95,7 +95,6 @@ layout: post
 <p>This is the story of that briefing, told through floor transcripts, correspondence, and firsthand tasting notes. It is the first of three pillars examining how private investment, not state funding, is stabilizing Armenia's emergence as a wine and gastronomic hub.</p>
 
 <h3>I. The Winemaker's Journey: From California to the Caucasus</h3>
-
 
 <p>Jeff Ritchey has been making wine professionally for 31 years, most of that time in California's long, mild valleys. On June 5, 2026 — the opening day of the festival — he marked his ninth year to the day since his first visit to Armenia.</p>
 
@@ -290,6 +289,7 @@ layout: post
 <!-- Pillar Two -->
 
 <h2>Pillar Two: Olé Yerevan – A Spanish Chef’s Wine Pairings and the Armenian Grape Leaf</h2>
+<img src="/images/uploads/12.png" alt="Description" data-aos="fade-up" />
 
 <details>
 
@@ -326,6 +326,7 @@ layout: post
 <p><strong>By Mikael Yamiosei | IRCNA</strong></p>
 
 <hr>
+<img src="/images/uploads/IMG_5109.JPG" alt="Description" data-aos="fade-up" />
 
 <p><strong>YEREVAN —</strong> The voice was Spanish. The translator, Elizabeth B., stood immediately to his right, converting his words into English in real time. The audience sat on folding chairs on Saryan Street, part of the Wine and Gastronomic Business Talks at the 10th anniversary of Yerevan Wine Days.</p>
 
@@ -387,6 +388,8 @@ layout: post
 
 <h3>The Fusion Question</h3>
 
+<img src="/images/uploads/IMG_5113.JPG" alt="Description" data-aos="fade-up" />
+
 <p>Midway through, I asked him in Spanish: if you could fuse something from Armenian cuisine with Spanish tradition, what would it be?</p>
 
 <p>His answer was immediate and specific.</p>
@@ -444,6 +447,7 @@ layout: post
 <!-- Pillar Three -->
 
 <h2>Pillar Three: TUMO Gyumri – A €2.5 Million Bet on Urban Recovery</h2>
+<img src="/images/uploads/IMG_5035.JPG" alt="Description" data-aos="fade-up" />
 
 <details>
 
@@ -616,6 +620,7 @@ layout: post
 <!-- Capstone Article -->
 
 <h2>Why the Wine and Gastronomic Business Talks Matter</h2>
+<img src="/images/uploads/DreamShots_PH3 (970) (1).jpg" alt="Description" data-aos="fade-up" />
 
 <details>
 
