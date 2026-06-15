@@ -461,3 +461,11 @@ items:
     title: "6.png"
     image: /images/uploads/6.png
     description: ""
+  - category: "Uncategorized"
+    title: "7.png"
+    image: /images/uploads/7.png
+    description: ""
+  - category: "Uncategorized"
+    title: "8.png"
+    image: /images/uploads/8.png
+    description: ""
