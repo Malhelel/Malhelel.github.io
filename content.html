@@ -1,0 +1,239 @@
+---
+title: Explore IRCNA Content
+permalink: /content/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Explore Content – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		.content-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 2em;
+			margin: 2em 0;
+		}
+		.content-card {
+			border-radius: 12px;
+			overflow: hidden;
+			background: #f5f6f7;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.2s ease;
+		}
+		.content-card:hover {
+			transform: translateY(-4px);
+		}
+		.content-card .card-image {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+			display: block;
+		}
+		.content-card .card-body {
+			padding: 1.2em;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.content-card h3 {
+			margin: 0 0 0.3em;
+			font-size: 1.3em;
+		}
+		.content-card p {
+			font-size: 0.9em;
+			color: #555;
+			margin-bottom: 1em;
+		}
+		.card-links {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.card-links a {
+			font-weight: 600;
+			font-size: 0.85em;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+		.view-example {
+			color: #e44;
+			border-bottom: none;
+		}
+		.view-all {
+			color: #3d4449;
+			border-bottom: none;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+{% include topnav.html %}
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header class="major">
+		<h1>Explore IRCNA Content</h1>
+		<p>One example from each of our main content areas. Click the image to view the example, or use the link below to browse the full collection.</p>
+	</header>
+
+	<div class="content-grid">
+		{% comment %} -------- Articles (latest post) -------- {% endcomment %}
+		{% assign latest_article = site.posts | sort: 'date' | last %}
+		{% if latest_article %}
+		<div class="content-card">
+			<a href="{{ latest_article.url }}">
+				{% if latest_article.image %}
+				<img src="{{ latest_article.image }}" alt="{{ latest_article.title }}" class="card-image" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Article" class="card-image" />
+				{% endif %}
+			</a>
+			<div class="card-body">
+				<div>
+					<h3>Articles</h3>
+					<p>{{ latest_article.title }}</p>
+				</div>
+				<div class="card-links">
+					<a href="{{ latest_article.url }}" class="view-example">Read Example</a>
+					<a href="/articles/" class="view-all">All Articles</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% comment %} -------- Emagazines (latest) -------- {% endcomment %}
+		{% assign latest_mag = site.emagazines | sort: 'date' | last %}
+		{% if latest_mag %}
+		<div class="content-card">
+			<a href="{{ latest_mag.url }}">
+				{% if latest_mag.image %}
+				<img src="{{ latest_mag.image }}" alt="{{ latest_mag.title }}" class="card-image" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Emagazine" class="card-image" />
+				{% endif %}
+			</a>
+			<div class="card-body">
+				<div>
+					<h3>Emagazines</h3>
+					<p>{{ latest_mag.title }}</p>
+				</div>
+				<div class="card-links">
+					<a href="{{ latest_mag.url }}" class="view-example">View Magazine</a>
+					<a href="/emagazines/" class="view-all">All Magazines</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% comment %} -------- Stories (latest local story) -------- {% endcomment %}
+		{% assign stories = site.data.local-stories.items | sort: 'date' | reverse %}
+		{% assign latest_story = stories | first %}
+		{% if latest_story %}
+		<div class="content-card">
+			<a href="{{ latest_story.link | default: '/stories/' }}">
+				{% if latest_story.image %}
+				<img src="{{ latest_story.image }}" alt="{{ latest_story.title }}" class="card-image" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Story" class="card-image" />
+				{% endif %}
+			</a>
+			<div class="card-body">
+				<div>
+					<h3>Stories</h3>
+					<p>{{ latest_story.title }}</p>
+				</div>
+				<div class="card-links">
+					<a href="{{ latest_story.link | default: '/stories/' }}" class="view-example">Read Story</a>
+					<a href="/stories/" class="view-all">All Stories</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% comment %} -------- Mini Posts (latest) -------- {% endcomment %}
+		{% assign mini_array = site.data.mini_posts.posts | reverse %}
+		{% assign latest_mini = mini_array | first %}
+		{% if latest_mini %}
+		<div class="content-card">
+			<a href="/mini-posts/">
+				{% if latest_mini.images[0].image %}
+				<img src="{{ latest_mini.images[0].image }}" alt="{{ latest_mini.title }}" class="card-image" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Mini Post" class="card-image" />
+				{% endif %}
+			</a>
+			<div class="card-body">
+				<div>
+					<h3>Mini Posts</h3>
+					<p>{{ latest_mini.title }}</p>
+				</div>
+				<div class="card-links">
+					<a href="/mini-posts/" class="view-example">View Mini Posts</a>
+					<a href="/mini-posts/" class="view-all">All Mini Posts</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% comment %} -------- Newsletter -------- {% endcomment %}
+		<div class="content-card">
+			<a href="/newsletter/">
+				{% if site.data.newsletter.image %}
+				<img src="{{ site.data.newsletter.image }}" alt="Newsletter" class="card-image" />
+				{% else %}
+				<img src="images/pic01.jpg" alt="Newsletter" class="card-image" />
+				{% endif %}
+			</a>
+			<div class="card-body">
+				<div>
+					<h3>Newsletter</h3>
+					<p>{{ site.data.newsletter.heading | default: "Stay informed with IRCNA" }}</p>
+				</div>
+				<div class="card-links">
+					<a href="/newsletter/" class="view-example">Sign Up</a>
+					<a href="/newsletter/" class="view-all">Newsletter Info</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
