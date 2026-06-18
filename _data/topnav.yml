@@ -1,9 +1,7 @@
 links:
   - label: Content
     url: /content/
-  - label: Community
-    url: '#'
-  - label: Clubs
+  - label: Community and Clubs
     url: '#'
   - label: Contact
     url: /contact/
