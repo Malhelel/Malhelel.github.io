@@ -1,7 +1,7 @@
 ---
 title: '"Tumo Speaker | Presentation DeepDive"'
 date: 2026-06-15T06:42
-image: ''
+image: /images/uploads/IMG_6746.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
@@ -71,6 +71,7 @@ layout: post
 <p>Kechichian was explicit: this is not a robot that cooks for you. “We want to create robots that help you learn how to cook yourself.” The station is still in development, but it is the technological core of the school’s scalability.</p>
 
 <h3>V. The Advisory Board: Twelve Michelin Stars in One Room</h3>
+<img src="/images/uploads/IMG_5035.JPG" alt="Description" data-aos="fade-up" />
 
 <p>Kechichian listed the advisory board with visible pride. Five members, each with deep culinary and business credentials.</p>
 
