@@ -1,7 +1,7 @@
 ---
 title: '"Ole Restaurant | Presentation DeepDive"'
 date: 2026-06-15T06:41
-image: ''
+image: /images/uploads/IMG_6584.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
@@ -70,6 +70,7 @@ layout: post
 <h3>The Cultural Corrections: Paella and Timing</h3>
 
 <p>Antonio also corrected a misconception that has taken root in Armenia: paella as a dinner dish.</p>
+<img src="/images/uploads/IMG_6587.jpeg" alt="Description" data-aos="fade-up" />
 
 <p><em>"El arroz no lo comiendo por la noche,"</em> he said flatly. ("Rice is not eaten at night.") In Spain, paella is a Sunday family lunch, prepared outdoors, watched as it cooks, accompanied by tapas along the way. <em>"Una reunión familiar, conectar todos juntos, ver cómo se prepara, comerse una tapa mientras que estamos preparando."</em> ("A family reunion, connecting everyone together, watching how it is prepared, eating a tapa while we prepare.")</p>
 
@@ -112,6 +113,7 @@ layout: post
 <p>That silence is worth noting. It does not indicate failure or unwillingness — only that the full story of Yerevan's restaurant scene at the festival remains, for now, partial.</p>
 
 <h3>Conclusion: The Leaf as Bridge</h3>
+<img src="/images/uploads/IMG_6586.jpeg" alt="Description" data-aos="fade-up" />
 
 <p>Antonio will be a chef until the end, he said. <em>"Voy a más la cocina."</em> ("I am going further in cooking.") That drive is visible in his willingness to adapt — not by abandoning Spanish tradition, but by finding an Armenian ingredient that makes that tradition better.</p>
 
