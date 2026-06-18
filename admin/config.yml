@@ -307,6 +307,13 @@ collections:
               - { label: "Overlap Image 3", name: "img3", widget: "image" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string", hint: "Where clicking takes you" }
+      - file: "_data/connect.yml"
+        label: "Connect"
+        name: "connect"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Intro / Rules", name: "intro", widget: "markdown" }
+          - { label: "Tally Embed Code", name: "embed_code", widget: "markdown", hint: "Paste the full Tally iframe code here" }
       - file: "_data/topnav.yml"
         label: "Top Navigation"
         name: "topnav"
