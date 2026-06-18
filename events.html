@@ -69,7 +69,7 @@ permalink: /events/
 				{% if item.images %}
 				<div class="event-images">
 					{% for img in item.images %}
-					<img src="{{ img }}" alt="{{ item.title }}" onclick="openLightbox('{{ img }}')" />
+					<img src="{{ img.image }}" alt="{{ item.title }}" onclick="openLightbox('{{ img.image }}')" />
 					{% endfor %}
 				</div>
 				{% endif %}
