@@ -348,5 +348,6 @@ collections:
       - { label: "Author", name: "author", widget: "string", default: "Mikael Yamiosei" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Background Colour", name: "background_color", widget: "string", required: false, hint: "e.g. #f5f5f5 or lightblue" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "emagazine" }
