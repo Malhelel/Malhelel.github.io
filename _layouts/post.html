@@ -24,6 +24,16 @@
 		{{ page.custom_css }}
 	</style>
 	{% endif %}
+	<style>
+		/* Comment styles */
+		#comments { margin-top: 3em; }
+		.comment { background: #f9f9f9; padding: 1em; border-radius: 6px; margin-bottom: 1em; }
+		.comment .author { font-weight: bold; color: #3d4449; }
+		.comment .date { font-size: 0.8em; color: #999; }
+		.comment-form { margin-top: 2em; }
+		.comment-form textarea { width: 100%; padding: 0.8em; border-radius: 6px; border: 1px solid #ddd; }
+		.comment-form button { margin-top: 0.5em; }
+	</style>
 </head>
 <body class="is-preload">
 
@@ -43,10 +53,22 @@
 		</div>
 	</article>
 
+	<!-- Comments -->
+	<div id="comments">
+		<h3>Comments</h3>
+		<div id="comments-list">Loading comments…</div>
+		<div id="comment-form-container" class="comment-form" style="display:none;">
+			<p>Leave a comment as <strong id="comment-user-email"></strong></p>
+			<textarea id="comment-body" rows="4" placeholder="Write your comment…"></textarea>
+			<button id="post-comment-btn" class="button primary">Post Comment</button>
+			<p class="error" id="comment-error"></p>
+		</div>
+		<p id="login-to-comment" style="display:none;"><a href="/connect/">Log in</a> to leave a comment.</p>
+	</div>
+
 </div>
 </div>
 
-<!-- Sidebar -->
 <div id="sidebar">
 <div class="inner">
 	<section id="search" class="alt">
@@ -108,16 +130,92 @@
 	});
 </script>
 
-<!-- Shrink topnav on scroll -->
-<script>
-	window.addEventListener('scroll', function() {
-		var topnav = document.getElementById('topnav');
-		if (window.scrollY > 50) {
-			topnav.classList.add('scrolled');
-		} else {
-			topnav.classList.remove('scrolled');
+<!-- Firebase & comments -->
+<script type="module">
+	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+	import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
+	import { getFirestore, collection, addDoc, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		authDomain: "ircna-dashboard.firebaseapp.com",
+		projectId: "ircna-dashboard",
+		storageBucket: "ircna-dashboard.firebasestorage.app",
+		messagingSenderId: "529973479613",
+		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		measurementId: "G-L91C0B65LC"
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const auth = getAuth(app);
+	const db = getFirestore(app);
+
+	const slug = '{{ page.url | slugify }}'; // unique identifier for the article
+
+	// References to DOM elements
+	const commentsList = document.getElementById('comments-list');
+	const commentFormContainer = document.getElementById('comment-form-container');
+	const commentBody = document.getElementById('comment-body');
+	const postCommentBtn = document.getElementById('post-comment-btn');
+	const commentError = document.getElementById('comment-error');
+	const loginToComment = document.getElementById('login-to-comment');
+	const commentUserEmail = document.getElementById('comment-user-email');
+
+	// Load comments
+	async function loadComments() {
+		commentsList.innerHTML = 'Loading comments…';
+		const q = query(collection(db, 'comments'), where('article', '==', slug), orderBy('timestamp', 'asc'));
+		const snapshot = await getDocs(q);
+		commentsList.innerHTML = '';
+		if (snapshot.empty) {
+			commentsList.innerHTML = '<p>No comments yet. Be the first to share your thoughts.</p>';
+			return;
+		}
+		snapshot.forEach(doc => {
+			const data = doc.data();
+			const div = document.createElement('div');
+			div.className = 'comment';
+			div.innerHTML = `<p class="author">${data.author}</p>
+			                <p>${data.body}</p>
+			                <p class="date">${new Date(data.timestamp?.toDate()).toLocaleString()}</p>`;
+			commentsList.appendChild(div);
+		});
+	}
+
+	// Post comment
+	postCommentBtn.addEventListener('click', async () => {
+		const body = commentBody.value.trim();
+		if (!body) return;
+		commentError.textContent = '';
+		try {
+			const user = auth.currentUser;
+			await addDoc(collection(db, 'comments'), {
+				article: slug,
+				author: user.email,
+				body: body,
+				timestamp: serverTimestamp()
+			});
+			commentBody.value = '';
+			loadComments();
+		} catch (err) {
+			commentError.textContent = err.message;
 		}
 	});
+
+	// Auth state listener
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			loginToComment.style.display = 'none';
+			commentFormContainer.style.display = 'block';
+			commentUserEmail.textContent = user.email;
+		} else {
+			loginToComment.style.display = 'block';
+			commentFormContainer.style.display = 'none';
+		}
+	});
+
+	// Initial load
+	loadComments();
 </script>
 
 <script src="assets/js/jquery.min.js"></script>
