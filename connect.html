@@ -11,6 +11,18 @@ permalink: /connect/
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		#auth-section { max-width: 500px; margin: 2em auto; }
+		#auth-section input { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
+		.error { color: #c00; margin-top: 0.5em; }
+		.success { color: green; margin-top: 0.5em; }
+		.tab-buttons { display: flex; gap: 1em; margin-bottom: 1.5em; }
+		.tab-buttons button { padding: 0.6em 1.5em; cursor: pointer; border: none; background: #ddd; border-radius: 4px; }
+		.tab-buttons button.active { background: #e44; color: #fff; }
+		.auth-form { display: none; }
+		.auth-form.active { display: block; }
+		.logout-btn { float: right; }
+	</style>
 </head>
 <body class="is-preload">
 
@@ -28,8 +40,42 @@ permalink: /connect/
 		{{ site.data.connect.intro | markdownify }}
 	</div>
 
+	<!-- Subscriber account section -->
+	<div id="auth-section">
+		<h2>Create Your Free Subscriber Account</h2>
+		<div id="auth-status">
+			<!-- Shown when NOT logged in -->
+			<div id="login-register-forms">
+				<div class="tab-buttons">
+					<button id="tab-login" class="active" onclick="switchTab('login')">Sign In</button>
+					<button id="tab-register" onclick="switchTab('register')">Create Account</button>
+				</div>
+
+				<form id="login-form" class="auth-form active" onsubmit="return false;">
+					<input type="email" id="login-email" placeholder="Email" required />
+					<input type="password" id="login-password" placeholder="Password" required />
+					<button type="submit" class="button primary">Sign In</button>
+					<p class="error" id="login-error"></p>
+				</form>
+
+				<form id="register-form" class="auth-form" onsubmit="return false;">
+					<input type="email" id="register-email" placeholder="Email" required />
+					<input type="password" id="register-password" placeholder="Password (min. 6 characters)" required />
+					<button type="submit" class="button primary">Create Account</button>
+					<p class="error" id="register-error"></p>
+				</form>
+			</div>
+
+			<!-- Shown when logged in -->
+			<div id="logged-in-section" style="display:none;">
+				<p>You are logged in as <strong id="user-email"></strong>. <a href="#" id="logout-link">Logout</a></p>
+				<p>You can now comment on articles and will be eligible to post community content in the future.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tally extra info form (unchanged) -->
 	<div style="margin: 2em 0;">
-		<!-- Tally subscriber sign‑up form -->
 		<iframe data-tally-src="https://tally.so/embed/zxgE0k?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="727" frameborder="0" marginheight="0" marginwidth="0" title="Subscriber sign‑up"></iframe>
 		<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 	</div>
@@ -56,6 +102,95 @@ permalink: /connect/
 </div>
 </div>
 </div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		authDomain: "ircna-dashboard.firebaseapp.com",
+		projectId: "ircna-dashboard",
+		storageBucket: "ircna-dashboard.firebasestorage.app",
+		messagingSenderId: "529973479613",
+		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		measurementId: "G-L91C0B65LC"
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const auth = getAuth(app);
+
+	// UI elements
+	const loginForm = document.getElementById('login-form');
+	const registerForm = document.getElementById('register-form');
+	const loginError = document.getElementById('login-error');
+	const registerError = document.getElementById('register-error');
+	const loggedInSection = document.getElementById('logged-in-section');
+	const loginRegisterForms = document.getElementById('login-register-forms');
+	const userEmailSpan = document.getElementById('user-email');
+	const logoutLink = document.getElementById('logout-link');
+
+	// Tab switching
+	window.switchTab = function(tab) {
+		document.getElementById('tab-login').classList.remove('active');
+		document.getElementById('tab-register').classList.remove('active');
+		document.getElementById('login-form').classList.remove('active');
+		document.getElementById('register-form').classList.remove('active');
+		if (tab === 'login') {
+			document.getElementById('tab-login').classList.add('active');
+			document.getElementById('login-form').classList.add('active');
+		} else {
+			document.getElementById('tab-register').classList.add('active');
+			document.getElementById('register-form').classList.add('active');
+		}
+	};
+
+	// Register
+	document.getElementById('register-form').addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('register-email').value;
+		const password = document.getElementById('register-password').value;
+		registerError.textContent = '';
+		try {
+			await createUserWithEmailAndPassword(auth, email, password);
+			// onAuthStateChanged will handle UI
+		} catch (err) {
+			registerError.textContent = err.message;
+		}
+	});
+
+	// Login
+	document.getElementById('login-form').addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('login-email').value;
+		const password = document.getElementById('login-password').value;
+		loginError.textContent = '';
+		try {
+			await signInWithEmailAndPassword(auth, email, password);
+		} catch (err) {
+			loginError.textContent = err.message;
+		}
+	});
+
+	// Logout
+	logoutLink.addEventListener('click', async (e) => {
+		e.preventDefault();
+		await signOut(auth);
+	});
+
+	// Auth state listener
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			loginRegisterForms.style.display = 'none';
+			loggedInSection.style.display = 'block';
+			userEmailSpan.textContent = user.email;
+		} else {
+			loginRegisterForms.style.display = 'block';
+			loggedInSection.style.display = 'none';
+		}
+	});
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
