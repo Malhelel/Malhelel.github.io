@@ -1,9 +1,37 @@
-title: IRCNA
-description: Independent Reporting and Community Networking in Armenia
-baseurl: ""
-url: "https://malhelel.github.io"
+title: IRCNA – Independent Reporting and Community Networking in Armenia
+description: Community-funded, independent journalism from Armenia, in English.
+url: https://malhelel.github.io
 future: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title.html
   emagazines:
     output: true
     permalink: /:collection/:path/
+  community_student:
+    output: true
+    permalink: /community/student/:slug/
+  community_internship:
+    output: true
+    permalink: /community/internship/:slug/
+  community_volunteering:
+    output: true
+    permalink: /community/volunteering/:slug/
+  community_sports:
+    output: true
+    permalink: /community/sports/:slug/
+  community_language_club:
+    output: true
+    permalink: /community/language-club/:slug/
+  community_community:
+    output: true
+    permalink: /community/community/:slug/
+  community_religious_gathering:
+    output: true
+    permalink: /community/religious-gathering/:slug/
