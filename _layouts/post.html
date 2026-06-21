@@ -147,7 +147,7 @@
 		if (!email) return 'IRCNA Subscriber';
 		try {
 			const snap = await getDoc(doc(db, 'subscribers', email));
-			return snap.exists() ? snap.data().displayName : 'IRCNA Subscriber';
+			return snap.exists() ? snap.data().DisplayName : 'IRCNA Subscriber';
 		} catch (e) {
 			return 'IRCNA Subscriber';
 		}
