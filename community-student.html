@@ -12,105 +12,46 @@ permalink: /community/student/
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
 	<style>
-		.opportunity-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-			gap: 2em;
-			margin: 2em 0;
-		}
-		.opportunity-card {
-			background: #f5f6f7;
-			border-radius: 8px;
-			overflow: hidden;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-			display: flex;
-			flex-direction: column;
-		}
-		.opportunity-card img {
-			width: 100%;
-			height: 180px;
-			object-fit: cover;
-		}
-		.opportunity-card .card-body {
-			padding: 1.2em;
-			flex: 1;
-		}
-		.opportunity-card h3 {
-			margin: 0 0 0.3em;
-			font-size: 1.1em;
-		}
-		.opportunity-card p {
-			font-size: 0.9em;
-			color: #555;
-			margin-bottom: 1em;
-		}
-		.opportunity-card .button {
-			margin-top: auto;
-			align-self: flex-start;
-		}
+		.opportunity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2em; margin: 2em 0; }
+		.opportunity-card { background: #f5f6f7; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+		.opportunity-card img { width: 100%; height: 180px; object-fit: cover; }
+		.opportunity-card .card-body { padding: 1.2em; flex: 1; }
+		.opportunity-card h3 { margin: 0 0 0.3em; font-size: 1.1em; }
+		.opportunity-card p { font-size: 0.9em; color: #555; margin-bottom: 1em; }
+		.opportunity-card .button { margin-top: auto; align-self: flex-start; }
 	</style>
 </head>
 <body class="is-preload">
-
 {% include topnav.html %}
-
 <div id="wrapper">
 <div id="main">
 <div class="inner">
-
-	<header class="major">
-		<h1>Student Opportunities</h1>
-	</header>
-
-	{% assign items = site.data.community_student.items %}
+	<header class="major"><h1>Student Opportunities</h1></header>
+	{% assign items = site.community_student | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
 		<div class="opportunity-card">
-			{% if item.image %}
-			<img src="{{ item.image }}" alt="{{ item.title }}" />
-			{% endif %}
+			{% if item.image %}<img src="{{ item.image }}" alt="{{ item.title }}" />{% endif %}
 			<div class="card-body">
 				<h3>{{ item.title }}</h3>
 				<p>{{ item.description }}</p>
-				{% if item.link %}
-				<a href="{{ item.link }}" class="button">More</a>
-				{% endif %}
+				{% if item.link %}<a href="{{ item.link }}" class="button">More</a>{% endif %}
 			</div>
 		</div>
 		{% endfor %}
 	</div>
-	{% else %}
-	<p>No opportunities listed yet. Check back soon!</p>
-	{% endif %}
-
+	{% else %}<p>No opportunities listed yet. Check back soon!</p>{% endif %}
 </div>
 </div>
-
 <div id="sidebar">
 <div class="inner">
-	<section id="search" class="alt">
-		<form method="get" action="search.html">
-			<input type="text" name="q" id="query" placeholder="Search" />
-		</form>
-	</section>
-
-	<nav id="menu">
-		<header class="major"><h2>Menu</h2></header>
-		{{ site.data.homepage.menu_html }}
-	</nav>
-
-	<footer id="footer">
-		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
-	</footer>
+	<section id="search" class="alt"><form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form></section>
+	<nav id="menu"><header class="major"><h2>Menu</h2></header>{{ site.data.homepage.menu_html }}</nav>
+	<footer id="footer"><p class="copyright">{{ site.data.homepage.footer_text }}</p></footer>
 </div>
 </div>
 </div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/browser.min.js"></script><script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
 </body>
 </html>
