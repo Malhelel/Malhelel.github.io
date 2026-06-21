@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>{{ page.title }} – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+</head>
+<body class="is-preload">
+{% include topnav.html %}
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header class="major">
+		<h1>{{ page.title }}</h1>
+	</header>
+
+	{% if page.image %}
+	<img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:100%; margin-bottom:1em; border-radius:8px;" />
+	{% endif %}
+
+	<p>{{ page.description }}</p>
+
+	{% if page.link %}
+	<a href="{{ page.link }}" class="button">More</a>
+	{% endif %}
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html"><input type="text" name="q" placeholder="Search" /></form>
+	</section>
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
