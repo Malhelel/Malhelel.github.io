@@ -27,7 +27,7 @@ permalink: /community/language-club/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Language Club Opportunities</h1></header>
-	{% assign items = site.data.community_language_club.items %}
+	{% assign items = site.community_language_club | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
