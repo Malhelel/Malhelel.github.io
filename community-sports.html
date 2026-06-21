@@ -27,7 +27,7 @@ permalink: /community/sports/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Sports Opportunities</h1></header>
-	{% assign items = site.data.community_sports.items %}
+	{% assign items = site.community_sports | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
