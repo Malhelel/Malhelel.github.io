@@ -314,6 +314,91 @@ collections:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro / Rules", name: "intro", widget: "markdown" }
           - { label: "Tally Embed Code", name: "embed_code", widget: "markdown", hint: "Paste the full Tally iframe code here" }
+      # ----- NEW COMMUNITY COLLECTIONS -----
+      - file: "_data/community_student.yml"
+        label: "Community – Student"
+        name: "community_student"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_internship.yml"
+        label: "Community – Internship"
+        name: "community_internship"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_volunteering.yml"
+        label: "Community – Volunteering"
+        name: "community_volunteering"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_sports.yml"
+        label: "Community – Sports"
+        name: "community_sports"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_language_club.yml"
+        label: "Community – Language Club"
+        name: "community_language_club"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_community.yml"
+        label: "Community – Community"
+        name: "community_community"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - file: "_data/community_religious_gathering.yml"
+        label: "Community – Religious Gathering"
+        name: "community_religious_gathering"
+        fields:
+          - name: "items"
+            label: "Opportunities"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", required: false }
       - file: "_data/topnav.yml"
         label: "Top Navigation"
         name: "topnav"
