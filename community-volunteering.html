@@ -27,7 +27,7 @@ permalink: /community/volunteering/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Volunteering Opportunities</h1></header>
-	{% assign items = site.data.community_volunteering.items %}
+	{% assign items = site.community_volunteering | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
