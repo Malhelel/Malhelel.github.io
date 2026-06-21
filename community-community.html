@@ -1,5 +1,5 @@
 ---
-title: Community Opportunities
+title: Community Gatherings Opportunities
 permalink: /community/community/
 ---
 <!DOCTYPE HTML>
@@ -27,7 +27,7 @@ permalink: /community/community/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Community Opportunities</h1></header>
-	{% assign items = site.data.community_community.items %}
+	{% assign items = site.community_community | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
