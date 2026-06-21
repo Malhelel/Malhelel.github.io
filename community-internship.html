@@ -27,7 +27,7 @@ permalink: /community/internship/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Internship Opportunities</h1></header>
-	{% assign items = site.data.community_internship.items %}
+	{% assign items = site.community_internship | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
