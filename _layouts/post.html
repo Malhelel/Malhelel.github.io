@@ -7,25 +7,17 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<!-- AOS (Animate on Scroll) CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	{% if page.background_color %}
-	<style>
-		body { background-color: {{ page.background_color }}; }
-	</style>
+	<style>body { background-color: {{ page.background_color }}; }</style>
 	{% endif %}
 	{% if page.text_color %}
-	<style>
-		.article-content { color: {{ page.text_color }}; }
-	</style>
+	<style>.article-content { color: {{ page.text_color }}; }</style>
 	{% endif %}
 	{% if page.custom_css %}
-	<style>
-		{{ page.custom_css }}
-	</style>
+	<style>{{ page.custom_css }}</style>
 	{% endif %}
 	<style>
-		/* Comment styles */
 		#comments { margin-top: 3em; }
 		.comment { background: #f9f9f9; padding: 1em; border-radius: 6px; margin-bottom: 1em; }
 		.comment .author { font-weight: bold; color: #3d4449; }
@@ -58,7 +50,6 @@
 		<h3>Comments</h3>
 		<div id="comments-list">Loading comments…</div>
 		<div id="comment-form-container" class="comment-form" style="display:none;">
-			<p>Leave a comment as <strong id="comment-user-email"></strong></p>
 			<textarea id="comment-body" rows="4" placeholder="Write your comment…"></textarea>
 			<button id="post-comment-btn" class="button primary">Post Comment</button>
 			<p class="error" id="comment-error"></p>
@@ -121,14 +112,8 @@
 </div>
 </div>
 
-<!-- AOS JavaScript -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-	AOS.init({
-		duration: 600,
-		once: true
-	});
-</script>
+<script>AOS.init({duration:600, once:true});</script>
 
 <!-- Firebase & comments -->
 <script type="module">
@@ -145,21 +130,17 @@
 		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
 		measurementId: "G-L91C0B65LC"
 	};
-
 	const app = initializeApp(firebaseConfig);
 	const auth = getAuth(app);
 	const db = getFirestore(app);
 
-	const slug = '{{ page.url | slugify }}'; // unique identifier for the article
-
-	// References to DOM elements
+	const slug = '{{ page.url | slugify }}';
 	const commentsList = document.getElementById('comments-list');
 	const commentFormContainer = document.getElementById('comment-form-container');
 	const commentBody = document.getElementById('comment-body');
 	const postCommentBtn = document.getElementById('post-comment-btn');
 	const commentError = document.getElementById('comment-error');
 	const loginToComment = document.getElementById('login-to-comment');
-	const commentUserEmail = document.getElementById('comment-user-email');
 
 	// Load comments
 	async function loadComments() {
@@ -173,9 +154,10 @@
 		}
 		snapshot.forEach(doc => {
 			const data = doc.data();
+			const authorName = data.displayName || 'IRCNA Subscriber';  // fallback if no display name set
 			const div = document.createElement('div');
 			div.className = 'comment';
-			div.innerHTML = `<p class="author">${data.author}</p>
+			div.innerHTML = `<p class="author">${authorName}</p>
 			                <p>${data.body}</p>
 			                <p class="date">${new Date(data.timestamp?.toDate()).toLocaleString()}</p>`;
 			commentsList.appendChild(div);
@@ -189,9 +171,11 @@
 		commentError.textContent = '';
 		try {
 			const user = auth.currentUser;
+			const displayName = user.displayName || 'IRCNA Subscriber';   // use display name set by admin
 			await addDoc(collection(db, 'comments'), {
 				article: slug,
-				author: user.email,
+				author: user.email,                     // stored for moderation only, not displayed
+				displayName: displayName,
 				body: body,
 				timestamp: serverTimestamp()
 			});
@@ -202,19 +186,16 @@
 		}
 	});
 
-	// Auth state listener
 	onAuthStateChanged(auth, (user) => {
 		if (user) {
 			loginToComment.style.display = 'none';
 			commentFormContainer.style.display = 'block';
-			commentUserEmail.textContent = user.email;
 		} else {
 			loginToComment.style.display = 'block';
 			commentFormContainer.style.display = 'none';
 		}
 	});
 
-	// Initial load
 	loadComments();
 </script>
 
