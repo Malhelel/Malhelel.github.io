@@ -27,7 +27,7 @@ permalink: /community/religious-gathering/
 <div id="main">
 <div class="inner">
 	<header class="major"><h1>Religious Gathering Opportunities</h1></header>
-	{% assign items = site.data.community_religious_gathering.items %}
+	{% assign items = site.community_religious_gathering | sort: 'date' | reverse %}
 	{% if items.size > 0 %}
 	<div class="opportunity-grid">
 		{% for item in items %}
