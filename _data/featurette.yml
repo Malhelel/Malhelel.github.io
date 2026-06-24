@@ -1,13 +1,4 @@
 items:
-  - title: 'RECAP | Yerevan Wine Days 2026: Ten Years in the Streets'
-    subtitle: .
-    heading: By Mikael Yamiosei
-    background_image: /images/uploads/wda18.jpg
-    img1: /images/uploads/featurette-1a.jpg
-    img2: /images/uploads/featurette-1b.jpg
-    img3: /images/uploads/featurette-1c.jpg
-    description: June 15 | 6:00am
-    link: https://malhelel.github.io/2026/06/15/recap-yerevan-wine-days-2026-ten-years-in-the-streets.html
   - title: The Marriage Between Wine & Gastronomy
     subtitle: .
     heading: By Mikael Yamiosei
@@ -26,3 +17,12 @@ items:
     img3: /images/uploads/featurette-3c.jpg
     description: COMING SOON
     link: /emagazines/2026-06-14-yerevine/
+  - title: Clean-Up at Azat Reservoir
+    subtitle: ','
+    heading: By Mikael Yamiosei
+    background_image: /images/uploads/azat1.png
+    img1: /images/uploads/azat2.png
+    img2: /images/uploads/azat3.png
+    img3: /images/uploads/azat4.png
+    description: .
+    link: https://malhelel.github.io/emagazines/2026-06-24-clean-up-at-azat-reservoir/
