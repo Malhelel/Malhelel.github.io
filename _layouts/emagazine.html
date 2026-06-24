@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,8 +8,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<!-- AOS (Animate on Scroll) -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	<style>
 		/* magazine‑specific overrides */
 		#emagazine-wrapper {
@@ -43,6 +42,7 @@
 			text-transform: uppercase;
 			letter-spacing: 0.075em;
 		}
+		/* Image stream */
 		.emagazine-content {
 			margin: 0;
 			padding: 0;
@@ -78,6 +78,7 @@
 				{% if page.date %}<span> · {{ page.date | date: "%B %d, %Y" }}</span>{% endif %}
 			</div>
 		</header>
+
 		<div class="emagazine-content">
 			{{ content }}
 		</div>
@@ -86,33 +87,6 @@
 </div>
 </div>
 </div>
-
-<!-- AOS JavaScript -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-	AOS.init({
-		duration: 600,
-		once: true
-	});
-	document.addEventListener('DOMContentLoaded', function() {
-		var images = document.querySelectorAll('.emagazine-content img');
-		images.forEach(function(img) {
-			img.setAttribute('data-aos', 'fade-up');
-		});
-	});
-</script>
-
-<!-- Shrink topnav on scroll -->
-<script>
-	window.addEventListener('scroll', function() {
-		var topnav = document.getElementById('topnav');
-		if (window.scrollY > 50) {
-			topnav.classList.add('scrolled');
-		} else {
-			topnav.classList.remove('scrolled');
-		}
-	});
-</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
