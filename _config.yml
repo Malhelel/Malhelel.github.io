@@ -37,4 +37,4 @@ collections:
     permalink: /community/religious-gathering/:slug/
   pages_community:
     output: true
-    permalink: /pages_community/
+    permalink: /pages-community/
