@@ -10,6 +10,29 @@
 	{% if page.custom_css %}
 	<style>{{ page.custom_css }}</style>
 	{% endif %}
+	<style>
+		.opportunity-logo {
+			max-width: 200px;
+			margin-bottom: 1.5em;
+		}
+		.opportunity-slogan {
+			font-style: italic;
+			font-size: 1.1em;
+			color: #555;
+			margin-bottom: 1.5em;
+			padding-left: 0.8em;
+			border-left: 4px solid #e44;
+		}
+		.opportunity-info-box {
+			background: #f9f9f9;
+			padding: 1.2em;
+			border-radius: 6px;
+			margin-bottom: 2em;
+		}
+		.opportunity-link {
+			margin-top: 2em;
+		}
+	</style>
 </head>
 <body class="is-preload">
 
@@ -23,12 +46,44 @@
 		<header class="major">
 			<h1>{{ page.title }}</h1>
 		</header>
-		{% if page.image %}
-		<span class="image main"><img src="{{ page.image }}" alt="{{ page.title }}" /></span>
+
+		<!-- Logo or main image -->
+		{% if page.logo %}
+		<div>
+			<img src="{{ page.logo }}" alt="{{ page.title }} logo" class="opportunity-logo" />
+		</div>
+		{% elsif page.image %}
+		<div>
+			<img src="{{ page.image }}" alt="{{ page.title }}" class="image fit" />
+		</div>
 		{% endif %}
+
+		<!-- Slogan -->
+		{% if page.slogan %}
+		<div class="opportunity-slogan">
+			{{ page.slogan }}
+		</div>
+		{% endif %}
+
+		<!-- Info box (key details) -->
+		{% if page.info_box %}
+		<div class="opportunity-info-box">
+			{{ page.info_box | markdownify }}
+		</div>
+		{% endif %}
+
+		<!-- Full body content -->
 		<div>
 			{{ content }}
 		</div>
+
+		<!-- External link -->
+		{% if page.link %}
+		<div class="opportunity-link">
+			<a href="{{ page.link }}" class="button primary" target="_blank">Visit Website</a>
+		</div>
+		{% endif %}
+
 	</article>
 
 </div>
