@@ -1,0 +1,153 @@
+---
+title: Submit an Article
+permalink: /submit-article/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Submit an Article | Subscriber Exclusive – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		#auth-section { max-width: 600px; margin: 2em auto; }
+		#auth-section input, #auth-section textarea { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
+		.error { color: #c00; margin-top: 0.5em; }
+		.success { color: green; margin-top: 0.5em; }
+	</style>
+</head>
+<body class="is-preload">
+
+{% include topnav.html %}
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header class="major">
+		<h1>Submit an Article</h1>
+		<p>Write your story below. All submissions are reviewed before publication.</p>
+	</header>
+
+	<!-- Shown when NOT logged in -->
+	<div id="login-message">
+		<p>You must be <a href="/connect/">logged in</a> to submit an article.</p>
+	</div>
+
+	<!-- Submission form (shown when logged in) -->
+	<div id="submission-form" style="display:none;">
+		<form id="article-form">
+			<label for="article-title">Title</label>
+			<input type="text" id="article-title" placeholder="Your article title" required />
+
+			<label for="article-body">Body</label>
+			<textarea id="article-body" rows="12" placeholder="Write your article…" required></textarea>
+
+			<button type="submit" class="button primary">Submit for Review</button>
+			<p class="error" id="submit-error"></p>
+			<p class="success" id="submit-success"></p>
+		</form>
+	</div>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+	import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
+	import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		authDomain: "ircna-dashboard.firebaseapp.com",
+		projectId: "ircna-dashboard",
+		storageBucket: "ircna-dashboard.firebasestorage.app",
+		messagingSenderId: "529973479613",
+		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		measurementId: "G-L91C0B65LC"
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const auth = getAuth(app);
+	const db = getFirestore(app);
+
+	const loginMessage = document.getElementById('login-message');
+	const submissionForm = document.getElementById('submission-form');
+	const articleForm = document.getElementById('article-form');
+	const submitError = document.getElementById('submit-error');
+	const submitSuccess = document.getElementById('submit-success');
+
+	// Show/hide form based on auth state
+	onAuthStateChanged(auth, (user) => {
+		if (user) {
+			loginMessage.style.display = 'none';
+			submissionForm.style.display = 'block';
+		} else {
+			loginMessage.style.display = 'block';
+			submissionForm.style.display = 'none';
+		}
+	});
+
+	// Handle form submission
+	articleForm.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const title = document.getElementById('article-title').value.trim();
+		const body = document.getElementById('article-body').value.trim();
+		if (!title || !body) return;
+
+		submitError.textContent = '';
+		submitSuccess.textContent = '';
+
+		const user = auth.currentUser;
+		if (!user) {
+			submitError.textContent = 'You must be logged in.';
+			return;
+		}
+
+		try {
+			await addDoc(collection(db, 'user_articles'), {
+				title: title,
+				body: body,
+				displayName: user.displayName || 'IRCNA Subscriber',
+				authorId: user.uid,
+				approved: false,
+				timestamp: serverTimestamp()
+			});
+			articleForm.reset();
+			submitSuccess.textContent = 'Article submitted for review! Thank you.';
+		} catch (err) {
+			submitError.textContent = err.message;
+		}
+	});
+</script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
