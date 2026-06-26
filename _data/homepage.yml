@@ -99,6 +99,8 @@ menu_html: |-
 
        <li><a href="/member-tools/"> Member Tools</a></li>
 
+       <li><a href="/submit-article/"> Submit an Article</a></li>
+
   </ul>
 
   </li>
@@ -107,6 +109,8 @@ menu_html: |-
   <li><a href="/subscribers/"> Our Subscribers</a></li>
 
     <li><a href="/articles/">All Articles</a></li>
+
+   <li><a href="/ugc-articles/">Subscriber Articles</a></li>
 
     <li><a href="/stories/">Latest Stories</a></li>
 
