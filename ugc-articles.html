@@ -6,7 +6,7 @@ permalink: /ugc-articles/
 <html>
 <head>
 	<base href="/">
-	<title>Community Articles Created By Our Volunteers!! – IRCNA</title>
+	<title>Community Articles – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,6 +35,12 @@ permalink: /ugc-articles/
 		.ugc-article-card .preview {
 			color: #555;
 			margin-top: 0.5em;
+		}
+		.error-message {
+			color: #c00;
+			background: #ffeaea;
+			padding: 1em;
+			border-radius: 6px;
 		}
 
 		/* Modal */
@@ -73,7 +79,7 @@ permalink: /ugc-articles/
 
 	<header class="major">
 		<h1>Community Articles</h1>
-		<p>Stories written by our IRCNA Volunteers or subscribers and approved by our editors.</p>
+		<p>Stories written by our IRCNA volunteers or subscribers and approved by our editors.</p>
 	</header>
 
 	<div id="articles-list">
@@ -135,34 +141,43 @@ permalink: /ugc-articles/
 
 	async function loadArticles() {
 		articlesList.innerHTML = '<p>Loading articles…</p>';
-		const q = query(
-			collection(db, 'user_articles'),
-			where('approved', '==', true),
-			orderBy('timestamp', 'desc')
-		);
-		const snapshot = await getDocs(q);
-		articlesList.innerHTML = '';
+		try {
+			const q = query(
+				collection(db, 'user_articles'),
+				where('approved', '==', true),
+				orderBy('timestamp', 'desc')
+			);
+			const snapshot = await getDocs(q);
+			articlesList.innerHTML = '';
 
-		if (snapshot.empty) {
-			articlesList.innerHTML = '<p>No community articles yet. Be the first to <a href="/submit-article/">submit one</a>!</p>';
-			return;
+			if (snapshot.empty) {
+				articlesList.innerHTML = '<p>No community articles yet. Be the first to <a href="/submit-article/">submit one</a>!</p>';
+				return;
+			}
+
+			snapshot.forEach(doc => {
+				const data = doc.data();
+				const date = data.timestamp?.toDate().toLocaleDateString() || '';
+				const preview = data.body.substring(0, 200).replace(/<[^>]*>/g, '') + '…';
+
+				const card = document.createElement('div');
+				card.className = 'ugc-article-card';
+				card.innerHTML = `
+					<h3>${data.title}</h3>
+					<p class="meta">By ${data.displayName || 'IRCNA Subscriber'} · ${date}</p>
+					<p class="preview">${preview}</p>
+				`;
+				card.addEventListener('click', () => openModal(data.title, data.displayName, date, data.body));
+				articlesList.appendChild(card);
+			});
+		} catch (err) {
+			console.error('Failed to load articles:', err);
+			articlesList.innerHTML = `<div class="error-message">
+				<p><strong>Unable to load articles.</strong></p>
+				<p>${err.message}</p>
+				<p>This often happens when a database index is missing. Check the browser console for a link to create the required index.</p>
+			</div>`;
 		}
-
-		snapshot.forEach(doc => {
-			const data = doc.data();
-			const date = data.timestamp?.toDate().toLocaleDateString() || '';
-			const preview = data.body.substring(0, 200).replace(/<[^>]*>/g, '') + '…';
-
-			const card = document.createElement('div');
-			card.className = 'ugc-article-card';
-			card.innerHTML = `
-				<h3>${data.title}</h3>
-				<p class="meta">By ${data.displayName || 'IRCNA Subscriber'} · ${date}</p>
-				<p class="preview">${preview}</p>
-			`;
-			card.addEventListener('click', () => openModal(data.title, data.displayName, date, data.body));
-			articlesList.appendChild(card);
-		});
 	}
 
 	// Modal functions
