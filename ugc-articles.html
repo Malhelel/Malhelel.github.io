@@ -1,0 +1,200 @@
+---
+title: Community Articles
+permalink: /ugc-articles/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+	<base href="/">
+	<title>Community Articles Created By Our Volunteers!! – IRCNA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="/images/uploads/ircna-favicon.png">
+	<style>
+		#articles-list { margin: 2em 0; }
+		.ugc-article-card {
+			background: #f9f9f9;
+			border-radius: 8px;
+			padding: 1.2em;
+			margin-bottom: 1.2em;
+			cursor: pointer;
+			transition: box-shadow 0.2s;
+		}
+		.ugc-article-card:hover {
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		}
+		.ugc-article-card h3 {
+			margin: 0 0 0.2em;
+			color: #3d4449;
+		}
+		.ugc-article-card .meta {
+			font-size: 0.85em;
+			color: #888;
+		}
+		.ugc-article-card .preview {
+			color: #555;
+			margin-top: 0.5em;
+		}
+
+		/* Modal */
+		.modal-overlay {
+			display: none;
+			position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.85); z-index: 99999;
+			justify-content: center; align-items: center;
+		}
+		.modal-overlay.active { display: flex; }
+		.modal-content {
+			background: #fff;
+			border-radius: 12px;
+			padding: 2em;
+			max-width: 700px;
+			width: 90%;
+			max-height: 80vh;
+			overflow-y: auto;
+			position: relative;
+		}
+		.modal-close {
+			position: absolute; top: 10px; right: 20px;
+			font-size: 28px; cursor: pointer; color: #aaa;
+			background: none; border: none;
+		}
+		.modal-close:hover { color: #e44; }
+	</style>
+</head>
+<body class="is-preload">
+
+{% include topnav.html %}
+
+<div id="wrapper">
+<div id="main">
+<div class="inner">
+
+	<header class="major">
+		<h1>Community Articles</h1>
+		<p>Stories written by IRCNA subscribers and approved by our editors.</p>
+	</header>
+
+	<div id="articles-list">
+		<p>Loading articles…</p>
+	</div>
+
+</div>
+</div>
+
+<div id="sidebar">
+<div class="inner">
+	<section id="search" class="alt">
+		<form method="get" action="search.html">
+			<input type="text" name="q" id="query" placeholder="Search" />
+		</form>
+	</section>
+
+	<nav id="menu">
+		<header class="major"><h2>Menu</h2></header>
+		{{ site.data.homepage.menu_html }}
+	</nav>
+
+	<footer id="footer">
+		<p class="copyright">{{ site.data.homepage.footer_text }}</p>
+	</footer>
+</div>
+</div>
+</div>
+
+<!-- Article modal -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+	<div class="modal-content" id="modal-content" onclick="event.stopPropagation()">
+		<button class="modal-close" onclick="closeModal()">&times;</button>
+		<h2 id="modal-title"></h2>
+		<p class="meta" id="modal-meta"></p>
+		<div id="modal-body" style="margin-top: 1em;"></div>
+	</div>
+</div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
+	import { getFirestore, collection, query, where, orderBy, getDocs } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		authDomain: "ircna-dashboard.firebaseapp.com",
+		projectId: "ircna-dashboard",
+		storageBucket: "ircna-dashboard.firebasestorage.app",
+		messagingSenderId: "529973479613",
+		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		measurementId: "G-L91C0B65LC"
+	};
+
+	const app = initializeApp(firebaseConfig);
+	const db = getFirestore(app);
+
+	const articlesList = document.getElementById('articles-list');
+
+	async function loadArticles() {
+		articlesList.innerHTML = '<p>Loading articles…</p>';
+		const q = query(
+			collection(db, 'user_articles'),
+			where('approved', '==', true),
+			orderBy('timestamp', 'desc')
+		);
+		const snapshot = await getDocs(q);
+		articlesList.innerHTML = '';
+
+		if (snapshot.empty) {
+			articlesList.innerHTML = '<p>No community articles yet. Be the first to <a href="/submit-article/">submit one</a>!</p>';
+			return;
+		}
+
+		snapshot.forEach(doc => {
+			const data = doc.data();
+			const date = data.timestamp?.toDate().toLocaleDateString() || '';
+			const preview = data.body.substring(0, 200).replace(/<[^>]*>/g, '') + '…';
+
+			const card = document.createElement('div');
+			card.className = 'ugc-article-card';
+			card.innerHTML = `
+				<h3>${data.title}</h3>
+				<p class="meta">By ${data.displayName || 'IRCNA Subscriber'} · ${date}</p>
+				<p class="preview">${preview}</p>
+			`;
+			card.addEventListener('click', () => openModal(data.title, data.displayName, date, data.body));
+			articlesList.appendChild(card);
+		});
+	}
+
+	// Modal functions
+	function openModal(title, author, date, body) {
+		document.getElementById('modal-title').textContent = title;
+		document.getElementById('modal-meta').textContent = `By ${author || 'IRCNA Subscriber'} · ${date}`;
+		document.getElementById('modal-body').innerHTML = body;
+		document.getElementById('modal-overlay').classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+
+	window.closeModal = function(event) {
+		if (event && event.target !== document.getElementById('modal-overlay')) return;
+		document.getElementById('modal-overlay').classList.remove('active');
+		document.body.style.overflow = '';
+	};
+
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			document.getElementById('modal-overlay').classList.remove('active');
+			document.body.style.overflow = '';
+		}
+	});
+
+	// Initial load
+	loadArticles();
+</script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
