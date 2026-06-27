@@ -58,63 +58,47 @@ contact_address_line1: IRCNA Offices | Kentron, Yerevan Armenia 0033
 contact_address_line2: ---------
 footer_text: "&copy; IRCN. All rights reserved. &copy; IRCNA. All rights reserved. IRCNA Images: <a href='https://ircna.eu.gov/gallery'>IRCNA GALLERY</a>. Founder: <a href='https://www.facebook.com/share/1Fc9ikucLU/?mibextid=wwXIfr'>Mikael Yamiosei</a>."
 menu_html: |-
-  <div id="google_translate_element"></div>
-
-  <script type="text/javascript">
-
-  function googleTranslateElementInit() {
-
-    new google.translate.TranslateElement({
-
-      pageLanguage: 'en',
-
-      includedLanguages: 'en,hy,ru,fr,de,es,ar,tr,fa',
-
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-
-      autoDisplay: false
-
-    }, 'google_translate_element');
-
-  }
-
-  </script>
-
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   <ul>
 
-    <li><a href="index.html">Homepage</a></li>
+    <!-- 1. IRCNA HOME-->
 
-  <li><a href="/about/">About IRCNA</a></li>
-  <li><a href="/featurette/"> Our Featurettes</a></li>
+    <li>
 
-  <li>
-
-        <span class="opener">IRCNA Member Tools</span>
+      <span class="opener">About IRCNA</span>
 
       <ul>
 
-       <li><a href="/dashboard/"> Journalist Dashboard</a></li>
+        <li><a href="index.html">Homepage</a></li>
 
-       <li><a href="/member-tools/"> Member Tools</a></li>
+        <li><a href="/about/">About IRCNA</a></li>
 
-       <li><a href="/submit-article/"> Submit an Article</a></li>
+        <li><a href="/featurette/">Our Featurettes</a></li>
 
-  </ul>
+      </ul>
 
-  </li>
-  <li><a href="/newsletter/"> Newsletter</a></li>
+    </li>
 
-  <li><a href="/subscribers/"> Our Subscribers</a></li>
+    <!-- 2. NEWS & ARTICLES -->
 
-    <li><a href="/articles/">All Articles</a></li>
+    <li>
 
-   <li><a href="/ugc-articles/">Subscriber Articles</a></li>
+      <span class="opener">News &amp; Articles</span>
 
-    <li><a href="/stories/">Latest Stories</a></li>
+      <ul>
 
-    <li><a href="/image-gallery/">IRCNA GALLERY</a></li>
+        <li><a href="/articles/">All Articles</a></li>
+
+        <li><a href="/ugc-articles/">Subscriber Articles</a></li>
+
+        <li><a href="/stories/">Latest Stories</a></li>
+
+        <li><a href="/image-gallery/">IRCNA GALLERY</a></li>
+
+      </ul>
+
+    </li>
+
+    <!-- 3. NEWS TOPICS (Kept as-is) -->
 
     <li>
 
@@ -134,9 +118,47 @@ menu_html: |-
 
     </li>
 
-    <li><a href="/independent-journalist/">Independent Journalists</a></li>
+    <!-- 4. COMMUNITY HUB -->
 
-    <li><a href="/community-connections/">Community Connections and Networking</a></li>
+    <li>
+
+      <span class="opener">Community Hub</span>
+
+      <ul>
+
+        <li><a href="/subscribers/">Our Subscribers</a></li>
+
+        <li><a href="/independent-journalist/">Independent Journalists</a></li>
+
+        <li><a href="/community-connections/">Community Connections and Networking</a></li>
+
+      </ul>
+
+    </li>
+
+    <!-- 5. MEMBER TOOLS (Kept as-is) -->
+
+    <li>
+
+      <span class="opener">IRCNA Member Tools</span>
+
+      <ul>
+
+        <li><a href="/dashboard/">Journalist Dashboard</a></li>
+
+        <li><a href="/member-tools/">Member Tools</a></li>
+
+        <li><a href="/submit-article/">Submit an Article</a></li>
+
+      </ul>
+
+    </li>
+
+    <!-- 6. NEWSLETTER (Standalone CTA) -->
+
+    <li><a href="/newsletter/">IRCNA Newsletter</a></li>
+
+    <!-- 7. REACH OUT (Kept as-is) -->
 
     <li>
 
@@ -148,7 +170,7 @@ menu_html: |-
 
         <li><a href="/submit-story/">Submit a Story or Interview Request</a></li>
 
-        <li><a href="/apply/">Apply to Join IRCNA (Members & Journalist)</a></li>
+        <li><a href="/apply/">Apply to Join IRCNA (Members &amp; Journalist)</a></li>
 
         <li><a href="/submit-events/">Submit a Tip or Information on Upcoming Events</a></li>
 
@@ -158,11 +180,23 @@ menu_html: |-
 
     </li>
 
-    <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
+    <!-- 8. LEGAL & POLICIES (NEW GROUP) -->
 
-    <li><a href="/policies/">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+    <li>
 
-    <li><a href="/legal/">CERTIFICATIONS | LEGAL | TERMS & COND.</a></li>
+      <span class="opener">Legal &amp; Policies</span>
+
+      <ul>
+
+        <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
+
+        <li><a href="/policies/">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+
+        <li><a href="/legal/">CERTIFICATIONS | LEGAL | TERMS &amp; COND.</a></li>
+
+      </ul>
+
+    </li>
 
   </ul>
 social_icons_html: |-
