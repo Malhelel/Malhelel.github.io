@@ -1,21 +1,6 @@
 enabled: true
-heading: CODING MAINTENANCE AND DELAYS
+heading: NEW POLICIES ADDED AND SITE IMPROVEMENTS
 body: |-
-  <h1>NOTICE: CONTENT DELAYS</h1>
-
-  <blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafaf;">
-
-  Due to circumstances outside of my control [Force Majeure], The following content will be delayed:
-
-      - [OUT NOW] Azat Reservoir Article will become a magazine entry due to constraints and be published by 6PM June 24th, 2026
-  - The Street Festival Magazine Article will be delayed until next Monday June 29th, 2026
-  - New Interview and Story request have been closed until August as July is fully booked
-  - Clubs and Organization registration implementation will gradually be integrated into the site
-
-  I deeply apologize for the delay, and I'm working swiftly and diligently to get IRCNA back on schedule, thank you for bearing with me and for your continued support!!
-
-  </blockquote>
-
   <h2>NOTICE: SITE MAINTENANCE</h2>
 
   <blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafaf;">
@@ -25,8 +10,8 @@ body: |-
   - Commenting on post now available
   - User generated content now live [BETA]
   - Account creation is now more secure
-  - Added new Community and Clubs Page
-  - You can now register your Club or Organization to be featured 
+  - New sidebar menu is more organized and updated
+  - New policies added PLEASE READ THEM 
   - Quality Improvements to the overall site
   - Fixed bugs
 
