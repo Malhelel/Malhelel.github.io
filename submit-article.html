@@ -6,7 +6,7 @@ permalink: /submit-article/
 <html>
 <head>
 	<base href="/">
-	<title>Submit an Article | Subscriber Exclusive – IRCNA</title>
+	<title>Submit an Article – IRCNA</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,6 +16,7 @@ permalink: /submit-article/
 		#auth-section input, #auth-section textarea { width: 100%; margin-bottom: 0.75em; padding: 0.6em; }
 		.error { color: #c00; margin-top: 0.5em; }
 		.success { color: green; margin-top: 0.5em; }
+		.info { background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; }
 	</style>
 </head>
 <body class="is-preload">
@@ -36,7 +37,16 @@ permalink: /submit-article/
 		<p>You must be <a href="/connect/">logged in</a> to submit an article.</p>
 	</div>
 
-	<!-- Submission form (shown when logged in) -->
+	<!-- Shown when NOT approved for UGC -->
+	<div id="not-approved-message" style="display:none;">
+		<div class="info">
+			<p><strong>You are not yet approved to submit articles.</strong></p>
+			<p>To gain Article Submission privileges, please support us by donating at least the hosting fee (1,000 AMD) and contact the admin to activate your posting rights.</p>
+			<p><a href="/connect/">Return to Connect page</a></p>
+		</div>
+	</div>
+
+	<!-- Submission form (shown when logged in AND approved) -->
 	<div id="submission-form" style="display:none;">
 		<form id="article-form">
 			<label for="article-title">Title</label>
@@ -78,7 +88,7 @@ permalink: /submit-article/
 <script type="module">
 	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
 	import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
-	import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
+	import { getFirestore, doc, getDoc, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
 
 	const firebaseConfig = {
 		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
@@ -95,18 +105,34 @@ permalink: /submit-article/
 	const db = getFirestore(app);
 
 	const loginMessage = document.getElementById('login-message');
+	const notApprovedMessage = document.getElementById('not-approved-message');
 	const submissionForm = document.getElementById('submission-form');
 	const articleForm = document.getElementById('article-form');
 	const submitError = document.getElementById('submit-error');
 	const submitSuccess = document.getElementById('submit-success');
 
-	// Show/hide form based on auth state
-	onAuthStateChanged(auth, (user) => {
+	// Listen for auth state changes
+	onAuthStateChanged(auth, async (user) => {
 		if (user) {
 			loginMessage.style.display = 'none';
-			submissionForm.style.display = 'block';
+
+			// Check if user's email is in ugc_approved_subscribers
+			const docRef = doc(db, 'ugc_approved_subscribers', user.email);
+			const docSnap = await getDoc(docRef);
+
+			if (docSnap.exists()) {
+				// User is approved – show form
+				notApprovedMessage.style.display = 'none';
+				submissionForm.style.display = 'block';
+			} else {
+				// Not approved – show message
+				notApprovedMessage.style.display = 'block';
+				submissionForm.style.display = 'none';
+			}
 		} else {
+			// Not logged in
 			loginMessage.style.display = 'block';
+			notApprovedMessage.style.display = 'none';
 			submissionForm.style.display = 'none';
 		}
 	});
