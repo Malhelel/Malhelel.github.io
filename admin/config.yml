@@ -314,6 +314,20 @@ collections:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro / Rules", name: "intro", widget: "markdown" }
           - { label: "Tally Embed Code", name: "embed_code", widget: "markdown", hint: "Paste the full Tally iframe code here" }
+      # ==== NEW POLICY PAGES ====
+      - file: "_data/commenting-policy.yml"
+        label: "Commenting Policy"
+        name: "commenting_policy"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/subscriber-policy.yml"
+        label: "Subscriber Policy"
+        name: "subscriber_policy"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      # ==== END NEW POLICY PAGES ====
       - file: "_data/topnav.yml"
         label: "Top Navigation"
         name: "topnav"
