@@ -314,6 +314,18 @@ collections:
           - { label: "Page Heading", name: "heading", widget: "string" }
           - { label: "Intro / Rules", name: "intro", widget: "markdown" }
           - { label: "Tally Embed Code", name: "embed_code", widget: "markdown", hint: "Paste the full Tally iframe code here" }
+      - file: "_data/commenting-policy.yml"
+        label: "Commenting Policy"
+        name: "commenting_policy"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "_data/subscriber-policy.yml"
+        label: "Subscriber Policy"
+        name: "subscriber_policy"
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "_data/topnav.yml"
         label: "Top Navigation"
         name: "topnav"
@@ -324,7 +336,6 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
-
   - name: "posts"
     label: "Articles"
     folder: "_posts"
@@ -339,7 +350,6 @@ collections:
       - { label: "Custom CSS", name: "custom_css", widget: "text", required: false, hint: "Any additional CSS for this article" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-
   - name: "emagazines"
     label: "Emagazines"
     folder: "_emagazines"
@@ -353,105 +363,3 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "emagazine" }
-
-  # ==== EXISTING COMMUNITY COLLECTIONS – NOT TOUCHED ====
-  - name: "community_student"
-    label: "Community – Student"
-    folder: "_community_student"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_internship"
-    label: "Community – Internship"
-    folder: "_community_internship"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_volunteering"
-    label: "Community – Volunteering"
-    folder: "_community_volunteering"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_sports"
-    label: "Community – Sports"
-    folder: "_community_sports"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_language_club"
-    label: "Community – Language Club"
-    folder: "_community_language_club"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_community"
-    label: "Community – Community"
-    folder: "_community_community"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  - name: "community_religious_gathering"
-    label: "Community – Religious Gathering"
-    folder: "_community_religious_gathering"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
-
-  # ==== NEW COLLECTION: Pages Community ====
-  - name: "pages_community"
-    label: "Pages Community"
-    folder: "_pages_community"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Category", name: "category", widget: "select", options: ["Student", "Internship", "Volunteering", "Sports", "Language Club", "Community", "Religious Gathering"] }
-      - { label: "Opportunity Name", name: "title", widget: "string" }
-      - { label: "Photo", name: "image", widget: "image", required: false }
-      - { label: "Logo", name: "logo", widget: "image", required: false }
-      - { label: "Slogan", name: "slogan", widget: "string" }
-      - { label: "Information Box", name: "info_box", widget: "markdown", hint: "Short text shown on listing cards" }
-      - { label: "About / Body", name: "body", widget: "markdown" }
-      - { label: "External Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
