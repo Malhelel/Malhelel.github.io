@@ -60,11 +60,11 @@ footer_text: "&copy; IRCN. All rights reserved. &copy; IRCNA. All rights reserve
 menu_html: |-
   <ul>
 
-    <!-- 1. IRCNA HOME-->
+    <!-- 1. ABOUT -->
 
     <li>
 
-      <span class="opener">About IRCNA</span>
+      <span class="opener">IRCNA HOME</span>
 
       <ul>
 
@@ -92,13 +92,15 @@ menu_html: |-
 
         <li><a href="/stories/">Latest Stories</a></li>
 
+        <li><a href="/emagazines/">📖 Emagazines</a></li>
+
         <li><a href="/image-gallery/">IRCNA GALLERY</a></li>
 
       </ul>
 
     </li>
 
-    <!-- 3. NEWS TOPICS (Kept as-is) -->
+    <!-- 3. NEWS TOPICS -->
 
     <li>
 
@@ -136,7 +138,7 @@ menu_html: |-
 
     </li>
 
-    <!-- 5. MEMBER TOOLS (Kept as-is) -->
+    <!-- 5. MEMBER TOOLS -->
 
     <li>
 
@@ -156,9 +158,9 @@ menu_html: |-
 
     <!-- 6. NEWSLETTER (Standalone CTA) -->
 
-    <li><a href="/newsletter/">IRCNA Newsletter</a></li>
+    <li><a href="/newsletter/">📧 Newsletter</a></li>
 
-    <!-- 7. REACH OUT (Kept as-is) -->
+    <!-- 7. REACH OUT -->
 
     <li>
 
@@ -180,19 +182,23 @@ menu_html: |-
 
     </li>
 
-    <!-- 8. LEGAL & POLICIES (NEW GROUP) -->
+    <!-- 8. POLICIES & LEGAL (Expanded) -->
 
     <li>
 
-      <span class="opener">Legal &amp; Policies</span>
+      <span class="opener">Policies &amp; Legal</span>
 
       <ul>
 
-        <li><a href="/disclaimer/">IRCNA CONTENT AND USAGE DISCLAIMER</a></li>
+        <li><a href="/subscriber-policy/">📋 Subscriber Policy</a></li>
 
-        <li><a href="/policies/">CONTENT/PRIVACY/INQUIRY POLICIES</a></li>
+        <li><a href="/commenting-policy/">📋 Commenting &amp; Posting Policy</a></li>
 
-        <li><a href="/legal/">CERTIFICATIONS | LEGAL | TERMS &amp; COND.</a></li>
+        <li><a href="/disclaimer/">📋 Content &amp; Usage Disclaimer</a></li>
+
+        <li><a href="/policies/">📋 Content / Privacy / Inquiry Policies</a></li>
+
+        <li><a href="/legal/">📋 Certifications | Legal | Terms &amp; Conditions</a></li>
 
       </ul>
 
