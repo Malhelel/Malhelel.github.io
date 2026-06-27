@@ -354,7 +354,6 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "emagazine" }
 
-  # ---- NEW COMMUNITY COLLECTIONS ----
   # ==== EXISTING COMMUNITY COLLECTIONS – NOT TOUCHED ====
   - name: "community_student"
     label: "Community – Student"
@@ -366,7 +365,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_internship"
@@ -379,7 +377,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_volunteering"
@@ -392,7 +389,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_sports"
@@ -405,7 +401,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_language_club"
@@ -418,7 +413,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_community"
@@ -431,7 +425,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   - name: "community_religious_gathering"
@@ -444,7 +437,6 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "community-opportunity" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "community_page" }
 
   # ==== NEW COLLECTION: Pages Community ====
