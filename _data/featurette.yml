@@ -1,20 +1,11 @@
 items:
-  - title: The Marriage Between Wine & Gastronomy
-    subtitle: .
-    heading: By Mikael Yamiosei
-    background_image: /images/uploads/Screenshot_14-6-2026_553_www.instagram.com.jpeg
-    img1: /images/uploads/featurette-2a.jpg
-    img2: /images/uploads/featurette-2b.jpg
-    img3: /images/uploads/featurette-2c.jpg
-    description: June 15 | 1:26am
-    link: https://malhelel.github.io/2026/06/15/the-marriage-between-wine-and-gastronomy.html
   - title: YEREVINE | Community Magazine
     subtitle: .
     heading: Wine Days Festival Photo Essay
     background_image: /images/uploads/YEREVINE.png
-    img1: /images/uploads/featurette-3a.jpg
-    img2: /images/uploads/featurette-3b.jpg
-    img3: /images/uploads/featurette-3c.jpg
+    img1: /images/uploads/3.png
+    img2: /images/uploads/2.png
+    img3: /images/uploads/1.png
     description: COMING SOON
     link: /emagazines/2026-06-14-yerevine/
   - title: Clean-Up at Azat Reservoir
@@ -22,7 +13,16 @@ items:
     heading: By Mikael Yamiosei
     background_image: /images/uploads/azat1.png
     img1: /images/uploads/azat2.png
-    img2: /images/uploads/azat3.png
-    img3: /images/uploads/azat4.png
+    img2: /images/uploads/azat5.png
+    img3: /images/uploads/azat1.png
     description: .
     link: https://malhelel.github.io/emagazines/2026-06-24-clean-up-at-azat-reservoir/
+  - title: Street Gandz Festival '26
+    subtitle: .
+    heading: By Mikael Yamiosei
+    background_image: /images/uploads/001.png
+    img1: /images/uploads/003.png
+    img2: /images/uploads/002.png
+    img3: /images/uploads/001.png
+    description: .
+    link: https://malhelel.github.io/emagazines/2026-06-28-street-gandz-fest-26/
