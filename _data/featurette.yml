@@ -17,3 +17,12 @@ items:
     img3: /images/uploads/001.png
     description: .
     link: https://malhelel.github.io/emagazines/2026-06-28-street-gandz-fest-26/
+  - title: Join our monthly Newsletter
+    subtitle: 2500 AMD
+    heading: .
+    background_image: /images/uploads/newsletter.png
+    img1: /images/uploads/newsletter.png
+    img2: /images/uploads/newsletter.png
+    img3: /images/uploads/newsletter.png
+    description: .
+    link: https://malhelel.github.io/newsletter/
