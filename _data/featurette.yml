@@ -1,28 +1,28 @@
 items:
   - title: YEREVINE | Community Magazine
-    subtitle: .
+    subtitle: '.'
     heading: Wine Days Festival Photo Essay
-    background_image: /images/uploads/YEREVINE.png
-    img1: /images/uploads/3.png
-    img2: /images/uploads/2.png
-    img3: /images/uploads/1.png
-    description: COMING SOON
-    link: /emagazines/2026-06-14-yerevine/
+    background_image: /images/uploads/SnapInsta.to_702911429_17951329941168707_3647707275814292475_n.jpg
+    img1: /images/uploads/SnapInsta.to_703242289_17951329932168707_6722119970252286324_n.jpg
+    img2: /images/uploads/SnapInsta.to_700890378_17951329959168707_4465422852667240088_n.jpg
+    img3: /images/uploads/Butterfly.png
+    description: About COP17
+    link: /mini-posts/
   - title: Street Gandz Festival '26
-    subtitle: .
+    subtitle: '.'
     heading: By Mikael Yamiosei
     background_image: /images/uploads/001.png
     img1: /images/uploads/003.png
     img2: /images/uploads/002.png
     img3: /images/uploads/001.png
-    description: .
+    description: '.'
     link: https://malhelel.github.io/emagazines/2026-06-28-street-gandz-fest-26/
   - title: Join our monthly Newsletter
     subtitle: 2500 AMD
-    heading: .
+    heading: '.'
     background_image: /images/uploads/newsletter.png
     img1: /images/uploads/newsletter.png
     img2: /images/uploads/newsletter.png
     img3: /images/uploads/newsletter.png
-    description: .
+    description: '.'
     link: https://malhelel.github.io/newsletter/
