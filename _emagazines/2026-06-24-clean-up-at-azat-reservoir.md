@@ -3,7 +3,7 @@ title: '"Clean-Up at Azat Reservoir"'
 author: Mikael Yamiosei
 date: 2026-06-24T17:53
 background_color: ''
-image: /images/uploads/azat1.png
+image: ''
 layout: emagazine
 ---
 
