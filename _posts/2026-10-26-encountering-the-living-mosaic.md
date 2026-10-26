@@ -10,9 +10,7 @@ layout: post
 
 # Iran’s Biodiversity, Wartime Resilience, and the Vision of NBSAP3 at COP17
 
-# 
-
-
+by Mikael Yamiosei
 
 **The air** – inside the Green Zone expo at the 17th Conference of the Parties to the United Nations Convention on Biological Diversity (COP17) in Yerevan thrummed with a distinct collective urgency. As delegates, researchers, and civil society actors navigated the sprawling pavilions, the exhibition booths at the Green Zone Expo offered deep windows into the ecological realities of participating nations. Among them, the pavilion display representing the Islamic Republic of Iran stood out, anchored by an enormous map of Iran detailing its biodiversity and rich visual records of the region's conservation efforts. It was there that I met Sayyad Sheykhi, an environmental specialist on biodiversity affiliated with the University of Tehran.
 
@@ -51,6 +49,7 @@ Iran's national Red Book provides rigorous taxonomic assessments based on empiri
 Beyond charismatic apex predators like the Asiatic cheetah and Persian leopard, the country's biodiversity portfolio includes a diverse array of ungulates, small carnivores, reptiles, and specialized invertebrates that form the complex trophic foundations of local ecosystems. Continuous monitoring of these prey species and their respective habitats is essential for maintaining balanced, self-sustaining wild populations across protected reserves and national parks.
 
 ## **Elevating Global Biodiversity Through the Ramsar Convention**
+
 ![](/images/uploads/ramsar.jpeg)
 
 He also walked me through how Iran was one of the first pioneers in leading a global stance on biodiversity with the ‘Convention on Wetlands of International Importance’ Adopted on February 2, 1971, in Ramsar, Iran, the Ramsar Convention on Wetlands fundamentally transformed the importance of biodiversity by pioneering the world's first modern multilateral treaty dedicated to a specific ecosystem. Prior to this agreement, international conservation was fractured into regional, species-specific bird treaties. The Ramsar Convention altered global policy by establishing that entire ecosystems must be preserved across political borders to shield the 40% of the world's plant and animal species that rely on wetlands. By introducing the concept of "wise use," the convention became the historic foundation for modern sustainable development, proving that human utility and biodiversity preservation could legally coexist. Furthermore, it shifted global policy from mere passive protection to active accountability, legally requiring its 172 member nations to integrate wetland preservation into national planning, declare internationally protected "Ramsar Sites," and jointly manage transboundary water systems that protect migratory species.
@@ -64,6 +63,7 @@ Wetland ecosystems across Iran—ranging from coastal lagoons and river deltas t
 The foundational principles articulated in the 1971 Ramsar Convention continue to guide contemporary national strategies addressing water scarcity, habitat degradation, and climate-induced environmental stress. By integrating wetland conservation into broader provincial and national planning frameworks, Iranian environmental authorities strive to safeguard essential hydrological services for both human communities and dependent wildlife populations.
 
 ## **Navigating the Blueprint: Inside NBSAP3**
+
 ![](/images/uploads/implementation.jpeg)
 
 To understand how these ecosystems are managed and protected, Sheykhi introduced me to the foundational strategic book guiding the nation's environmental policy: the Islamic Republic of Iran's National Biodiversity Strategies and Action Plan (NBSAP3), Final Version, 2025–2030: Framework to Halt and Reverse Biodiversity Loss. Published under the authority of the Department of Environment and coordinated by key national focal points, this comprehensive roadmap serves as the country's strategic pledge under the global biodiversity framework.
@@ -78,11 +78,10 @@ The strategic framework outlined in the NBSAP3 book emphasizes strengthening the
 
 Implementation mechanisms within NBSAP3 incorporate a collaborative, whole-of-society approach that engages governmental bodies, academic institutions, local communities, and non-governmental organizations. By aligning domestic conservation targets with scientific monitoring protocols and sustainable resource use principles, the action plan provides a structured, verifiable pathway for long-term environmental stewardship across the nation.
 
-
-
 At the end of our discussions and my many - many - questions to him, he had decided to give me a copy of the NBSAP3 book as a gift, so that I may learn more about the rich biodiversity in Iran and how they plan to preserve, conserve and reinstate biodiversity in their region.
 
 ## **Preserving Nature Amidst War**
+
 ![](/images/uploads/iranwar.jpeg)
 
 One of the most profound dimensions of our discussion centered on a stark, sobering reality: how Iran plans to sustain its biodiversity preservation efforts amidst the compounding pressures and disruptions of having to defend itself during a regional war and geopolitical instability.
@@ -98,6 +97,7 @@ The Department of Environment maintains continuous institutional oversight, ensu
 Collaborative networks involving academic institutions, local stakeholders, and regional conservation entities reinforce the resilience of Iran's environmental framework under duress. By embedding conservation priorities within broader structures of civil resilience and national defense, the strategy recognizes that protecting the nation's natural heritage is inseparable from ensuring the long-term survival and stability of its human communities.
 
 ## **Connecting to the Global Stage at COP17**
+
 ![](/images/uploads/globalstageiran.jpeg)
 
 The timing of this dialogue at COP17 in Yerevan placed Iran’s national strategy into direct alignment with global environmental goals. As nations assemble to review progress toward halting and reversing biodiversity loss under international agreements, regional strategies like the ones found in the NBSAP3 book provide the practical, ground-level mechanisms necessary to translate global targets into actionable domestic policy.
@@ -115,5 +115,4 @@ Concluding the discussions at the Yerevan expo reinforced the understanding that
 ## **Sources and Credit**
 
 - Primary Source Document: Islamic Republic of Iran's National Biodiversity Strategies and Action Plan (NBSAP3), Final Version, 2025–2030: Framework to Halt and Reverse Biodiversity Loss, published by the Department of Environment, Islamic Republic of Iran. Accessible via the Climate Policy Radar.
-
 - Field Context: Direct discussions and exhibition walkthroughs with Sayyad Sheykhi, environmental specialist on biodiversity for the University of Tehran, at the Green Zone exhibition booth during COP17 in Yerevan, Armenia.
