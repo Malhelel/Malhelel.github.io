@@ -3,14 +3,10 @@ title: '"Uncovering Yerevan’s Lost Blue Arteries"'
 date: 2026-10-22T03:17:00
 image: /images/uploads/Blue Yerevan at COP17.png
 background_color: ''
-text_color: '#0147AB'
+text_color: ''
 custom_css: ''
 layout: post
 ---
-
-# Uncovering Yerevan’s Lost Blue Arteries:
-
-# 
 
 ![](/images/uploads/Blue%20Yerevan%20at%20COP17.png)
 
@@ -37,10 +33,10 @@ Parallel to this spatial planning is the history of the **Getar River**, detaile
 The narrative extends deeply into the socio-ecological life of public water spaces under **Water Bodies**, **Yerevan’s Blue Utopia**, **The Constructed Sea**, and **The Archive of Energy**. Built between 1965 and 1967 on the Hrazdan River, **Yerevan Lake** was engineered to regulate water flow and establish a recreational maritime identity for the landlocked city. Despite initial features like boating stations, swimming zones, and active public life, the lake ultimately suffered from severe pollution and ecological decline. Similarly, Soviet swimming pools and public baths once served as vital infrastructure for hygiene, leisure, and state-sanctioned physical culture, but post-Soviet economic shifts led to their privatization, abandonment, or commercial enclosure. In the Hrazdan Gorge, the **Yerevan Children’s Railway**, built in the 1930s, symbolized the triumph of industrialization as a utopian childhood dream before slipping into a zone of uncertainty after the collapse of the Soviet system.
 
 ## **Bridging Memory and Form: Contemporary Artistic Interventions**
+
 ![](/images/uploads/IMG_0004.jpeg)
 
 To bridge the gap between archival fact and subjective experience, the exhibition incorporates dedicated showcases of contemporary artwork positioned alongside the central curatorial statement titled _Immersed_. The text notes that _"each time the city loses its bodies of water and its water architectures, our bodies likewise lose their practices and forms of experience,"_ emphasizing that artistic practice restores the possibility of touch and memory.
-
 
 ![](/images/uploads/IMG_0011.jpeg)
 
