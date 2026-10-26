@@ -35,26 +35,32 @@ The narrative extends deeply into the socio-ecological life of public water spac
 ## **Bridging Memory and Form: Contemporary Artistic Interventions**
 
 ![](/images/uploads/IMG_0004.jpeg)
+<blockquote>IMG_0004 By Mikael Yamiose/IRCNA</blockquote>
 
 To bridge the gap between archival fact and subjective experience, the exhibition incorporates dedicated showcases of contemporary artwork positioned alongside the central curatorial statement titled _Immersed_. The text notes that _"each time the city loses its bodies of water and its water architectures, our bodies likewise lose their practices and forms of experience,"_ emphasizing that artistic practice restores the possibility of touch and memory.
 
 ![](/images/uploads/IMG_0011.jpeg)
+<blockquote>IMG_0011 By Mikael Yamiose/IRCNA</blockquote>
 
 Working within this conceptual space, Lucine Talalyan’s _Appliqué_ (2026) utilizes minimalist paper cut-out collage works to evoke lost aquatic ecosystems. One composition displays three vibrant fish—colored red, yellow, and orange—swimming across layered blue water bands, while another features a stylized green frog with prominent yellow-rimmed eyes submerged in deep blue geometric channels. Talalyan’s work invokes the tactile presence of aquatic fauna that once inhabited Yerevan's open streams and gorges, offering a playful yet poignant reminder of lost biodiversity.
 
 ![](/images/uploads/IMG_0005.jpeg)
+<blockquote>IMG_0005 By Mikael Yamiose/IRCNA</blockquote>
 
 Anna Hakopian’s _Playing Getar / Pulpulaks (drinking fountains)_ (2026) explores the intersection of civic infrastructure and collective memory through mixed media and graphic print works. _Playing Getar_ superimposes a winding blue river across urban maps alongside cultural objects including chess pieces and a cassette tape labeled "Yerevan Memory Set," while _Pulpulaks_ maps the city's extensive network of public drinking fountains as blue water drop nodes distributed across a street grid. Through these works, Hakopian demonstrates how public drinking fountains and hidden river networks structure everyday urban life.
 
 ![](/images/uploads/IMG_0007.jpeg)![](/images/uploads/IMG_0006.jpeg)
+<blockquote>IMG_0006 & IMG_0007 By Mikael Yamiose/IRCNA</blockquote>
 
 Davit Kochunts’ _From the Blue Diary_ (2026) investigates the intimate, tactile dimension of daily water engagement through a series of blue-toned prints and monochromatic line illustrations. The series depicts personal moments of cleansing and touch, including a hand operating a spray nozzle generating water splashes, structural studies of fountains surmounted by birds, and line drawings capturing individuals engaged with public water outlets.
 
 ![](/images/uploads/IMG_0010.jpeg)
+<blockquote>IMG_0010 By Mikael Yamiose/IRCNA</blockquote>
 
 Armine Shahbazyan’s _Traces of Urban Waters_ (2026) captures the sensory memory of public swimming spaces through dual print works illustrating figures floating and swimming within isometric, diamond-shaped volumetric pools of water. One print portrays figures resting on a pink-tinted water plane, while the second displays swimmers moving through a light blue aquatic basin, framing water as a geometric sanctuary of weightlessness, leisure, and bodily freedom.
 
 ![](/images/uploads/IMG_0012.jpeg)
+<blockquote>IMG_0012 By Mikael Yamiose/IRCNA</blockquote>
 
 Finally, Harutyun Tumaghyan’s _2750 and more_ (2026) contrasts the monumental scale of public water celebrations—such as fountains built for Yerevan's historical anniversaries—with the modest, egalitarian act of communal drinking fountains distributed across the urban landscape. The project comprises two complementary works on paper: the first presents a fluid blue line illustration of a crowd swimming and wading together in a shared pool, while the second features a structured grid array of individual drinking fountain (_pulpulak_) spouts emitting tiny blue water drops.
 
@@ -77,7 +83,7 @@ Furthermore, while ecological engineering focuses on physical daylighting—the 
 
 ## **Sources**
 
-1. **Video Documentation File:** Primary on-site video walkthrough (which can be found here: ) capturing exhibition wall texts, curatorial statements, archival photographs, architectural maps, and spatial layouts of the _Blue Yerevan_ exhibition. Taken by Mikael Yamiosei for IRCNA
+1. **Video Documentation File:** Primary on-site video walkthrough (which can be found here: [https://youtube.com/shorts/HzCZ1OcowSM?feature=share](https://youtube.com/shorts/HzCZ1OcowSM?feature=share) ) capturing exhibition wall texts, curatorial statements, archival photographs, architectural maps, and spatial layouts of the _Blue Yerevan_ exhibition. Taken by Mikael Yamiosei for IRCNA
 2. **Visual Documentation & Exhibition Photography:** Primary still photography files taken by Mikael Yamiosei; documenting individual artwork installations, artist credit labels, and vitrine displays:
 
 - IMG_0004.jpg – Curatorial statement panel detailing the _Immersed_ thematic framework.
