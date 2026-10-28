@@ -85,7 +85,10 @@ The intentional methodology employed by My Forest Armenia—emphasizing high spe
 
 As the diplomatic proceedings of COP17 draw global attention to Yerevan, the contrast between high-level policy declarations and grassroots execution remains sharp. Conversations at the Green Zone expo with advocates like Alina Karapetyan underscore a vital truth: international biodiversity frameworks are only as effective as the institutions on the ground executing them.
 
-Through scalable nursery infrastructure like the Benjamin Gumuchdjian facility and rigorous, multi-species reforestation projects spanning Lernajur to Tsaghkunk, My Forest Armenia is demonstrating what it takes to reclaim the landscape—one hectare, and one million saplings, at a time.![](/images/uploads/MFA01.webp)
+Through scalable nursery infrastructure like the Benjamin Gumuchdjian facility and rigorous, multi-species reforestation projects spanning Lernajur to Tsaghkunk, My Forest Armenia is demonstrating what it takes to reclaim the landscape—one hectare, and one million saplings, at a time.
+
+
+![](/images/uploads/MFA01.webp)
 
 Ultimately, restoring Armenia's forests is not merely an environmental calculation of carbon offsets; it is a profound moral obligation to future generations. By binding local communities, civic organizations, and international partners together in a shared stewardship of the earth, initiatives like My Forest Armenia bridge the gap between abstract climate targets and enduring, tangible ecological reality.
 
