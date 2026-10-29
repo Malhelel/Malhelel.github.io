@@ -1,7 +1,7 @@
 ---
 title: '"Scales of Survival"'
 date: 2026-10-23T10:06:00
-image: ''
+image: /images/uploads/IMG_0340.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
