@@ -7,6 +7,4 @@ image: /images/uploads/01copmag.png
 layout: emagazine
 ---
 
-\<blockquote>This Magazine is Currently being Revised per Feedback from MyForestArmenia.org\</blockquote>
-
-![](/images/uploads/01copmag.png)
+![](/images/uploads/01copmag.png)![](/images/uploads/copmag02.png)![](/images/uploads/copmag03.png)![](/images/uploads/copmag04.png)![](/images/uploads/copmag05.png)![](/images/uploads/copmag06.png)![](/images/uploads/copmag07.png)![](/images/uploads/copmag08.png)![](/images/uploads/copmag09.png)![](/images/uploads/copmag10.png)![](/images/uploads/copmag11.png)![](/images/uploads/copmag12.png)
