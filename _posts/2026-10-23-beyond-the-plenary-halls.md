@@ -26,7 +26,7 @@ Understanding the scope of reforestation in Armenia requires disentangling natio
 
 In subsequent years, government targets evolved to reflect changing administrative priorities. Later state commitments set goals of establishing 50,000 hectares of new forest by 2030, a figure that was eventually recalibrated to 25,000 hectares by 2050. While these state-level figures reflect ambitious political commitments, achieving them presents immense practical challenges in land allocation, sustained funding, sapling availability, and long-term maintenance.
 
-Crucially, My Forest Armenia operates as a completely separate entity whose core mission is not defined by government quotas or shifting state deadlines. Launched with its first afforestation campaign in the fall of 2020, the NGO was established to reforest Armenia systematically and independently. Regardless of which administration holds office or which numerical target is codified at any given moment, My Forest Armenia pursues its restoration mandate on its own merit. In doing so, their high-capacity nursery production and long-term planting campaigns inherently support the nation's broader ecological recovery, filling a vital operational gap between theoretical national policies and tangible landscape restoration.
+Crucially, My Forest Armenia operates as a completely separate entity whose core mission is not defined by government quotas or shifting state deadlines. L\Founded in 2019 and Launched with its first afforestation campaign in the fall of 2020, the NGO was established to reforest Armenia systematically and independently. Regardless of which administration holds office or which numerical target is codified at any given moment, My Forest Armenia pursues its restoration mandate on its own merit. In doing so, their high-capacity nursery production and long-term planting campaigns inherently support the nation's broader ecological recovery, filling a vital operational gap between theoretical national policies and tangible landscape restoration.
 
 ### Detailed Review of Past Projects and Sites
 
@@ -134,7 +134,7 @@ Ultimately, restoring Armenia's forests is not merely an environmental calculati
 >
 >
 >
-> Reframed My Forest Armenia's operational mandate to establish that the organization operates as an independent entity launched in the fall of 2020, pursuing systematic afforestation regardless of shifting political cycles or state quotas.
+> Reframed My Forest Armenia's operational mandate to establish that the organization operates as an independent entity founded in 2019, with their first campaign launched in the fall of 2020, pursuing systematic afforestation regardless of shifting political cycles or state quotas.
 >
 > Highlighted that while their high-capacity nursery production and planting campaigns inadvertently support broader national milestones, their primary driver is ecological restoration rather than fulfilling state-mandated metrics.
 >
