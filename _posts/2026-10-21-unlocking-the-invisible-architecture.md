@@ -1,7 +1,7 @@
 ---
 title: '"Unlocking the Invisible Architecture"'
 date: 2026-10-21T09:10:00
-image: ''
+image: /images/uploads/IMG_0354.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
