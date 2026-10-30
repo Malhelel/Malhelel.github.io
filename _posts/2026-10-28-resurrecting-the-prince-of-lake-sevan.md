@@ -1,7 +1,7 @@
 ---
 title: '"Resurrecting the Prince of Lake Sevan"'
 date: 2026-10-28T23:58:00
-image: ''
+image: /images/uploads/svntrout.jpg
 background_color: ''
 text_color: ''
 custom_css: ''
@@ -23,11 +23,8 @@ At the absolute core of this ecosystem's natural identity is the Sevan trout (_S
 To understand the biological significance of the Sevan trout is to understand ecological speciation within an isolated lacustrine environment. _Salmo ischchan_ did not exist as a single homogenous population; rather, it evolved into four distinct morphological and behavioral races, each precisely adapted to specific thermal gradients, depth profiles, and spawning grounds within Lake Sevan’s 1,270-square-kilometer basin:
 
 - **Gegharkuni (_S. i. gegarkuni_):** A lacustrine-riverine form that feeds predominantly in the open water on zooplankton and macroinvertebrates, migrating into entering rivers to deposit eggs in gravel currents.
-
 - **Summer Trout (_S. i. aestivalis_):** Spawns during warmer months both in shallow littoral zones of the lake and in the lower reaches of feeder streams.
-
 - **Winter Trout (_S. i. ischchan_):** The largest, deep-water race, historically spawning on underwater gravel beds at depths of up to 15 to 20 meters during winter months.
-
 - **Boon (_S. i. danilewskii_):** A dwarf, slow-growing form restricted to deeper, cold lacustrine zones, feeding primarily on benthic organisms.
 
 This evolutionary divergence allowed _Salmo ischchan_ to occupy virtually every major ecological niche in the lake's water column, maintaining top-predator stability and driving trophic energy flow. Preserving this species is not merely a matter of maintaining fish biomass for resource extraction; it is a fundamental requirement for safeguarding the evolutionary diversity that stabilizes Lake Sevan’s food web.
@@ -72,10 +69,7 @@ To operationalize restocking at scale, the Restoration Foundation—established 
 
 [Systematic Lake & River Stocking]
 
-
-
 - **Onshore Biotechnology (Karchaghbyur Fingerling Plant):** Operating as the technological core of the program, this facility employs Recirculating Aquaculture Systems (RAS). Advanced biofilters remove nitrogenous waste, inject dissolved oxygen, and recycle up to 90 percent of process water daily. This closed-loop environment yields approximately 1.5 million genetically verified fry per cycle while preventing nutrient-rich hatchery effluent from polluting local waterways.
-
 - **In-Lake Acclimatization (Sevan Aqua CJSC Cages):** Before full release into the open lake, juvenile trout are transferred to modular floating net-pen cages anchored directly in Lake Sevan. This intermediate stage allows young fish to adjust naturally to ambient water temperatures, seasonal thermal stratification, micro-currents, and live prey dynamics, significantly reducing mortality rates upon wild release.
 
 ## **Governance on the Water: Anti-Poaching and Resource Protection**
@@ -99,11 +93,8 @@ This work directly advances key pillars of the Kunming-Montreal Global Biodivers
 ## **Sources & References**
 
 1. **Foundation for Restoration of Sevan Trout Stocks and Development of Aquaculture (_Sevani Ishkhan_)** – Official Technical Documentation, Facility Specifications, and Project Reports.
-
 2. **Scientific Center of Zoology and Hydroecology, National Academy of Sciences of Armenia** – Published Hydroecological Field Research and Genetic Monitoring Reports on Lake Sevan Endemic Salmonids.
-
 3. **Ministry of Environment of the Republic of Armenia / CBD COP17 Secretariat** – Environmental Protection Decrees, Eco-Patrol Enforcement Statistics, and National Biodiversity Strategy Updates (2025–2026).
-
 4. **European Union Delegation to Armenia & UNDP** – Project Factsheets, Governance Frameworks, and Progress Documentation for _EU4BiodiversityinSevan_.
-
-1. **Asian Development Bank (ADB)** – Technical Assistance and Community-Based Infrastructure Frameworks for the Lake Sevan Basin Watershed.
+5. **Asian Development Bank (ADB)** – Technical Assistance and Community-Based Infrastructure Frameworks for the Lake Sevan Basin Watershed.
+6. **Cover image used in article** - Taken directly from the Sevani Ishkhan Facebook page (Photo uploaded April 12. 2021)
