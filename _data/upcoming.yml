@@ -1,8 +1,7 @@
 enabled: true
 heading: WELCOME TO IRCNA!!
 body: |-
-  <blockquote> Recent Articles and Content 
-
+  #  Recent Articles and Content 
 
   - **“Sovereinty in the Green Zone”** — November 2, 2026
   _How Brazil’s Biocultural Protocols Reframe Community Monitoring at COP17_
@@ -18,10 +17,6 @@ body: |-
   _CNS_Lab's Blue Yerevan at COP17_
   - **“Unlocking the Invisible Architecture”** — October 21, 2026
   _Invertebrates, Knowledge Gaps, and the Imperative of Micro-Conservation at COP17 Armenia_
-
-
-
-  </Blockquote>
 
   <blockquote style="border-left: 4px solid #e44; margin: 1.5em 0; padding: 0.8em 1.2em; background: #fafaf;">
 
