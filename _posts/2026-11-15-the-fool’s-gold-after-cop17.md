@@ -1,7 +1,7 @@
 ---
-title: 'The Fool’s Gold After COP17'
+title: '"The Fool’s Gold After COP17"'
 date: 2026-11-15T15:56:00
-image: ''
+image: /images/uploads/IMG_0665.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
