@@ -8,8 +8,6 @@ custom_css: ''
 layout: post
 ---
 
-The three residual items are resolved. The primary documents settle the terminology question decisively: the Government of Armenia’s own submission to the Bern Convention records that the Administrative Court’s 25 December 2024 decision classified the subsoil permits as \*\*“unappealable administrative acts”\*\* — not legislative acts — and that this means the Government \*\*“currently has no mechanism to suspend or invalidate the permits.”\*\* The Sputnik headline’s use of “законодательные акты” appears to be an editorial imprecision; Finport’s English report and the government’s Bern submission both use “administrative acts.” The quotation “cannot be contested in administrative or judicial order” is a close paraphrase of the court’s holding as rendered in the sources; the body text now uses a formulation that tracks the primary record without quotation marks where the exact wording is not verbatim, and the footnote cites the government submissio
-
 \## \<strong>Armenia’s Amulsar Mine and the Unresolved Questions of the Yerevan Summit\</strong>
 
 \<strong>By Mikael Yamiosei\</strong>
