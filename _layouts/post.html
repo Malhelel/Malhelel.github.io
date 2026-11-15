@@ -115,6 +115,13 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:600, once:true});</script>
 
+<!-- Keep Kramdown footnote links on this article despite the site-wide base URL. -->
+<script>
+	document.querySelectorAll('.article-content a[href^="#fn"], .article-content a[href^="#fnref"]').forEach(function (link) {
+		link.href = window.location.pathname + window.location.search + link.getAttribute('href');
+	});
+</script>
+
 <!-- Firebase & comments -->
 <script type="module">
 	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
@@ -122,7 +129,7 @@
 	import { getFirestore, collection, addDoc, doc, getDoc, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
 
 	const firebaseConfig = {
-		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
+		apiKey: "AIzaSyABeZMe1fvPSswarkqc93IPd1wFZct1C1MA",
 		authDomain: "ircna-dashboard.firebaseapp.com",
 		projectId: "ircna-dashboard",
 		storageBucket: "ircna-dashboard.firebasestorage.app",
