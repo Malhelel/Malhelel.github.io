@@ -1,13 +1,13 @@
 ---
-title: '"The Fool’s Gold After COP17"'
+title: '" SUBSCRIBER EXCLUSIVE | The Fool’s Gold After COP17"'
 date: 2026-11-15T15:56:00
 image: /images/uploads/IMG_0665.jpeg
 background_color: ''
 text_color: ''
 custom_css: ''
 layout: post
-members_only: true
 member_article_id: the-fools-gold-after-cop17
+members_only: true
 ---
 
 ### Armenia’s Amulsar Mine and the Unresolved Questions of the Yerevan Summit
