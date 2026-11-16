@@ -25,11 +25,20 @@
 		.comment-form { margin-top: 2em; }
 		.comment-form textarea { width: 100%; padding: 0.8em; border-radius: 6px; border: 1px solid #ddd; }
 		.comment-form button { margin-top: 0.5em; }
+		#member-lock { margin-top: 1.5em; padding: 1em; border: 1px solid #ddd; background: #fafafa; }
+		#member-status { margin-bottom: 0; }
+		/* The public post currently ends with this marker; the access prompt below replaces it visually. */
+		#article-teaser > h3:last-child { display: none; }
 	</style>
 </head>
 <body class="is-preload">
 
 {% include topnav.html %}
+
+{% assign is_member_article = false %}
+{% if page.title contains 'Fool' and page.title contains 'COP17' %}
+	{% assign is_member_article = true %}
+{% endif %}
 
 <div id="wrapper">
 <div id="main">
@@ -40,9 +49,20 @@
 			<h1>{{ page.title }}</h1>
 			<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
 		</header>
+		{% if is_member_article %}
+		<div class="article-content" id="article-teaser">
+			{{ content }}
+		</div>
+		<div id="member-lock">
+			<p><strong>Members only.</strong> <a href="/connect/">Sign in</a> with an approved subscriber account to continue reading.</p>
+			<p id="member-status" aria-live="polite"></p>
+		</div>
+		<div class="article-content" id="article-full" hidden></div>
+		{% else %}
 		<div class="article-content">
 			{{ content }}
 		</div>
+		{% endif %}
 	</article>
 
 	<!-- Comments -->
@@ -122,19 +142,19 @@
 	});
 </script>
 
-<!-- Firebase & comments -->
+<!-- Firebase, subscriber-only article loading, and comments -->
 <script type="module">
 	import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js';
 	import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js';
 	import { getFirestore, collection, addDoc, doc, getDoc, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js';
 
 	const firebaseConfig = {
-		apiKey: "AIzaSyABeZMe1fvPSswarkqc93IPd1wFZct1C1MA",
+		apiKey: "AIzaSyABeZM1fvPSswarkqc93IPd1wFZct1C1MA",
 		authDomain: "ircna-dashboard.firebaseapp.com",
 		projectId: "ircna-dashboard",
 		storageBucket: "ircna-dashboard.firebasestorage.app",
 		messagingSenderId: "529973479613",
-		appId: "1:529973479613:web:05bb90468055c5e70c0fd4",
+		appId: "1:529973479613:web:05bb90468055e5e70c0fd4",
 		measurementId: "G-L91C0B65LC"
 	};
 	const app = initializeApp(firebaseConfig);
@@ -148,6 +168,63 @@
 	const postCommentBtn = document.getElementById('post-comment-btn');
 	const commentError = document.getElementById('comment-error');
 	const loginToComment = document.getElementById('login-to-comment');
+
+	{% if is_member_article %}
+	const memberArticleId = 'the-fools-gold-after-cop17';
+	const articleTeaser = document.getElementById('article-teaser');
+	const memberLock = document.getElementById('member-lock');
+	const memberStatus = document.getElementById('member-status');
+	const articleFull = document.getElementById('article-full');
+	let articleLoadAttempt = 0;
+
+	async function loadMemberArticle(user) {
+		const attempt = ++articleLoadAttempt;
+		articleTeaser.hidden = false;
+		memberLock.hidden = false;
+		articleFull.hidden = true;
+		articleFull.replaceChildren();
+		memberStatus.textContent = '';
+
+		if (!user) return;
+
+		memberStatus.textContent = 'Checking subscriber access…';
+		try {
+			// The Firestore rules are the authorization boundary; client checks are not trusted.
+			const articleSnap = await getDoc(doc(db, 'member_articles', memberArticleId));
+			if (attempt !== articleLoadAttempt) return;
+
+			if (!articleSnap.exists()) {
+				memberStatus.textContent = 'This member article is not available yet.';
+				return;
+			}
+
+			const data = articleSnap.data();
+			const body = data.bodyMarkdown ?? data.body ?? data.content;
+			if (typeof body !== 'string' || !body.trim()) {
+				memberStatus.textContent = 'The member article document is missing its bodyMarkdown, body, or content text field.';
+				return;
+			}
+
+			// Render Markdown and sanitize generated HTML before inserting it into the page.
+			const [{ marked }, { default: DOMPurify }] = await Promise.all([
+				import('https://esm.sh/marked@15.0.7'),
+				import('https://esm.sh/dompurify@3.2.6')
+			]);
+			if (attempt !== articleLoadAttempt) return;
+			const rendered = await marked.parse(body);
+			articleFull.innerHTML = DOMPurify.sanitize(rendered);
+			articleTeaser.hidden = true;
+			memberLock.hidden = true;
+			articleFull.hidden = false;
+		} catch (error) {
+			if (attempt !== articleLoadAttempt) return;
+			console.error('Member article load failed:', error);
+			memberStatus.textContent = error.code === 'permission-denied'
+				? 'Access denied. This account is not an approved subscriber.'
+				: 'The member article could not be loaded. Please try again later.';
+		}
+	}
+	{% endif %}
 
 	// Helper: get display name from subscribers collection
 	async function getDisplayName(email) {
@@ -211,6 +288,9 @@
 			loginToComment.style.display = 'block';
 			commentFormContainer.style.display = 'none';
 		}
+		{% if is_member_article %}
+		loadMemberArticle(user);
+		{% endif %}
 	});
 
 	loadComments();
